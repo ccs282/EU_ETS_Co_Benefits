@@ -39,8 +39,7 @@ mac drop _all
 // Location of the repository --> adjust according to who's running the file
 
 * Insert Code for Adjusting Directory
-global repo "G:/Other computers/My laptop/PhD Hamburg/Research_projects/co_benefits/EU_ETS_Co-Benefits/"
-/* global repo "C:/Users/jonas/OneDrive - London School of Economics/Documents/PhD Hamburg/Research_projects/co_benefits/EU_ETS_Co-Benefits/" */
+global repo "C:/.../EU_ETS_Co_Benefits/"
 
 // Location of the Stata SDID code within the repository
 global home ${repo}Stata_SDID/
