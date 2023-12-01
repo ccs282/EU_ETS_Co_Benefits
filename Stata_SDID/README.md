@@ -56,4 +56,4 @@ Users can refer to these log files for detailed information on each step of the 
 
 ## Contact
 
-If users have any doubts concerning the portion of the code written in Stata, they are encouraged to reach out to [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
+If users have any questions concerning the portion of the code written in Stata, they are encouraged to reach out to [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
