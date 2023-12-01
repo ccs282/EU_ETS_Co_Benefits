@@ -1,0 +1,394 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/logs/EUETS_SDID_2008.log
+  log type:  text
+ opened on:  22 Nov 2023, 16:57:17
+
+. 
+. clear all
+
+. 
+. *Loop analyis over the pollutants under investigation
+. local varlist "so2 pm25 nox"
+
+. 
+. foreach v in `varlist' {
+  2. 
+. import delimited "${dataIn}`v'_gscm_data.csv", encoding(UTF-8) clear
+  3. 
+. encode unit_id, gen(id)
+  4. tsset id year //Panel is unbalanced --> Need to make it strongly balanced to run SDID estimator (Arkhangelsky et al., 2021)
+  5. 
+. *SDID and DID
+. preserve
+  6. 
+. // First step: Cleaning the sample
+. *The command sdid requires a balanced sample so (i) we need to exclude a number of Eastern European countries due to missing data in the early 90s and (ii) need to r
+> estrict the sample prrior to 2019 not to drop the UK out of the sample 
+. 
+. keep if year<=2019
+  7. 
+. drop if country=="Estonia"
+  8. drop if country=="Hungary"
+  9. drop if country=="Latvia"
+ 10. drop if country=="Lithuania"
+ 11. drop if country=="Slovakia"
+ 12. drop if country=="Slovenia"
+ 13. 
+. capt label variable log_emissions "Emissions (log)"
+ 14. capt label variable treat_post "EU ETS"
+ 15. 
+. *Shift treatment to 2008 to investigate impacts over the second trading phase of the EU ETS
+. gen ets_second_phase=1 if year>=2008
+ 16. replace ets_second_phase=0 if missing(ets_second_phase)
+ 17. 
+. replace treat_post = treat_post*ets_second_phase
+ 18. 
+. ****************************************
+. 
+. //Second step: Estimations
+. 
+. *SDiD
+. * Follow our main specification (cf. Methods Section in the paper for more details) based on Bayer and Aklin (2020): include log_gdp log_gdp_2 as controls.
+. * Implement the optimization procedure introduced by Kranz (2022) with the option "projected" in the covariates environment.
+. * Select a random number of seeds to replicate the same bootstrapped sample on the grounds of transparency and enhanced replicability.
+. 
+. cd "${figures}"
+ 19. eststo sdid_1: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) reps(800) seed(1615)
+ 20. 
+. *Results come from a log-linear model, sae results to compute exp() transofrmation in a later step
+. cd "${tables}"
+ 21. putexcel set EUETS_SDID_`v'_tbc_2008, replace
+ 22. putexcel A1=("estimate") B1=("standarderror")  A2=matrix(e(ATT)) B2=matrix(e(se))
+ 23. 
+. *TWFE-DiD
+. *Three options here: (i) run it with the same sdid command or (ii) absorb fixed effects with reghdfe. If using (ii), then we can additionally aborb country-year effe
+> cts which refelcts option (iii).
+. eststo sdid_2: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) method(did) reps(800) seed(1615)
+ 24. *eststo sdid_2: reghdfe log_emissions treat_post log_gdp log_gdp_2, abs(i.id i.year)
+. *eststo sdid_2: reghdfe log_emissions treat_post log_gdp log_gdp_2, abs(i.id i.year i.country_id##i.year)
+. 
+. *Results come from a log-linear model, sae results to compute exp() transofrmation in a later step
+. putexcel set EUETS_TWFEDID_`v'_tbc_2008, replace
+ 25. putexcel A1=("estimate") B1=("standarderror")  A2=matrix(e(b)) B2=matrix(e(se))
+ 26. 
+. *Export estimates
+. esttab sdid_1 sdid_2 using EUETS_SDID_`v'_2008.csv, keep(treat_post) starlevel ("*" 0.10 "**" 0.05 "***" 0.01) b(%-9.3f) se(%-9.3f) label replace
+ 27. 
+. ****************************************
+. 
+. //Third Step: Results come from a log-linear model, we need to apply exp() transformation to interpret our results as percentages
+. 
+. *SDiD
+. import excel "${tables}EUETS_SDID_`v'_tbc_2008.xlsx", sheet("Sheet1") firstrow clear
+ 28. 
+. // Compute 95% confidence intervals
+. local critical_value = 1.96 // for a 95% confidence interval
+ 29. 
+. gen CI_lower = estimate - (`critical_value' * standarderror)
+ 30. gen CI_upper = estimate + (`critical_value' * standarderror)
+ 31. 
+. replace estimate = exp(estimate)-1
+ 32. 
+. replace CI_lower = exp(CI_lower)-1
+ 33. replace CI_upper = exp(CI_upper)-1
+ 34. 
+. 
+. cd "${paper_results}"
+ 35. export delimited using "EUETS_SDID_`v'_exp_2008", replace
+ 36. 
+. *TWFE-DiD
+. import excel "${tables}EUETS_TWFEDID_`v'_tbc_2008.xlsx", sheet("Sheet1") firstrow clear
+ 37. 
+. // Compute 95% confidence intervals
+. local critical_value = 1.96 // for a 95% confidence interval
+ 38. 
+. gen CI_lower = estimate - (`critical_value' * standarderror)
+ 39. gen CI_upper = estimate + (`critical_value' * standarderror)
+ 40. 
+. replace estimate = exp(estimate)-1
+ 41. 
+. replace CI_lower = exp(CI_lower)-1
+ 42. replace CI_upper = exp(CI_upper)-1
+ 43. 
+. 
+. cd "${paper_results}"
+ 44. export delimited using "EUETS_TWFEDID_`v'_exp_2008", replace
+ 45. 
+. restore
+ 46. }
+(15 vars, 1,550 obs)
+       panel variable:  id (unbalanced)
+        time variable:  year, 1990 to 2021
+                delta:  1 unit
+(96 observations deleted)
+(50 observations deleted)
+(58 observations deleted)
+(50 observations deleted)
+(50 observations deleted)
+(56 observations deleted)
+(50 observations deleted)
+(684 missing values generated)
+(684 real changes made)
+(57 real changes made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/figures
+Bootstrap replications (800). This may take some time.
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................     50
+..................................................     100
+..................................................     150
+..................................................     200
+..................................................     250
+..................................................     300
+..................................................     350
+..................................................     400
+..................................................     450
+..................................................     500
+..................................................     550
+..................................................     600
+..................................................     650
+..................................................     700
+..................................................     750
+..................................................     800
+
+
+Synthetic Difference-in-Differences Estimator
+
+-----------------------------------------------------------------------------
+log_emissi~s |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
+-------------+---------------------------------------------------------------
+  treat_post |  -0.32023    0.14587    -2.20    0.028    -0.60613    -0.03433
+-----------------------------------------------------------------------------
+95% CIs and p-values are based on Large-Sample approximations.
+Refer to Arkhangelsky et al., (2020) for theoretical derivations.
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/tables
+Note: file will be replaced when the first putexcel command is issued
+file EUETS_SDID_so2_tbc_2008.xlsx saved
+Bootstrap replications (800). This may take some time.
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................     50
+..................................................     100
+..................................................     150
+..................................................     200
+..................................................     250
+..................................................     300
+..................................................     350
+..................................................     400
+..................................................     450
+..................................................     500
+..................................................     550
+..................................................     600
+..................................................     650
+..................................................     700
+..................................................     750
+..................................................     800
+
+
+Difference-in-Differences Estimator
+
+-----------------------------------------------------------------------------
+log_emissi~s |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
+-------------+---------------------------------------------------------------
+  treat_post |  -0.39780    0.15468    -2.57    0.010    -0.70096    -0.09464
+-----------------------------------------------------------------------------
+95% CIs and p-values are based on Large-Sample approximations.
+
+Note: file will be replaced when the first putexcel command is issued
+file EUETS_TWFEDID_so2_tbc_2008.xlsx saved
+(output written to EUETS_SDID_so2_2008.csv)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/results
+file EUETS_SDID_so2_exp_2008.csv saved
+(1 real change made)
+(1 real change made)
+(1 real change made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/results
+file EUETS_TWFEDID_so2_exp_2008.csv saved
+(15 vars, 1,550 obs)
+       panel variable:  id (unbalanced)
+        time variable:  year, 1990 to 2021
+                delta:  1 unit
+(96 observations deleted)
+(50 observations deleted)
+(58 observations deleted)
+(50 observations deleted)
+(50 observations deleted)
+(56 observations deleted)
+(50 observations deleted)
+(684 missing values generated)
+(684 real changes made)
+(57 real changes made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/figures
+Bootstrap replications (800). This may take some time.
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................     50
+..................................................     100
+..................................................     150
+..................................................     200
+..................................................     250
+..................................................     300
+..................................................     350
+..................................................     400
+..................................................     450
+..................................................     500
+..................................................     550
+..................................................     600
+..................................................     650
+..................................................     700
+..................................................     750
+..................................................     800
+
+
+Synthetic Difference-in-Differences Estimator
+
+-----------------------------------------------------------------------------
+log_emissi~s |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
+-------------+---------------------------------------------------------------
+  treat_post |  -0.33493    0.08743    -3.83    0.000    -0.50628    -0.16358
+-----------------------------------------------------------------------------
+95% CIs and p-values are based on Large-Sample approximations.
+Refer to Arkhangelsky et al., (2020) for theoretical derivations.
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/tables
+Note: file will be replaced when the first putexcel command is issued
+file EUETS_SDID_pm25_tbc_2008.xlsx saved
+Bootstrap replications (800). This may take some time.
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................     50
+..................................................     100
+..................................................     150
+..................................................     200
+..................................................     250
+..................................................     300
+..................................................     350
+..................................................     400
+..................................................     450
+..................................................     500
+..................................................     550
+..................................................     600
+..................................................     650
+..................................................     700
+..................................................     750
+..................................................     800
+
+
+Difference-in-Differences Estimator
+
+-----------------------------------------------------------------------------
+log_emissi~s |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
+-------------+---------------------------------------------------------------
+  treat_post |  -0.50499    0.12142    -4.16    0.000    -0.74297    -0.26701
+-----------------------------------------------------------------------------
+95% CIs and p-values are based on Large-Sample approximations.
+
+Note: file will be replaced when the first putexcel command is issued
+file EUETS_TWFEDID_pm25_tbc_2008.xlsx saved
+(output written to EUETS_SDID_pm25_2008.csv)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/results
+file EUETS_SDID_pm25_exp_2008.csv saved
+(1 real change made)
+(1 real change made)
+(1 real change made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/results
+file EUETS_TWFEDID_pm25_exp_2008.csv saved
+(15 vars, 1,550 obs)
+       panel variable:  id (unbalanced)
+        time variable:  year, 1990 to 2021
+                delta:  1 unit
+(96 observations deleted)
+(50 observations deleted)
+(58 observations deleted)
+(50 observations deleted)
+(50 observations deleted)
+(56 observations deleted)
+(50 observations deleted)
+(684 missing values generated)
+(684 real changes made)
+(57 real changes made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/figures
+Bootstrap replications (800). This may take some time.
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................     50
+..................................................     100
+..................................................     150
+..................................................     200
+..................................................     250
+..................................................     300
+..................................................     350
+..................................................     400
+..................................................     450
+..................................................     500
+..................................................     550
+..................................................     600
+..................................................     650
+..................................................     700
+..................................................     750
+..................................................     800
+
+
+Synthetic Difference-in-Differences Estimator
+
+-----------------------------------------------------------------------------
+log_emissi~s |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
+-------------+---------------------------------------------------------------
+  treat_post |  -0.24388    0.07209    -3.38    0.001    -0.38518    -0.10259
+-----------------------------------------------------------------------------
+95% CIs and p-values are based on Large-Sample approximations.
+Refer to Arkhangelsky et al., (2020) for theoretical derivations.
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/tables
+Note: file will be replaced when the first putexcel command is issued
+file EUETS_SDID_nox_tbc_2008.xlsx saved
+Bootstrap replications (800). This may take some time.
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................     50
+..................................................     100
+..................................................     150
+..................................................     200
+..................................................     250
+..................................................     300
+..................................................     350
+..................................................     400
+..................................................     450
+..................................................     500
+..................................................     550
+..................................................     600
+..................................................     650
+..................................................     700
+..................................................     750
+..................................................     800
+
+
+Difference-in-Differences Estimator
+
+-----------------------------------------------------------------------------
+log_emissi~s |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
+-------------+---------------------------------------------------------------
+  treat_post |  -0.31451    0.09381    -3.35    0.001    -0.49837    -0.13065
+-----------------------------------------------------------------------------
+95% CIs and p-values are based on Large-Sample approximations.
+
+Note: file will be replaced when the first putexcel command is issued
+file EUETS_TWFEDID_nox_tbc_2008.xlsx saved
+(output written to EUETS_SDID_nox_2008.csv)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/results
+file EUETS_SDID_nox_exp_2008.csv saved
+(1 real change made)
+(1 real change made)
+(1 real change made)
+/Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/results
+file EUETS_TWFEDID_nox_exp_2008.csv saved
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/pierbasaglia/Dropbox/EUETS_cobenefits/STATA/logs/EUETS_SDID_2008.log
+  log type:  text
+ closed on:  22 Nov 2023, 17:00:17
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

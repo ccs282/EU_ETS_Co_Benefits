@@ -1,0 +1,2109 @@
+﻿GroupCode,GroupName,CountryCode,CountryName,
+AFE,Africa Eastern and Southern,AGO,Angola,
+AFE,Africa Eastern and Southern,BWA,Botswana,
+AFE,Africa Eastern and Southern,BDI,Burundi,
+AFE,Africa Eastern and Southern,COM,Comoros,
+AFE,Africa Eastern and Southern,COD,"Congo, Dem. Rep.",
+AFE,Africa Eastern and Southern,ERI,Eritrea,
+AFE,Africa Eastern and Southern,SWZ,Eswatini,
+AFE,Africa Eastern and Southern,ETH,Ethiopia,
+AFE,Africa Eastern and Southern,KEN,Kenya,
+AFE,Africa Eastern and Southern,LSO,Lesotho,
+AFE,Africa Eastern and Southern,MDG,Madagascar,
+AFE,Africa Eastern and Southern,MWI,Malawi,
+AFE,Africa Eastern and Southern,MUS,Mauritius,
+AFE,Africa Eastern and Southern,MOZ,Mozambique,
+AFE,Africa Eastern and Southern,NAM,Namibia,
+AFE,Africa Eastern and Southern,RWA,Rwanda,
+AFE,Africa Eastern and Southern,STP,São Tomé and Príncipe,
+AFE,Africa Eastern and Southern,SYC,Seychelles,
+AFE,Africa Eastern and Southern,SOM,Somalia,
+AFE,Africa Eastern and Southern,ZAF,South Africa,
+AFE,Africa Eastern and Southern,SSD,South Sudan,
+AFE,Africa Eastern and Southern,SDN,Sudan,
+AFE,Africa Eastern and Southern,TZA,Tanzania,
+AFE,Africa Eastern and Southern,UGA,Uganda,
+AFE,Africa Eastern and Southern,ZMB,Zambia,
+AFE,Africa Eastern and Southern,ZWE,Zimbabwe,
+AFW,Africa Western and Central,BEN,Benin,
+AFW,Africa Western and Central,BFA,Burkina Faso,
+AFW,Africa Western and Central,CPV,Cabo Verde,
+AFW,Africa Western and Central,CMR,Cameroon,
+AFW,Africa Western and Central,CAF,Central African Republic,
+AFW,Africa Western and Central,TCD,Chad,
+AFW,Africa Western and Central,COG,"Congo, Rep.",
+AFW,Africa Western and Central,CIV,Côte d’Ivoire,
+AFW,Africa Western and Central,GNQ,Equatorial Guinea,
+AFW,Africa Western and Central,GAB,Gabon,
+AFW,Africa Western and Central,GMB,"Gambia, The",
+AFW,Africa Western and Central,GHA,Ghana,
+AFW,Africa Western and Central,GIN,Guinea,
+AFW,Africa Western and Central,GNB,Guinea-Bissau,
+AFW,Africa Western and Central,LBR,Liberia,
+AFW,Africa Western and Central,MLI,Mali,
+AFW,Africa Western and Central,MRT,Mauritania,
+AFW,Africa Western and Central,NER,Niger,
+AFW,Africa Western and Central,NGA,Nigeria,
+AFW,Africa Western and Central,SEN,Senegal,
+AFW,Africa Western and Central,SLE,Sierra Leone,
+AFW,Africa Western and Central,TGO,Togo,
+ARB,Arab World,DZA,Algeria,Lower middle income
+ARB,Arab World,BHR,Bahrain,High income
+ARB,Arab World,COM,Comoros,Lower middle income
+ARB,Arab World,DJI,Djibouti,Lower middle income
+ARB,Arab World,EGY,"Egypt, Arab Rep.",Lower middle income
+ARB,Arab World,IRQ,Iraq,Upper middle income
+ARB,Arab World,JOR,Jordan,Lower middle income
+ARB,Arab World,KWT,Kuwait,High income
+ARB,Arab World,LBN,Lebanon,Lower middle income
+ARB,Arab World,LBY,Libya,Upper middle income
+ARB,Arab World,MRT,Mauritania,Lower middle income
+ARB,Arab World,MAR,Morocco,Lower middle income
+ARB,Arab World,OMN,Oman,High income
+ARB,Arab World,QAT,Qatar,High income
+ARB,Arab World,SAU,Saudi Arabia,High income
+ARB,Arab World,SOM,Somalia,Low income
+ARB,Arab World,SDN,Sudan,Low income
+ARB,Arab World,SYR,Syrian Arab Republic,Low income
+ARB,Arab World,TUN,Tunisia,Lower middle income
+ARB,Arab World,ARE,United Arab Emirates,High income
+ARB,Arab World,PSE,West Bank and Gaza,Upper middle income
+ARB,Arab World,YEM,"Yemen, Rep.",Low income
+CEB,Central Europe and the Baltics,BGR,Bulgaria,Upper middle income
+CEB,Central Europe and the Baltics,HRV,Croatia,High income
+CEB,Central Europe and the Baltics,CZE,Czechia,High income
+CEB,Central Europe and the Baltics,EST,Estonia,High income
+CEB,Central Europe and the Baltics,HUN,Hungary,High income
+CEB,Central Europe and the Baltics,LVA,Latvia,High income
+CEB,Central Europe and the Baltics,LTU,Lithuania,High income
+CEB,Central Europe and the Baltics,POL,Poland,High income
+CEB,Central Europe and the Baltics,ROU,Romania,High income
+CEB,Central Europe and the Baltics,SVK,Slovak Republic,High income
+CEB,Central Europe and the Baltics,SVN,Slovenia,High income
+CSS,Caribbean small states,ATG,Antigua and Barbuda,High income
+CSS,Caribbean small states,BHS,"Bahamas, The",High income
+CSS,Caribbean small states,BRB,Barbados,High income
+CSS,Caribbean small states,BLZ,Belize,Upper middle income
+CSS,Caribbean small states,DMA,Dominica,Upper middle income
+CSS,Caribbean small states,GRD,Grenada,Upper middle income
+CSS,Caribbean small states,GUY,Guyana,High income
+CSS,Caribbean small states,JAM,Jamaica,Upper middle income
+CSS,Caribbean small states,KNA,St. Kitts and Nevis,High income
+CSS,Caribbean small states,LCA,St. Lucia,Upper middle income
+CSS,Caribbean small states,VCT,St. Vincent and the Grenadines,Upper middle income
+CSS,Caribbean small states,SUR,Suriname,Upper middle income
+CSS,Caribbean small states,TTO,Trinidad and Tobago,High income
+EAP,East Asia & Pacific (excluding high income),KHM,Cambodia,Lower middle income
+EAP,East Asia & Pacific (excluding high income),CHN,China,Upper middle income
+EAP,East Asia & Pacific (excluding high income),FJI,Fiji,Upper middle income
+EAP,East Asia & Pacific (excluding high income),IDN,Indonesia,Upper middle income
+EAP,East Asia & Pacific (excluding high income),KIR,Kiribati,Lower middle income
+EAP,East Asia & Pacific (excluding high income),PRK,"Korea, Dem. People's Rep.",Low income
+EAP,East Asia & Pacific (excluding high income),LAO,Lao PDR,Lower middle income
+EAP,East Asia & Pacific (excluding high income),MYS,Malaysia,Upper middle income
+EAP,East Asia & Pacific (excluding high income),MHL,Marshall Islands,Upper middle income
+EAP,East Asia & Pacific (excluding high income),FSM,"Micronesia, Fed. Sts.",Lower middle income
+EAP,East Asia & Pacific (excluding high income),MNG,Mongolia,Lower middle income
+EAP,East Asia & Pacific (excluding high income),MMR,Myanmar,Lower middle income
+EAP,East Asia & Pacific (excluding high income),PLW,Palau,Upper middle income
+EAP,East Asia & Pacific (excluding high income),PNG,Papua New Guinea,Lower middle income
+EAP,East Asia & Pacific (excluding high income),PHL,Philippines,Lower middle income
+EAP,East Asia & Pacific (excluding high income),WSM,Samoa,Lower middle income
+EAP,East Asia & Pacific (excluding high income),SLB,Solomon Islands,Lower middle income
+EAP,East Asia & Pacific (excluding high income),THA,Thailand,Upper middle income
+EAP,East Asia & Pacific (excluding high income),TLS,Timor-Leste,Lower middle income
+EAP,East Asia & Pacific (excluding high income),TON,Tonga,Upper middle income
+EAP,East Asia & Pacific (excluding high income),TUV,Tuvalu,Upper middle income
+EAP,East Asia & Pacific (excluding high income),VUT,Vanuatu,Lower middle income
+EAP,East Asia & Pacific (excluding high income),VNM,Vietnam,Lower middle income
+EAR,Early-demographic dividend,DZA,Algeria,Lower middle income
+EAR,Early-demographic dividend,ARG,Argentina,Upper middle income
+EAR,Early-demographic dividend,BHR,Bahrain,High income
+EAR,Early-demographic dividend,BGD,Bangladesh,Lower middle income
+EAR,Early-demographic dividend,BLZ,Belize,Upper middle income
+EAR,Early-demographic dividend,BTN,Bhutan,Lower middle income
+EAR,Early-demographic dividend,BOL,Bolivia,Lower middle income
+EAR,Early-demographic dividend,BWA,Botswana,Upper middle income
+EAR,Early-demographic dividend,CPV,Cabo Verde,Lower middle income
+EAR,Early-demographic dividend,KHM,Cambodia,Lower middle income
+EAR,Early-demographic dividend,DJI,Djibouti,Lower middle income
+EAR,Early-demographic dividend,DOM,Dominican Republic,Upper middle income
+EAR,Early-demographic dividend,ECU,Ecuador,Upper middle income
+EAR,Early-demographic dividend,EGY,"Egypt, Arab Rep.",Lower middle income
+EAR,Early-demographic dividend,SLV,El Salvador,Upper middle income
+EAR,Early-demographic dividend,SWZ,Eswatini,Lower middle income
+EAR,Early-demographic dividend,ETH,Ethiopia,Low income
+EAR,Early-demographic dividend,GAB,Gabon,Upper middle income
+EAR,Early-demographic dividend,GHA,Ghana,Lower middle income
+EAR,Early-demographic dividend,GRD,Grenada,Upper middle income
+EAR,Early-demographic dividend,GTM,Guatemala,Upper middle income
+EAR,Early-demographic dividend,HTI,Haiti,Lower middle income
+EAR,Early-demographic dividend,HND,Honduras,Lower middle income
+EAR,Early-demographic dividend,IND,India,Lower middle income
+EAR,Early-demographic dividend,IDN,Indonesia,Upper middle income
+EAR,Early-demographic dividend,IRN,"Iran, Islamic Rep.",Lower middle income
+EAR,Early-demographic dividend,ISR,Israel,High income
+EAR,Early-demographic dividend,JOR,Jordan,Lower middle income
+EAR,Early-demographic dividend,KIR,Kiribati,Lower middle income
+EAR,Early-demographic dividend,LAO,Lao PDR,Lower middle income
+EAR,Early-demographic dividend,LSO,Lesotho,Lower middle income
+EAR,Early-demographic dividend,LBY,Libya,Upper middle income
+EAR,Early-demographic dividend,MDV,Maldives,Upper middle income
+EAR,Early-demographic dividend,MEX,Mexico,Upper middle income
+EAR,Early-demographic dividend,FSM,"Micronesia, Fed. Sts.",Lower middle income
+EAR,Early-demographic dividend,MMR,Myanmar,Lower middle income
+EAR,Early-demographic dividend,NAM,Namibia,Upper middle income
+EAR,Early-demographic dividend,NPL,Nepal,Lower middle income
+EAR,Early-demographic dividend,NIC,Nicaragua,Lower middle income
+EAR,Early-demographic dividend,PAK,Pakistan,Lower middle income
+EAR,Early-demographic dividend,PAN,Panama,High income
+EAR,Early-demographic dividend,PNG,Papua New Guinea,Lower middle income
+EAR,Early-demographic dividend,PRY,Paraguay,Upper middle income
+EAR,Early-demographic dividend,PER,Peru,Upper middle income
+EAR,Early-demographic dividend,PHL,Philippines,Lower middle income
+EAR,Early-demographic dividend,RWA,Rwanda,Low income
+EAR,Early-demographic dividend,WSM,Samoa,Lower middle income
+EAR,Early-demographic dividend,SAU,Saudi Arabia,High income
+EAR,Early-demographic dividend,SLB,Solomon Islands,Lower middle income
+EAR,Early-demographic dividend,ZAF,South Africa,Upper middle income
+EAR,Early-demographic dividend,SUR,Suriname,Upper middle income
+EAR,Early-demographic dividend,SYR,Syrian Arab Republic,Low income
+EAR,Early-demographic dividend,TJK,Tajikistan,Lower middle income
+EAR,Early-demographic dividend,TON,Tonga,Upper middle income
+EAR,Early-demographic dividend,TUR,Türkiye,Upper middle income
+EAR,Early-demographic dividend,TKM,Turkmenistan,Upper middle income
+EAR,Early-demographic dividend,UZB,Uzbekistan,Lower middle income
+EAR,Early-demographic dividend,VUT,Vanuatu,Lower middle income
+EAR,Early-demographic dividend,VEN,"Venezuela, RB",0
+EAR,Early-demographic dividend,PSE,West Bank and Gaza,Upper middle income
+EAR,Early-demographic dividend,YEM,"Yemen, Rep.",Low income
+EAR,Early-demographic dividend,ZWE,Zimbabwe,Lower middle income
+EAS,East Asia & Pacific,ASM,American Samoa,High income
+EAS,East Asia & Pacific,AUS,Australia,High income
+EAS,East Asia & Pacific,BRN,Brunei Darussalam,High income
+EAS,East Asia & Pacific,KHM,Cambodia,Lower middle income
+EAS,East Asia & Pacific,CHN,China,Upper middle income
+EAS,East Asia & Pacific,FJI,Fiji,Upper middle income
+EAS,East Asia & Pacific,PYF,French Polynesia,High income
+EAS,East Asia & Pacific,GUM,Guam,High income
+EAS,East Asia & Pacific,HKG,"Hong Kong SAR, China",High income
+EAS,East Asia & Pacific,IDN,Indonesia,Upper middle income
+EAS,East Asia & Pacific,JPN,Japan,High income
+EAS,East Asia & Pacific,KIR,Kiribati,Lower middle income
+EAS,East Asia & Pacific,PRK,"Korea, Dem. People's Rep.",Low income
+EAS,East Asia & Pacific,KOR,"Korea, Rep.",High income
+EAS,East Asia & Pacific,LAO,Lao PDR,Lower middle income
+EAS,East Asia & Pacific,MAC,"Macao SAR, China",High income
+EAS,East Asia & Pacific,MYS,Malaysia,Upper middle income
+EAS,East Asia & Pacific,MHL,Marshall Islands,Upper middle income
+EAS,East Asia & Pacific,FSM,"Micronesia, Fed. Sts.",Lower middle income
+EAS,East Asia & Pacific,MNG,Mongolia,Lower middle income
+EAS,East Asia & Pacific,MMR,Myanmar,Lower middle income
+EAS,East Asia & Pacific,NRU,Nauru,High income
+EAS,East Asia & Pacific,NCL,New Caledonia,High income
+EAS,East Asia & Pacific,NZL,New Zealand,High income
+EAS,East Asia & Pacific,MNP,Northern Mariana Islands,High income
+EAS,East Asia & Pacific,PLW,Palau,Upper middle income
+EAS,East Asia & Pacific,PNG,Papua New Guinea,Lower middle income
+EAS,East Asia & Pacific,PHL,Philippines,Lower middle income
+EAS,East Asia & Pacific,WSM,Samoa,Lower middle income
+EAS,East Asia & Pacific,SGP,Singapore,High income
+EAS,East Asia & Pacific,SLB,Solomon Islands,Lower middle income
+EAS,East Asia & Pacific,TWN,"Taiwan, China",High income
+EAS,East Asia & Pacific,THA,Thailand,Upper middle income
+EAS,East Asia & Pacific,TLS,Timor-Leste,Lower middle income
+EAS,East Asia & Pacific,TON,Tonga,Upper middle income
+EAS,East Asia & Pacific,TUV,Tuvalu,Upper middle income
+EAS,East Asia & Pacific,VUT,Vanuatu,Lower middle income
+EAS,East Asia & Pacific,VNM,Vietnam,Lower middle income
+ECA,Europe & Central Asia (excluding high income),ALB,Albania,Upper middle income
+ECA,Europe & Central Asia (excluding high income),ARM,Armenia,Upper middle income
+ECA,Europe & Central Asia (excluding high income),AZE,Azerbaijan,Upper middle income
+ECA,Europe & Central Asia (excluding high income),BLR,Belarus,Upper middle income
+ECA,Europe & Central Asia (excluding high income),BIH,Bosnia and Herzegovina,Upper middle income
+ECA,Europe & Central Asia (excluding high income),BGR,Bulgaria,Upper middle income
+ECA,Europe & Central Asia (excluding high income),GEO,Georgia,Upper middle income
+ECA,Europe & Central Asia (excluding high income),KAZ,Kazakhstan,Upper middle income
+ECA,Europe & Central Asia (excluding high income),XKX,Kosovo,Upper middle income
+ECA,Europe & Central Asia (excluding high income),KGZ,Kyrgyz Republic,Lower middle income
+ECA,Europe & Central Asia (excluding high income),MDA,Moldova,Upper middle income
+ECA,Europe & Central Asia (excluding high income),MNE,Montenegro,Upper middle income
+ECA,Europe & Central Asia (excluding high income),MKD,North Macedonia,Upper middle income
+ECA,Europe & Central Asia (excluding high income),RUS,Russian Federation,Upper middle income
+ECA,Europe & Central Asia (excluding high income),SRB,Serbia,Upper middle income
+ECA,Europe & Central Asia (excluding high income),TJK,Tajikistan,Lower middle income
+ECA,Europe & Central Asia (excluding high income),TUR,Türkiye,Upper middle income
+ECA,Europe & Central Asia (excluding high income),TKM,Turkmenistan,Upper middle income
+ECA,Europe & Central Asia (excluding high income),UKR,Ukraine,Lower middle income
+ECA,Europe & Central Asia (excluding high income),UZB,Uzbekistan,Lower middle income
+ECS,Europe & Central Asia,ALB,Albania,Upper middle income
+ECS,Europe & Central Asia,AND,Andorra,High income
+ECS,Europe & Central Asia,ARM,Armenia,Upper middle income
+ECS,Europe & Central Asia,AUT,Austria,High income
+ECS,Europe & Central Asia,AZE,Azerbaijan,Upper middle income
+ECS,Europe & Central Asia,BLR,Belarus,Upper middle income
+ECS,Europe & Central Asia,BEL,Belgium,High income
+ECS,Europe & Central Asia,BIH,Bosnia and Herzegovina,Upper middle income
+ECS,Europe & Central Asia,BGR,Bulgaria,Upper middle income
+ECS,Europe & Central Asia,CHI,Channel Islands,High income
+ECS,Europe & Central Asia,HRV,Croatia,High income
+ECS,Europe & Central Asia,CYP,Cyprus,High income
+ECS,Europe & Central Asia,CZE,Czechia,High income
+ECS,Europe & Central Asia,DNK,Denmark,High income
+ECS,Europe & Central Asia,EST,Estonia,High income
+ECS,Europe & Central Asia,FRO,Faroe Islands,High income
+ECS,Europe & Central Asia,FIN,Finland,High income
+ECS,Europe & Central Asia,FRA,France,High income
+ECS,Europe & Central Asia,GEO,Georgia,Upper middle income
+ECS,Europe & Central Asia,DEU,Germany,High income
+ECS,Europe & Central Asia,GIB,Gibraltar,High income
+ECS,Europe & Central Asia,GRC,Greece,High income
+ECS,Europe & Central Asia,GRL,Greenland,High income
+ECS,Europe & Central Asia,HUN,Hungary,High income
+ECS,Europe & Central Asia,ISL,Iceland,High income
+ECS,Europe & Central Asia,IRL,Ireland,High income
+ECS,Europe & Central Asia,IMN,Isle of Man,High income
+ECS,Europe & Central Asia,ITA,Italy,High income
+ECS,Europe & Central Asia,KAZ,Kazakhstan,Upper middle income
+ECS,Europe & Central Asia,XKX,Kosovo,Upper middle income
+ECS,Europe & Central Asia,KGZ,Kyrgyz Republic,Lower middle income
+ECS,Europe & Central Asia,LVA,Latvia,High income
+ECS,Europe & Central Asia,LIE,Liechtenstein,High income
+ECS,Europe & Central Asia,LTU,Lithuania,High income
+ECS,Europe & Central Asia,LUX,Luxembourg,High income
+ECS,Europe & Central Asia,MDA,Moldova,Upper middle income
+ECS,Europe & Central Asia,MCO,Monaco,High income
+ECS,Europe & Central Asia,MNE,Montenegro,Upper middle income
+ECS,Europe & Central Asia,NLD,Netherlands,High income
+ECS,Europe & Central Asia,MKD,North Macedonia,Upper middle income
+ECS,Europe & Central Asia,NOR,Norway,High income
+ECS,Europe & Central Asia,POL,Poland,High income
+ECS,Europe & Central Asia,PRT,Portugal,High income
+ECS,Europe & Central Asia,ROU,Romania,High income
+ECS,Europe & Central Asia,RUS,Russian Federation,Upper middle income
+ECS,Europe & Central Asia,SMR,San Marino,High income
+ECS,Europe & Central Asia,SRB,Serbia,Upper middle income
+ECS,Europe & Central Asia,SVK,Slovak Republic,High income
+ECS,Europe & Central Asia,SVN,Slovenia,High income
+ECS,Europe & Central Asia,ESP,Spain,High income
+ECS,Europe & Central Asia,SWE,Sweden,High income
+ECS,Europe & Central Asia,CHE,Switzerland,High income
+ECS,Europe & Central Asia,TJK,Tajikistan,Lower middle income
+ECS,Europe & Central Asia,TUR,Türkiye,Upper middle income
+ECS,Europe & Central Asia,TKM,Turkmenistan,Upper middle income
+ECS,Europe & Central Asia,UKR,Ukraine,Lower middle income
+ECS,Europe & Central Asia,GBR,United Kingdom,High income
+ECS,Europe & Central Asia,UZB,Uzbekistan,Lower middle income
+EMU,Euro area,AUT,Austria,High income
+EMU,Euro area,BEL,Belgium,High income
+EMU,Euro area,CYP,Cyprus,High income
+EMU,Euro area,EST,Estonia,High income
+EMU,Euro area,FIN,Finland,High income
+EMU,Euro area,FRA,France,High income
+EMU,Euro area,DEU,Germany,High income
+EMU,Euro area,GRC,Greece,High income
+EMU,Euro area,IRL,Ireland,High income
+EMU,Euro area,ITA,Italy,High income
+EMU,Euro area,LVA,Latvia,High income
+EMU,Euro area,LTU,Lithuania,High income
+EMU,Euro area,LUX,Luxembourg,High income
+EMU,Euro area,MLT,Malta,High income
+EMU,Euro area,NLD,Netherlands,High income
+EMU,Euro area,PRT,Portugal,High income
+EMU,Euro area,SVK,Slovak Republic,High income
+EMU,Euro area,SVN,Slovenia,High income
+EMU,Euro area,ESP,Spain,High income
+EUU,European Union,AUT,Austria,High income
+EUU,European Union,BEL,Belgium,High income
+EUU,European Union,BGR,Bulgaria,Upper middle income
+EUU,European Union,HRV,Croatia,High income
+EUU,European Union,CYP,Cyprus,High income
+EUU,European Union,CZE,Czechia,High income
+EUU,European Union,DNK,Denmark,High income
+EUU,European Union,EST,Estonia,High income
+EUU,European Union,FIN,Finland,High income
+EUU,European Union,FRA,France,High income
+EUU,European Union,DEU,Germany,High income
+EUU,European Union,GRC,Greece,High income
+EUU,European Union,HUN,Hungary,High income
+EUU,European Union,IRL,Ireland,High income
+EUU,European Union,ITA,Italy,High income
+EUU,European Union,LVA,Latvia,High income
+EUU,European Union,LTU,Lithuania,High income
+EUU,European Union,LUX,Luxembourg,High income
+EUU,European Union,MLT,Malta,High income
+EUU,European Union,NLD,Netherlands,High income
+EUU,European Union,POL,Poland,High income
+EUU,European Union,PRT,Portugal,High income
+EUU,European Union,ROU,Romania,High income
+EUU,European Union,SVK,Slovak Republic,High income
+EUU,European Union,SVN,Slovenia,High income
+EUU,European Union,ESP,Spain,High income
+EUU,European Union,SWE,Sweden,High income
+FCS,Fragile and conflict affected situations,AFG,Afghanistan,Low income
+FCS,Fragile and conflict affected situations,BFA,Burkina Faso,Low income
+FCS,Fragile and conflict affected situations,BDI,Burundi,Low income
+FCS,Fragile and conflict affected situations,CMR,Cameroon,Lower middle income
+FCS,Fragile and conflict affected situations,CAF,Central African Republic,Low income
+FCS,Fragile and conflict affected situations,TCD,Chad,Low income
+FCS,Fragile and conflict affected situations,COM,Comoros,Lower middle income
+FCS,Fragile and conflict affected situations,COD,"Congo, Dem. Rep.",Low income
+FCS,Fragile and conflict affected situations,COG,"Congo, Rep.",Lower middle income
+FCS,Fragile and conflict affected situations,ERI,Eritrea,Low income
+FCS,Fragile and conflict affected situations,ETH,Ethiopia,Low income
+FCS,Fragile and conflict affected situations,GNB,Guinea-Bissau,Low income
+FCS,Fragile and conflict affected situations,HTI,Haiti,Lower middle income
+FCS,Fragile and conflict affected situations,IRQ,Iraq,Upper middle income
+FCS,Fragile and conflict affected situations,KIR,Kiribati,Lower middle income
+FCS,Fragile and conflict affected situations,XKX,Kosovo,Upper middle income
+FCS,Fragile and conflict affected situations,LBN,Lebanon,Lower middle income
+FCS,Fragile and conflict affected situations,LBY,Libya,Upper middle income
+FCS,Fragile and conflict affected situations,MLI,Mali,Low income
+FCS,Fragile and conflict affected situations,MHL,Marshall Islands,Upper middle income
+FCS,Fragile and conflict affected situations,FSM,"Micronesia, Fed. Sts.",Lower middle income
+FCS,Fragile and conflict affected situations,MOZ,Mozambique,Low income
+FCS,Fragile and conflict affected situations,MMR,Myanmar,Lower middle income
+FCS,Fragile and conflict affected situations,NER,Niger,Low income
+FCS,Fragile and conflict affected situations,NGA,Nigeria,Lower middle income
+FCS,Fragile and conflict affected situations,PNG,Papua New Guinea,Lower middle income
+FCS,Fragile and conflict affected situations,STP,São Tomé and Príncipe,Lower middle income
+FCS,Fragile and conflict affected situations,SLB,Solomon Islands,Lower middle income
+FCS,Fragile and conflict affected situations,SOM,Somalia,Low income
+FCS,Fragile and conflict affected situations,SSD,South Sudan,Low income
+FCS,Fragile and conflict affected situations,SDN,Sudan,Low income
+FCS,Fragile and conflict affected situations,SYR,Syrian Arab Republic,Low income
+FCS,Fragile and conflict affected situations,TLS,Timor-Leste,Lower middle income
+FCS,Fragile and conflict affected situations,TUV,Tuvalu,Upper middle income
+FCS,Fragile and conflict affected situations,UKR,Ukraine,Lower middle income
+FCS,Fragile and conflict affected situations,VEN,"Venezuela, RB",0
+FCS,Fragile and conflict affected situations,PSE,West Bank and Gaza,Upper middle income
+FCS,Fragile and conflict affected situations,YEM,"Yemen, Rep.",Low income
+FCS,Fragile and conflict affected situations,ZWE,Zimbabwe,Lower middle income
+HIC,High income,ASM,American Samoa,High income
+HIC,High income,AND,Andorra,High income
+HIC,High income,ATG,Antigua and Barbuda,High income
+HIC,High income,ABW,Aruba,High income
+HIC,High income,AUS,Australia,High income
+HIC,High income,AUT,Austria,High income
+HIC,High income,BHS,"Bahamas, The",High income
+HIC,High income,BHR,Bahrain,High income
+HIC,High income,BRB,Barbados,High income
+HIC,High income,BEL,Belgium,High income
+HIC,High income,BMU,Bermuda,High income
+HIC,High income,VGB,British Virgin Islands,High income
+HIC,High income,BRN,Brunei Darussalam,High income
+HIC,High income,CAN,Canada,High income
+HIC,High income,CYM,Cayman Islands,High income
+HIC,High income,CHI,Channel Islands,High income
+HIC,High income,CHL,Chile,High income
+HIC,High income,HRV,Croatia,High income
+HIC,High income,CUW,Curaçao,High income
+HIC,High income,CYP,Cyprus,High income
+HIC,High income,CZE,Czechia,High income
+HIC,High income,DNK,Denmark,High income
+HIC,High income,EST,Estonia,High income
+HIC,High income,FRO,Faroe Islands,High income
+HIC,High income,FIN,Finland,High income
+HIC,High income,FRA,France,High income
+HIC,High income,PYF,French Polynesia,High income
+HIC,High income,DEU,Germany,High income
+HIC,High income,GIB,Gibraltar,High income
+HIC,High income,GRC,Greece,High income
+HIC,High income,GRL,Greenland,High income
+HIC,High income,GUM,Guam,High income
+HIC,High income,GUY,Guyana,High income
+HIC,High income,HKG,"Hong Kong SAR, China",High income
+HIC,High income,HUN,Hungary,High income
+HIC,High income,ISL,Iceland,High income
+HIC,High income,IRL,Ireland,High income
+HIC,High income,IMN,Isle of Man,High income
+HIC,High income,ISR,Israel,High income
+HIC,High income,ITA,Italy,High income
+HIC,High income,JPN,Japan,High income
+HIC,High income,KOR,"Korea, Rep.",High income
+HIC,High income,KWT,Kuwait,High income
+HIC,High income,LVA,Latvia,High income
+HIC,High income,LIE,Liechtenstein,High income
+HIC,High income,LTU,Lithuania,High income
+HIC,High income,LUX,Luxembourg,High income
+HIC,High income,MAC,"Macao SAR, China",High income
+HIC,High income,MLT,Malta,High income
+HIC,High income,MCO,Monaco,High income
+HIC,High income,NRU,Nauru,High income
+HIC,High income,NLD,Netherlands,High income
+HIC,High income,NCL,New Caledonia,High income
+HIC,High income,NZL,New Zealand,High income
+HIC,High income,MNP,Northern Mariana Islands,High income
+HIC,High income,NOR,Norway,High income
+HIC,High income,OMN,Oman,High income
+HIC,High income,PAN,Panama,High income
+HIC,High income,POL,Poland,High income
+HIC,High income,PRT,Portugal,High income
+HIC,High income,PRI,Puerto Rico,High income
+HIC,High income,QAT,Qatar,High income
+HIC,High income,ROU,Romania,High income
+HIC,High income,SMR,San Marino,High income
+HIC,High income,SAU,Saudi Arabia,High income
+HIC,High income,SYC,Seychelles,High income
+HIC,High income,SGP,Singapore,High income
+HIC,High income,SXM,Sint Maarten (Dutch part),High income
+HIC,High income,SVK,Slovak Republic,High income
+HIC,High income,SVN,Slovenia,High income
+HIC,High income,ESP,Spain,High income
+HIC,High income,KNA,St. Kitts and Nevis,High income
+HIC,High income,MAF,St. Martin (French part),High income
+HIC,High income,SWE,Sweden,High income
+HIC,High income,CHE,Switzerland,High income
+HIC,High income,TWN,"Taiwan, China",High income
+HIC,High income,TTO,Trinidad and Tobago,High income
+HIC,High income,TCA,Turks and Caicos Islands,High income
+HIC,High income,ARE,United Arab Emirates,High income
+HIC,High income,GBR,United Kingdom,High income
+HIC,High income,USA,United States,High income
+HIC,High income,URY,Uruguay,High income
+HIC,High income,VIR,Virgin Islands (U.S.),High income
+HPC,Heavily indebted poor countries (HIPC),AFG,Afghanistan,Low income
+HPC,Heavily indebted poor countries (HIPC),BEN,Benin,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),BOL,Bolivia,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),BFA,Burkina Faso,Low income
+HPC,Heavily indebted poor countries (HIPC),BDI,Burundi,Low income
+HPC,Heavily indebted poor countries (HIPC),CMR,Cameroon,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),CAF,Central African Republic,Low income
+HPC,Heavily indebted poor countries (HIPC),TCD,Chad,Low income
+HPC,Heavily indebted poor countries (HIPC),COM,Comoros,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),COD,"Congo, Dem. Rep.",Low income
+HPC,Heavily indebted poor countries (HIPC),COG,"Congo, Rep.",Lower middle income
+HPC,Heavily indebted poor countries (HIPC),CIV,Côte d’Ivoire,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),ERI,Eritrea,Low income
+HPC,Heavily indebted poor countries (HIPC),ETH,Ethiopia,Low income
+HPC,Heavily indebted poor countries (HIPC),GMB,"Gambia, The",Low income
+HPC,Heavily indebted poor countries (HIPC),GHA,Ghana,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),GIN,Guinea,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),GNB,Guinea-Bissau,Low income
+HPC,Heavily indebted poor countries (HIPC),GUY,Guyana,High income
+HPC,Heavily indebted poor countries (HIPC),HTI,Haiti,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),HND,Honduras,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),LBR,Liberia,Low income
+HPC,Heavily indebted poor countries (HIPC),MDG,Madagascar,Low income
+HPC,Heavily indebted poor countries (HIPC),MWI,Malawi,Low income
+HPC,Heavily indebted poor countries (HIPC),MLI,Mali,Low income
+HPC,Heavily indebted poor countries (HIPC),MRT,Mauritania,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),MOZ,Mozambique,Low income
+HPC,Heavily indebted poor countries (HIPC),NIC,Nicaragua,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),NER,Niger,Low income
+HPC,Heavily indebted poor countries (HIPC),RWA,Rwanda,Low income
+HPC,Heavily indebted poor countries (HIPC),STP,São Tomé and Príncipe,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),SEN,Senegal,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),SLE,Sierra Leone,Low income
+HPC,Heavily indebted poor countries (HIPC),SOM,Somalia,Low income
+HPC,Heavily indebted poor countries (HIPC),SDN,Sudan,Low income
+HPC,Heavily indebted poor countries (HIPC),TZA,Tanzania,Lower middle income
+HPC,Heavily indebted poor countries (HIPC),TGO,Togo,Low income
+HPC,Heavily indebted poor countries (HIPC),UGA,Uganda,Low income
+HPC,Heavily indebted poor countries (HIPC),ZMB,Zambia,Lower middle income
+IBD,IBRD only,ALB,Albania,Upper middle income
+IBD,IBRD only,DZA,Algeria,Lower middle income
+IBD,IBRD only,AGO,Angola,Lower middle income
+IBD,IBRD only,ATG,Antigua and Barbuda,High income
+IBD,IBRD only,ARG,Argentina,Upper middle income
+IBD,IBRD only,ARM,Armenia,Upper middle income
+IBD,IBRD only,AZE,Azerbaijan,Upper middle income
+IBD,IBRD only,BLR,Belarus,Upper middle income
+IBD,IBRD only,BLZ,Belize,Upper middle income
+IBD,IBRD only,BOL,Bolivia,Lower middle income
+IBD,IBRD only,BIH,Bosnia and Herzegovina,Upper middle income
+IBD,IBRD only,BWA,Botswana,Upper middle income
+IBD,IBRD only,BRA,Brazil,Upper middle income
+IBD,IBRD only,BGR,Bulgaria,Upper middle income
+IBD,IBRD only,CHL,Chile,High income
+IBD,IBRD only,CHN,China,Upper middle income
+IBD,IBRD only,COL,Colombia,Upper middle income
+IBD,IBRD only,CRI,Costa Rica,Upper middle income
+IBD,IBRD only,HRV,Croatia,High income
+IBD,IBRD only,DOM,Dominican Republic,Upper middle income
+IBD,IBRD only,ECU,Ecuador,Upper middle income
+IBD,IBRD only,EGY,"Egypt, Arab Rep.",Lower middle income
+IBD,IBRD only,SLV,El Salvador,Upper middle income
+IBD,IBRD only,GNQ,Equatorial Guinea,Upper middle income
+IBD,IBRD only,SWZ,Eswatini,Lower middle income
+IBD,IBRD only,GAB,Gabon,Upper middle income
+IBD,IBRD only,GEO,Georgia,Upper middle income
+IBD,IBRD only,GTM,Guatemala,Upper middle income
+IBD,IBRD only,IND,India,Lower middle income
+IBD,IBRD only,IDN,Indonesia,Upper middle income
+IBD,IBRD only,IRN,"Iran, Islamic Rep.",Lower middle income
+IBD,IBRD only,IRQ,Iraq,Upper middle income
+IBD,IBRD only,JAM,Jamaica,Upper middle income
+IBD,IBRD only,JOR,Jordan,Lower middle income
+IBD,IBRD only,KAZ,Kazakhstan,Upper middle income
+IBD,IBRD only,LBN,Lebanon,Lower middle income
+IBD,IBRD only,LBY,Libya,Upper middle income
+IBD,IBRD only,MYS,Malaysia,Upper middle income
+IBD,IBRD only,MUS,Mauritius,Upper middle income
+IBD,IBRD only,MEX,Mexico,Upper middle income
+IBD,IBRD only,MDA,Moldova,Upper middle income
+IBD,IBRD only,MNG,Mongolia,Lower middle income
+IBD,IBRD only,MNE,Montenegro,Upper middle income
+IBD,IBRD only,MAR,Morocco,Lower middle income
+IBD,IBRD only,NAM,Namibia,Upper middle income
+IBD,IBRD only,NRU,Nauru,High income
+IBD,IBRD only,MKD,North Macedonia,Upper middle income
+IBD,IBRD only,PLW,Palau,Upper middle income
+IBD,IBRD only,PAN,Panama,High income
+IBD,IBRD only,PRY,Paraguay,Upper middle income
+IBD,IBRD only,PER,Peru,Upper middle income
+IBD,IBRD only,PHL,Philippines,Lower middle income
+IBD,IBRD only,POL,Poland,High income
+IBD,IBRD only,ROU,Romania,High income
+IBD,IBRD only,RUS,Russian Federation,Upper middle income
+IBD,IBRD only,SRB,Serbia,Upper middle income
+IBD,IBRD only,SYC,Seychelles,High income
+IBD,IBRD only,ZAF,South Africa,Upper middle income
+IBD,IBRD only,KNA,St. Kitts and Nevis,High income
+IBD,IBRD only,SUR,Suriname,Upper middle income
+IBD,IBRD only,THA,Thailand,Upper middle income
+IBD,IBRD only,TTO,Trinidad and Tobago,High income
+IBD,IBRD only,TUN,Tunisia,Lower middle income
+IBD,IBRD only,TUR,Türkiye,Upper middle income
+IBD,IBRD only,TKM,Turkmenistan,Upper middle income
+IBD,IBRD only,UKR,Ukraine,Lower middle income
+IBD,IBRD only,URY,Uruguay,High income
+IBD,IBRD only,VEN,"Venezuela, RB",0
+IBD,IBRD only,VNM,Vietnam,Lower middle income
+IBT,IDA & IBRD total,AFG,Afghanistan,Low income
+IBT,IDA & IBRD total,ALB,Albania,Upper middle income
+IBT,IDA & IBRD total,DZA,Algeria,Lower middle income
+IBT,IDA & IBRD total,AGO,Angola,Lower middle income
+IBT,IDA & IBRD total,ATG,Antigua and Barbuda,High income
+IBT,IDA & IBRD total,ARG,Argentina,Upper middle income
+IBT,IDA & IBRD total,ARM,Armenia,Upper middle income
+IBT,IDA & IBRD total,AZE,Azerbaijan,Upper middle income
+IBT,IDA & IBRD total,BGD,Bangladesh,Lower middle income
+IBT,IDA & IBRD total,BLR,Belarus,Upper middle income
+IBT,IDA & IBRD total,BLZ,Belize,Upper middle income
+IBT,IDA & IBRD total,BEN,Benin,Lower middle income
+IBT,IDA & IBRD total,BTN,Bhutan,Lower middle income
+IBT,IDA & IBRD total,BOL,Bolivia,Lower middle income
+IBT,IDA & IBRD total,BIH,Bosnia and Herzegovina,Upper middle income
+IBT,IDA & IBRD total,BWA,Botswana,Upper middle income
+IBT,IDA & IBRD total,BRA,Brazil,Upper middle income
+IBT,IDA & IBRD total,BGR,Bulgaria,Upper middle income
+IBT,IDA & IBRD total,BFA,Burkina Faso,Low income
+IBT,IDA & IBRD total,BDI,Burundi,Low income
+IBT,IDA & IBRD total,CPV,Cabo Verde,Lower middle income
+IBT,IDA & IBRD total,KHM,Cambodia,Lower middle income
+IBT,IDA & IBRD total,CMR,Cameroon,Lower middle income
+IBT,IDA & IBRD total,CAF,Central African Republic,Low income
+IBT,IDA & IBRD total,TCD,Chad,Low income
+IBT,IDA & IBRD total,CHL,Chile,High income
+IBT,IDA & IBRD total,CHN,China,Upper middle income
+IBT,IDA & IBRD total,COL,Colombia,Upper middle income
+IBT,IDA & IBRD total,COM,Comoros,Lower middle income
+IBT,IDA & IBRD total,COD,"Congo, Dem. Rep.",Low income
+IBT,IDA & IBRD total,COG,"Congo, Rep.",Lower middle income
+IBT,IDA & IBRD total,CRI,Costa Rica,Upper middle income
+IBT,IDA & IBRD total,CIV,Côte d’Ivoire,Lower middle income
+IBT,IDA & IBRD total,HRV,Croatia,High income
+IBT,IDA & IBRD total,DJI,Djibouti,Lower middle income
+IBT,IDA & IBRD total,DMA,Dominica,Upper middle income
+IBT,IDA & IBRD total,DOM,Dominican Republic,Upper middle income
+IBT,IDA & IBRD total,ECU,Ecuador,Upper middle income
+IBT,IDA & IBRD total,EGY,"Egypt, Arab Rep.",Lower middle income
+IBT,IDA & IBRD total,SLV,El Salvador,Upper middle income
+IBT,IDA & IBRD total,GNQ,Equatorial Guinea,Upper middle income
+IBT,IDA & IBRD total,ERI,Eritrea,Low income
+IBT,IDA & IBRD total,SWZ,Eswatini,Lower middle income
+IBT,IDA & IBRD total,ETH,Ethiopia,Low income
+IBT,IDA & IBRD total,FJI,Fiji,Upper middle income
+IBT,IDA & IBRD total,GAB,Gabon,Upper middle income
+IBT,IDA & IBRD total,GMB,"Gambia, The",Low income
+IBT,IDA & IBRD total,GEO,Georgia,Upper middle income
+IBT,IDA & IBRD total,GHA,Ghana,Lower middle income
+IBT,IDA & IBRD total,GRD,Grenada,Upper middle income
+IBT,IDA & IBRD total,GTM,Guatemala,Upper middle income
+IBT,IDA & IBRD total,GIN,Guinea,Lower middle income
+IBT,IDA & IBRD total,GNB,Guinea-Bissau,Low income
+IBT,IDA & IBRD total,GUY,Guyana,High income
+IBT,IDA & IBRD total,HTI,Haiti,Lower middle income
+IBT,IDA & IBRD total,HND,Honduras,Lower middle income
+IBT,IDA & IBRD total,IND,India,Lower middle income
+IBT,IDA & IBRD total,IDN,Indonesia,Upper middle income
+IBT,IDA & IBRD total,IRN,"Iran, Islamic Rep.",Lower middle income
+IBT,IDA & IBRD total,IRQ,Iraq,Upper middle income
+IBT,IDA & IBRD total,JAM,Jamaica,Upper middle income
+IBT,IDA & IBRD total,JOR,Jordan,Lower middle income
+IBT,IDA & IBRD total,KAZ,Kazakhstan,Upper middle income
+IBT,IDA & IBRD total,KEN,Kenya,Lower middle income
+IBT,IDA & IBRD total,KIR,Kiribati,Lower middle income
+IBT,IDA & IBRD total,XKX,Kosovo,Upper middle income
+IBT,IDA & IBRD total,KGZ,Kyrgyz Republic,Lower middle income
+IBT,IDA & IBRD total,LAO,Lao PDR,Lower middle income
+IBT,IDA & IBRD total,LBN,Lebanon,Lower middle income
+IBT,IDA & IBRD total,LSO,Lesotho,Lower middle income
+IBT,IDA & IBRD total,LBR,Liberia,Low income
+IBT,IDA & IBRD total,LBY,Libya,Upper middle income
+IBT,IDA & IBRD total,MDG,Madagascar,Low income
+IBT,IDA & IBRD total,MWI,Malawi,Low income
+IBT,IDA & IBRD total,MYS,Malaysia,Upper middle income
+IBT,IDA & IBRD total,MDV,Maldives,Upper middle income
+IBT,IDA & IBRD total,MLI,Mali,Low income
+IBT,IDA & IBRD total,MHL,Marshall Islands,Upper middle income
+IBT,IDA & IBRD total,MRT,Mauritania,Lower middle income
+IBT,IDA & IBRD total,MUS,Mauritius,Upper middle income
+IBT,IDA & IBRD total,MEX,Mexico,Upper middle income
+IBT,IDA & IBRD total,FSM,"Micronesia, Fed. Sts.",Lower middle income
+IBT,IDA & IBRD total,MDA,Moldova,Upper middle income
+IBT,IDA & IBRD total,MNG,Mongolia,Lower middle income
+IBT,IDA & IBRD total,MNE,Montenegro,Upper middle income
+IBT,IDA & IBRD total,MAR,Morocco,Lower middle income
+IBT,IDA & IBRD total,MOZ,Mozambique,Low income
+IBT,IDA & IBRD total,MMR,Myanmar,Lower middle income
+IBT,IDA & IBRD total,NAM,Namibia,Upper middle income
+IBT,IDA & IBRD total,NRU,Nauru,High income
+IBT,IDA & IBRD total,NPL,Nepal,Lower middle income
+IBT,IDA & IBRD total,NIC,Nicaragua,Lower middle income
+IBT,IDA & IBRD total,NER,Niger,Low income
+IBT,IDA & IBRD total,NGA,Nigeria,Lower middle income
+IBT,IDA & IBRD total,MKD,North Macedonia,Upper middle income
+IBT,IDA & IBRD total,PAK,Pakistan,Lower middle income
+IBT,IDA & IBRD total,PLW,Palau,Upper middle income
+IBT,IDA & IBRD total,PAN,Panama,High income
+IBT,IDA & IBRD total,PNG,Papua New Guinea,Lower middle income
+IBT,IDA & IBRD total,PRY,Paraguay,Upper middle income
+IBT,IDA & IBRD total,PER,Peru,Upper middle income
+IBT,IDA & IBRD total,PHL,Philippines,Lower middle income
+IBT,IDA & IBRD total,POL,Poland,High income
+IBT,IDA & IBRD total,ROU,Romania,High income
+IBT,IDA & IBRD total,RUS,Russian Federation,Upper middle income
+IBT,IDA & IBRD total,RWA,Rwanda,Low income
+IBT,IDA & IBRD total,WSM,Samoa,Lower middle income
+IBT,IDA & IBRD total,STP,São Tomé and Príncipe,Lower middle income
+IBT,IDA & IBRD total,SEN,Senegal,Lower middle income
+IBT,IDA & IBRD total,SRB,Serbia,Upper middle income
+IBT,IDA & IBRD total,SYC,Seychelles,High income
+IBT,IDA & IBRD total,SLE,Sierra Leone,Low income
+IBT,IDA & IBRD total,SLB,Solomon Islands,Lower middle income
+IBT,IDA & IBRD total,SOM,Somalia,Low income
+IBT,IDA & IBRD total,ZAF,South Africa,Upper middle income
+IBT,IDA & IBRD total,SSD,South Sudan,Low income
+IBT,IDA & IBRD total,LKA,Sri Lanka,Lower middle income
+IBT,IDA & IBRD total,KNA,St. Kitts and Nevis,High income
+IBT,IDA & IBRD total,LCA,St. Lucia,Upper middle income
+IBT,IDA & IBRD total,VCT,St. Vincent and the Grenadines,Upper middle income
+IBT,IDA & IBRD total,SDN,Sudan,Low income
+IBT,IDA & IBRD total,SUR,Suriname,Upper middle income
+IBT,IDA & IBRD total,SYR,Syrian Arab Republic,Low income
+IBT,IDA & IBRD total,TJK,Tajikistan,Lower middle income
+IBT,IDA & IBRD total,TZA,Tanzania,Lower middle income
+IBT,IDA & IBRD total,THA,Thailand,Upper middle income
+IBT,IDA & IBRD total,TLS,Timor-Leste,Lower middle income
+IBT,IDA & IBRD total,TGO,Togo,Low income
+IBT,IDA & IBRD total,TON,Tonga,Upper middle income
+IBT,IDA & IBRD total,TTO,Trinidad and Tobago,High income
+IBT,IDA & IBRD total,TUN,Tunisia,Lower middle income
+IBT,IDA & IBRD total,TUR,Türkiye,Upper middle income
+IBT,IDA & IBRD total,TKM,Turkmenistan,Upper middle income
+IBT,IDA & IBRD total,TUV,Tuvalu,Upper middle income
+IBT,IDA & IBRD total,UGA,Uganda,Low income
+IBT,IDA & IBRD total,UKR,Ukraine,Lower middle income
+IBT,IDA & IBRD total,URY,Uruguay,High income
+IBT,IDA & IBRD total,UZB,Uzbekistan,Lower middle income
+IBT,IDA & IBRD total,VUT,Vanuatu,Lower middle income
+IBT,IDA & IBRD total,VEN,"Venezuela, RB",0
+IBT,IDA & IBRD total,VNM,Vietnam,Lower middle income
+IBT,IDA & IBRD total,YEM,"Yemen, Rep.",Low income
+IBT,IDA & IBRD total,ZMB,Zambia,Lower middle income
+IBT,IDA & IBRD total,ZWE,Zimbabwe,Lower middle income
+IDA,IDA total,AFG,Afghanistan,Low income
+IDA,IDA total,BGD,Bangladesh,Lower middle income
+IDA,IDA total,BEN,Benin,Lower middle income
+IDA,IDA total,BTN,Bhutan,Lower middle income
+IDA,IDA total,BFA,Burkina Faso,Low income
+IDA,IDA total,BDI,Burundi,Low income
+IDA,IDA total,CPV,Cabo Verde,Lower middle income
+IDA,IDA total,KHM,Cambodia,Lower middle income
+IDA,IDA total,CMR,Cameroon,Lower middle income
+IDA,IDA total,CAF,Central African Republic,Low income
+IDA,IDA total,TCD,Chad,Low income
+IDA,IDA total,COM,Comoros,Lower middle income
+IDA,IDA total,COD,"Congo, Dem. Rep.",Low income
+IDA,IDA total,COG,"Congo, Rep.",Lower middle income
+IDA,IDA total,CIV,Côte d’Ivoire,Lower middle income
+IDA,IDA total,DJI,Djibouti,Lower middle income
+IDA,IDA total,DMA,Dominica,Upper middle income
+IDA,IDA total,ERI,Eritrea,Low income
+IDA,IDA total,ETH,Ethiopia,Low income
+IDA,IDA total,FJI,Fiji,Upper middle income
+IDA,IDA total,GMB,"Gambia, The",Low income
+IDA,IDA total,GHA,Ghana,Lower middle income
+IDA,IDA total,GRD,Grenada,Upper middle income
+IDA,IDA total,GIN,Guinea,Lower middle income
+IDA,IDA total,GNB,Guinea-Bissau,Low income
+IDA,IDA total,GUY,Guyana,High income
+IDA,IDA total,HTI,Haiti,Lower middle income
+IDA,IDA total,HND,Honduras,Lower middle income
+IDA,IDA total,KEN,Kenya,Lower middle income
+IDA,IDA total,KIR,Kiribati,Lower middle income
+IDA,IDA total,XKX,Kosovo,Upper middle income
+IDA,IDA total,KGZ,Kyrgyz Republic,Lower middle income
+IDA,IDA total,LAO,Lao PDR,Lower middle income
+IDA,IDA total,LSO,Lesotho,Lower middle income
+IDA,IDA total,LBR,Liberia,Low income
+IDA,IDA total,MDG,Madagascar,Low income
+IDA,IDA total,MWI,Malawi,Low income
+IDA,IDA total,MDV,Maldives,Upper middle income
+IDA,IDA total,MLI,Mali,Low income
+IDA,IDA total,MHL,Marshall Islands,Upper middle income
+IDA,IDA total,MRT,Mauritania,Lower middle income
+IDA,IDA total,FSM,"Micronesia, Fed. Sts.",Lower middle income
+IDA,IDA total,MOZ,Mozambique,Low income
+IDA,IDA total,MMR,Myanmar,Lower middle income
+IDA,IDA total,NPL,Nepal,Lower middle income
+IDA,IDA total,NIC,Nicaragua,Lower middle income
+IDA,IDA total,NER,Niger,Low income
+IDA,IDA total,NGA,Nigeria,Lower middle income
+IDA,IDA total,PAK,Pakistan,Lower middle income
+IDA,IDA total,PNG,Papua New Guinea,Lower middle income
+IDA,IDA total,RWA,Rwanda,Low income
+IDA,IDA total,WSM,Samoa,Lower middle income
+IDA,IDA total,STP,São Tomé and Príncipe,Lower middle income
+IDA,IDA total,SEN,Senegal,Lower middle income
+IDA,IDA total,SLE,Sierra Leone,Low income
+IDA,IDA total,SLB,Solomon Islands,Lower middle income
+IDA,IDA total,SOM,Somalia,Low income
+IDA,IDA total,SSD,South Sudan,Low income
+IDA,IDA total,LKA,Sri Lanka,Lower middle income
+IDA,IDA total,LCA,St. Lucia,Upper middle income
+IDA,IDA total,VCT,St. Vincent and the Grenadines,Upper middle income
+IDA,IDA total,SDN,Sudan,Low income
+IDA,IDA total,SYR,Syrian Arab Republic,Low income
+IDA,IDA total,TJK,Tajikistan,Lower middle income
+IDA,IDA total,TZA,Tanzania,Lower middle income
+IDA,IDA total,TLS,Timor-Leste,Lower middle income
+IDA,IDA total,TGO,Togo,Low income
+IDA,IDA total,TON,Tonga,Upper middle income
+IDA,IDA total,TUV,Tuvalu,Upper middle income
+IDA,IDA total,UGA,Uganda,Low income
+IDA,IDA total,UZB,Uzbekistan,Lower middle income
+IDA,IDA total,VUT,Vanuatu,Lower middle income
+IDA,IDA total,YEM,"Yemen, Rep.",Low income
+IDA,IDA total,ZMB,Zambia,Lower middle income
+IDA,IDA total,ZWE,Zimbabwe,Lower middle income
+IDB,IDA blend,CPV,Cabo Verde,Lower middle income
+IDB,IDA blend,CMR,Cameroon,Lower middle income
+IDB,IDA blend,COG,"Congo, Rep.",Lower middle income
+IDB,IDA blend,DMA,Dominica,Upper middle income
+IDB,IDA blend,FJI,Fiji,Upper middle income
+IDB,IDA blend,GRD,Grenada,Upper middle income
+IDB,IDA blend,KEN,Kenya,Lower middle income
+IDB,IDA blend,NGA,Nigeria,Lower middle income
+IDB,IDA blend,PAK,Pakistan,Lower middle income
+IDB,IDA blend,PNG,Papua New Guinea,Lower middle income
+IDB,IDA blend,LCA,St. Lucia,Upper middle income
+IDB,IDA blend,VCT,St. Vincent and the Grenadines,Upper middle income
+IDB,IDA blend,TLS,Timor-Leste,Lower middle income
+IDB,IDA blend,UZB,Uzbekistan,Lower middle income
+IDB,IDA blend,ZWE,Zimbabwe,Lower middle income
+IDX,IDA only,AFG,Afghanistan,Low income
+IDX,IDA only,BGD,Bangladesh,Lower middle income
+IDX,IDA only,BEN,Benin,Lower middle income
+IDX,IDA only,BTN,Bhutan,Lower middle income
+IDX,IDA only,BFA,Burkina Faso,Low income
+IDX,IDA only,BDI,Burundi,Low income
+IDX,IDA only,KHM,Cambodia,Lower middle income
+IDX,IDA only,CAF,Central African Republic,Low income
+IDX,IDA only,TCD,Chad,Low income
+IDX,IDA only,COM,Comoros,Lower middle income
+IDX,IDA only,COD,"Congo, Dem. Rep.",Low income
+IDX,IDA only,CIV,Côte d’Ivoire,Lower middle income
+IDX,IDA only,DJI,Djibouti,Lower middle income
+IDX,IDA only,ERI,Eritrea,Low income
+IDX,IDA only,ETH,Ethiopia,Low income
+IDX,IDA only,GMB,"Gambia, The",Low income
+IDX,IDA only,GHA,Ghana,Lower middle income
+IDX,IDA only,GIN,Guinea,Lower middle income
+IDX,IDA only,GNB,Guinea-Bissau,Low income
+IDX,IDA only,GUY,Guyana,High income
+IDX,IDA only,HTI,Haiti,Lower middle income
+IDX,IDA only,HND,Honduras,Lower middle income
+IDX,IDA only,KIR,Kiribati,Lower middle income
+IDX,IDA only,XKX,Kosovo,Upper middle income
+IDX,IDA only,KGZ,Kyrgyz Republic,Lower middle income
+IDX,IDA only,LAO,Lao PDR,Lower middle income
+IDX,IDA only,LSO,Lesotho,Lower middle income
+IDX,IDA only,LBR,Liberia,Low income
+IDX,IDA only,MDG,Madagascar,Low income
+IDX,IDA only,MWI,Malawi,Low income
+IDX,IDA only,MDV,Maldives,Upper middle income
+IDX,IDA only,MLI,Mali,Low income
+IDX,IDA only,MHL,Marshall Islands,Upper middle income
+IDX,IDA only,MRT,Mauritania,Lower middle income
+IDX,IDA only,FSM,"Micronesia, Fed. Sts.",Lower middle income
+IDX,IDA only,MOZ,Mozambique,Low income
+IDX,IDA only,MMR,Myanmar,Lower middle income
+IDX,IDA only,NPL,Nepal,Lower middle income
+IDX,IDA only,NIC,Nicaragua,Lower middle income
+IDX,IDA only,NER,Niger,Low income
+IDX,IDA only,RWA,Rwanda,Low income
+IDX,IDA only,WSM,Samoa,Lower middle income
+IDX,IDA only,STP,São Tomé and Príncipe,Lower middle income
+IDX,IDA only,SEN,Senegal,Lower middle income
+IDX,IDA only,SLE,Sierra Leone,Low income
+IDX,IDA only,SLB,Solomon Islands,Lower middle income
+IDX,IDA only,SOM,Somalia,Low income
+IDX,IDA only,SSD,South Sudan,Low income
+IDX,IDA only,LKA,Sri Lanka,Lower middle income
+IDX,IDA only,SDN,Sudan,Low income
+IDX,IDA only,SYR,Syrian Arab Republic,Low income
+IDX,IDA only,TJK,Tajikistan,Lower middle income
+IDX,IDA only,TZA,Tanzania,Lower middle income
+IDX,IDA only,TGO,Togo,Low income
+IDX,IDA only,TON,Tonga,Upper middle income
+IDX,IDA only,TUV,Tuvalu,Upper middle income
+IDX,IDA only,UGA,Uganda,Low income
+IDX,IDA only,VUT,Vanuatu,Lower middle income
+IDX,IDA only,YEM,"Yemen, Rep.",Low income
+IDX,IDA only,ZMB,Zambia,Lower middle income
+LAC,Latin America & Caribbean (excluding high income),ARG,Argentina,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),BLZ,Belize,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),BOL,Bolivia,Lower middle income
+LAC,Latin America & Caribbean (excluding high income),BRA,Brazil,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),COL,Colombia,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),CRI,Costa Rica,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),CUB,Cuba,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),DMA,Dominica,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),DOM,Dominican Republic,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),ECU,Ecuador,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),SLV,El Salvador,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),GRD,Grenada,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),GTM,Guatemala,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),HTI,Haiti,Lower middle income
+LAC,Latin America & Caribbean (excluding high income),HND,Honduras,Lower middle income
+LAC,Latin America & Caribbean (excluding high income),JAM,Jamaica,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),MEX,Mexico,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),NIC,Nicaragua,Lower middle income
+LAC,Latin America & Caribbean (excluding high income),PRY,Paraguay,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),PER,Peru,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),LCA,St. Lucia,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),VCT,St. Vincent and the Grenadines,Upper middle income
+LAC,Latin America & Caribbean (excluding high income),SUR,Suriname,Upper middle income
+LCN,Latin America & Caribbean,ATG,Antigua and Barbuda,High income
+LCN,Latin America & Caribbean,ARG,Argentina,Upper middle income
+LCN,Latin America & Caribbean,ABW,Aruba,High income
+LCN,Latin America & Caribbean,BHS,"Bahamas, The",High income
+LCN,Latin America & Caribbean,BRB,Barbados,High income
+LCN,Latin America & Caribbean,BLZ,Belize,Upper middle income
+LCN,Latin America & Caribbean,BOL,Bolivia,Lower middle income
+LCN,Latin America & Caribbean,BRA,Brazil,Upper middle income
+LCN,Latin America & Caribbean,VGB,British Virgin Islands,High income
+LCN,Latin America & Caribbean,CYM,Cayman Islands,High income
+LCN,Latin America & Caribbean,CHL,Chile,High income
+LCN,Latin America & Caribbean,COL,Colombia,Upper middle income
+LCN,Latin America & Caribbean,CRI,Costa Rica,Upper middle income
+LCN,Latin America & Caribbean,CUB,Cuba,Upper middle income
+LCN,Latin America & Caribbean,CUW,Curaçao,High income
+LCN,Latin America & Caribbean,DMA,Dominica,Upper middle income
+LCN,Latin America & Caribbean,DOM,Dominican Republic,Upper middle income
+LCN,Latin America & Caribbean,ECU,Ecuador,Upper middle income
+LCN,Latin America & Caribbean,SLV,El Salvador,Upper middle income
+LCN,Latin America & Caribbean,GRD,Grenada,Upper middle income
+LCN,Latin America & Caribbean,GTM,Guatemala,Upper middle income
+LCN,Latin America & Caribbean,GUY,Guyana,High income
+LCN,Latin America & Caribbean,HTI,Haiti,Lower middle income
+LCN,Latin America & Caribbean,HND,Honduras,Lower middle income
+LCN,Latin America & Caribbean,JAM,Jamaica,Upper middle income
+LCN,Latin America & Caribbean,MEX,Mexico,Upper middle income
+LCN,Latin America & Caribbean,NIC,Nicaragua,Lower middle income
+LCN,Latin America & Caribbean,PAN,Panama,High income
+LCN,Latin America & Caribbean,PRY,Paraguay,Upper middle income
+LCN,Latin America & Caribbean,PER,Peru,Upper middle income
+LCN,Latin America & Caribbean,PRI,Puerto Rico,High income
+LCN,Latin America & Caribbean,SXM,Sint Maarten (Dutch part),High income
+LCN,Latin America & Caribbean,KNA,St. Kitts and Nevis,High income
+LCN,Latin America & Caribbean,LCA,St. Lucia,Upper middle income
+LCN,Latin America & Caribbean,MAF,St. Martin (French part),High income
+LCN,Latin America & Caribbean,VCT,St. Vincent and the Grenadines,Upper middle income
+LCN,Latin America & Caribbean,SUR,Suriname,Upper middle income
+LCN,Latin America & Caribbean,TTO,Trinidad and Tobago,High income
+LCN,Latin America & Caribbean,TCA,Turks and Caicos Islands,High income
+LCN,Latin America & Caribbean,URY,Uruguay,High income
+LCN,Latin America & Caribbean,VEN,"Venezuela, RB",0
+LCN,Latin America & Caribbean,VIR,Virgin Islands (U.S.),High income
+LDC,Least developed countries: UN classification,AFG,Afghanistan,Low income
+LDC,Least developed countries: UN classification,AGO,Angola,Lower middle income
+LDC,Least developed countries: UN classification,BGD,Bangladesh,Lower middle income
+LDC,Least developed countries: UN classification,BEN,Benin,Lower middle income
+LDC,Least developed countries: UN classification,BTN,Bhutan,Lower middle income
+LDC,Least developed countries: UN classification,BFA,Burkina Faso,Low income
+LDC,Least developed countries: UN classification,BDI,Burundi,Low income
+LDC,Least developed countries: UN classification,KHM,Cambodia,Lower middle income
+LDC,Least developed countries: UN classification,CAF,Central African Republic,Low income
+LDC,Least developed countries: UN classification,TCD,Chad,Low income
+LDC,Least developed countries: UN classification,COM,Comoros,Lower middle income
+LDC,Least developed countries: UN classification,COD,"Congo, Dem. Rep.",Low income
+LDC,Least developed countries: UN classification,DJI,Djibouti,Lower middle income
+LDC,Least developed countries: UN classification,ERI,Eritrea,Low income
+LDC,Least developed countries: UN classification,ETH,Ethiopia,Low income
+LDC,Least developed countries: UN classification,GMB,"Gambia, The",Low income
+LDC,Least developed countries: UN classification,GIN,Guinea,Lower middle income
+LDC,Least developed countries: UN classification,GNB,Guinea-Bissau,Low income
+LDC,Least developed countries: UN classification,HTI,Haiti,Lower middle income
+LDC,Least developed countries: UN classification,KIR,Kiribati,Lower middle income
+LDC,Least developed countries: UN classification,LAO,Lao PDR,Lower middle income
+LDC,Least developed countries: UN classification,LSO,Lesotho,Lower middle income
+LDC,Least developed countries: UN classification,LBR,Liberia,Low income
+LDC,Least developed countries: UN classification,MDG,Madagascar,Low income
+LDC,Least developed countries: UN classification,MWI,Malawi,Low income
+LDC,Least developed countries: UN classification,MLI,Mali,Low income
+LDC,Least developed countries: UN classification,MRT,Mauritania,Lower middle income
+LDC,Least developed countries: UN classification,MOZ,Mozambique,Low income
+LDC,Least developed countries: UN classification,MMR,Myanmar,Lower middle income
+LDC,Least developed countries: UN classification,NPL,Nepal,Lower middle income
+LDC,Least developed countries: UN classification,NER,Niger,Low income
+LDC,Least developed countries: UN classification,RWA,Rwanda,Low income
+LDC,Least developed countries: UN classification,STP,São Tomé and Príncipe,Lower middle income
+LDC,Least developed countries: UN classification,SEN,Senegal,Lower middle income
+LDC,Least developed countries: UN classification,SLE,Sierra Leone,Low income
+LDC,Least developed countries: UN classification,SLB,Solomon Islands,Lower middle income
+LDC,Least developed countries: UN classification,SOM,Somalia,Low income
+LDC,Least developed countries: UN classification,SSD,South Sudan,Low income
+LDC,Least developed countries: UN classification,SDN,Sudan,Low income
+LDC,Least developed countries: UN classification,TZA,Tanzania,Lower middle income
+LDC,Least developed countries: UN classification,TLS,Timor-Leste,Lower middle income
+LDC,Least developed countries: UN classification,TGO,Togo,Low income
+LDC,Least developed countries: UN classification,TUV,Tuvalu,Upper middle income
+LDC,Least developed countries: UN classification,UGA,Uganda,Low income
+LDC,Least developed countries: UN classification,YEM,"Yemen, Rep.",Low income
+LDC,Least developed countries: UN classification,ZMB,Zambia,Lower middle income
+LIC,Low income,AFG,Afghanistan,Low income
+LIC,Low income,BFA,Burkina Faso,Low income
+LIC,Low income,BDI,Burundi,Low income
+LIC,Low income,CAF,Central African Republic,Low income
+LIC,Low income,TCD,Chad,Low income
+LIC,Low income,COD,"Congo, Dem. Rep.",Low income
+LIC,Low income,ERI,Eritrea,Low income
+LIC,Low income,ETH,Ethiopia,Low income
+LIC,Low income,GMB,"Gambia, The",Low income
+LIC,Low income,GNB,Guinea-Bissau,Low income
+LIC,Low income,PRK,"Korea, Dem. People's Rep.",Low income
+LIC,Low income,LBR,Liberia,Low income
+LIC,Low income,MDG,Madagascar,Low income
+LIC,Low income,MWI,Malawi,Low income
+LIC,Low income,MLI,Mali,Low income
+LIC,Low income,MOZ,Mozambique,Low income
+LIC,Low income,NER,Niger,Low income
+LIC,Low income,RWA,Rwanda,Low income
+LIC,Low income,SLE,Sierra Leone,Low income
+LIC,Low income,SOM,Somalia,Low income
+LIC,Low income,SSD,South Sudan,Low income
+LIC,Low income,SDN,Sudan,Low income
+LIC,Low income,SYR,Syrian Arab Republic,Low income
+LIC,Low income,TGO,Togo,Low income
+LIC,Low income,UGA,Uganda,Low income
+LIC,Low income,YEM,"Yemen, Rep.",Low income
+LMC,Lower middle income,DZA,Algeria,Lower middle income
+LMC,Lower middle income,AGO,Angola,Lower middle income
+LMC,Lower middle income,BGD,Bangladesh,Lower middle income
+LMC,Lower middle income,BEN,Benin,Lower middle income
+LMC,Lower middle income,BTN,Bhutan,Lower middle income
+LMC,Lower middle income,BOL,Bolivia,Lower middle income
+LMC,Lower middle income,CPV,Cabo Verde,Lower middle income
+LMC,Lower middle income,KHM,Cambodia,Lower middle income
+LMC,Lower middle income,CMR,Cameroon,Lower middle income
+LMC,Lower middle income,COM,Comoros,Lower middle income
+LMC,Lower middle income,COG,"Congo, Rep.",Lower middle income
+LMC,Lower middle income,CIV,Côte d’Ivoire,Lower middle income
+LMC,Lower middle income,DJI,Djibouti,Lower middle income
+LMC,Lower middle income,EGY,"Egypt, Arab Rep.",Lower middle income
+LMC,Lower middle income,SWZ,Eswatini,Lower middle income
+LMC,Lower middle income,GHA,Ghana,Lower middle income
+LMC,Lower middle income,GIN,Guinea,Lower middle income
+LMC,Lower middle income,HTI,Haiti,Lower middle income
+LMC,Lower middle income,HND,Honduras,Lower middle income
+LMC,Lower middle income,IND,India,Lower middle income
+LMC,Lower middle income,IRN,"Iran, Islamic Rep.",Lower middle income
+LMC,Lower middle income,JOR,Jordan,Lower middle income
+LMC,Lower middle income,KEN,Kenya,Lower middle income
+LMC,Lower middle income,KIR,Kiribati,Lower middle income
+LMC,Lower middle income,KGZ,Kyrgyz Republic,Lower middle income
+LMC,Lower middle income,LAO,Lao PDR,Lower middle income
+LMC,Lower middle income,LBN,Lebanon,Lower middle income
+LMC,Lower middle income,LSO,Lesotho,Lower middle income
+LMC,Lower middle income,MRT,Mauritania,Lower middle income
+LMC,Lower middle income,FSM,"Micronesia, Fed. Sts.",Lower middle income
+LMC,Lower middle income,MNG,Mongolia,Lower middle income
+LMC,Lower middle income,MAR,Morocco,Lower middle income
+LMC,Lower middle income,MMR,Myanmar,Lower middle income
+LMC,Lower middle income,NPL,Nepal,Lower middle income
+LMC,Lower middle income,NIC,Nicaragua,Lower middle income
+LMC,Lower middle income,NGA,Nigeria,Lower middle income
+LMC,Lower middle income,PAK,Pakistan,Lower middle income
+LMC,Lower middle income,PNG,Papua New Guinea,Lower middle income
+LMC,Lower middle income,PHL,Philippines,Lower middle income
+LMC,Lower middle income,WSM,Samoa,Lower middle income
+LMC,Lower middle income,STP,São Tomé and Príncipe,Lower middle income
+LMC,Lower middle income,SEN,Senegal,Lower middle income
+LMC,Lower middle income,SLB,Solomon Islands,Lower middle income
+LMC,Lower middle income,LKA,Sri Lanka,Lower middle income
+LMC,Lower middle income,TJK,Tajikistan,Lower middle income
+LMC,Lower middle income,TZA,Tanzania,Lower middle income
+LMC,Lower middle income,TLS,Timor-Leste,Lower middle income
+LMC,Lower middle income,TUN,Tunisia,Lower middle income
+LMC,Lower middle income,UKR,Ukraine,Lower middle income
+LMC,Lower middle income,UZB,Uzbekistan,Lower middle income
+LMC,Lower middle income,VUT,Vanuatu,Lower middle income
+LMC,Lower middle income,VNM,Vietnam,Lower middle income
+LMC,Lower middle income,ZMB,Zambia,Lower middle income
+LMC,Lower middle income,ZWE,Zimbabwe,Lower middle income
+LMY,Low & middle income,AFG,Afghanistan,Low income
+LMY,Low & middle income,ALB,Albania,Upper middle income
+LMY,Low & middle income,DZA,Algeria,Lower middle income
+LMY,Low & middle income,AGO,Angola,Lower middle income
+LMY,Low & middle income,ARG,Argentina,Upper middle income
+LMY,Low & middle income,ARM,Armenia,Upper middle income
+LMY,Low & middle income,AZE,Azerbaijan,Upper middle income
+LMY,Low & middle income,BGD,Bangladesh,Lower middle income
+LMY,Low & middle income,BLR,Belarus,Upper middle income
+LMY,Low & middle income,BLZ,Belize,Upper middle income
+LMY,Low & middle income,BEN,Benin,Lower middle income
+LMY,Low & middle income,BTN,Bhutan,Lower middle income
+LMY,Low & middle income,BOL,Bolivia,Lower middle income
+LMY,Low & middle income,BIH,Bosnia and Herzegovina,Upper middle income
+LMY,Low & middle income,BWA,Botswana,Upper middle income
+LMY,Low & middle income,BRA,Brazil,Upper middle income
+LMY,Low & middle income,BGR,Bulgaria,Upper middle income
+LMY,Low & middle income,BFA,Burkina Faso,Low income
+LMY,Low & middle income,BDI,Burundi,Low income
+LMY,Low & middle income,CPV,Cabo Verde,Lower middle income
+LMY,Low & middle income,KHM,Cambodia,Lower middle income
+LMY,Low & middle income,CMR,Cameroon,Lower middle income
+LMY,Low & middle income,CAF,Central African Republic,Low income
+LMY,Low & middle income,TCD,Chad,Low income
+LMY,Low & middle income,CHN,China,Upper middle income
+LMY,Low & middle income,COL,Colombia,Upper middle income
+LMY,Low & middle income,COM,Comoros,Lower middle income
+LMY,Low & middle income,COD,"Congo, Dem. Rep.",Low income
+LMY,Low & middle income,COG,"Congo, Rep.",Lower middle income
+LMY,Low & middle income,CRI,Costa Rica,Upper middle income
+LMY,Low & middle income,CIV,Côte d’Ivoire,Lower middle income
+LMY,Low & middle income,CUB,Cuba,Upper middle income
+LMY,Low & middle income,DJI,Djibouti,Lower middle income
+LMY,Low & middle income,DMA,Dominica,Upper middle income
+LMY,Low & middle income,DOM,Dominican Republic,Upper middle income
+LMY,Low & middle income,ECU,Ecuador,Upper middle income
+LMY,Low & middle income,EGY,"Egypt, Arab Rep.",Lower middle income
+LMY,Low & middle income,SLV,El Salvador,Upper middle income
+LMY,Low & middle income,GNQ,Equatorial Guinea,Upper middle income
+LMY,Low & middle income,ERI,Eritrea,Low income
+LMY,Low & middle income,SWZ,Eswatini,Lower middle income
+LMY,Low & middle income,ETH,Ethiopia,Low income
+LMY,Low & middle income,FJI,Fiji,Upper middle income
+LMY,Low & middle income,GAB,Gabon,Upper middle income
+LMY,Low & middle income,GMB,"Gambia, The",Low income
+LMY,Low & middle income,GEO,Georgia,Upper middle income
+LMY,Low & middle income,GHA,Ghana,Lower middle income
+LMY,Low & middle income,GRD,Grenada,Upper middle income
+LMY,Low & middle income,GTM,Guatemala,Upper middle income
+LMY,Low & middle income,GIN,Guinea,Lower middle income
+LMY,Low & middle income,GNB,Guinea-Bissau,Low income
+LMY,Low & middle income,HTI,Haiti,Lower middle income
+LMY,Low & middle income,HND,Honduras,Lower middle income
+LMY,Low & middle income,IND,India,Lower middle income
+LMY,Low & middle income,IDN,Indonesia,Upper middle income
+LMY,Low & middle income,IRN,"Iran, Islamic Rep.",Lower middle income
+LMY,Low & middle income,IRQ,Iraq,Upper middle income
+LMY,Low & middle income,JAM,Jamaica,Upper middle income
+LMY,Low & middle income,JOR,Jordan,Lower middle income
+LMY,Low & middle income,KAZ,Kazakhstan,Upper middle income
+LMY,Low & middle income,KEN,Kenya,Lower middle income
+LMY,Low & middle income,KIR,Kiribati,Lower middle income
+LMY,Low & middle income,PRK,"Korea, Dem. People's Rep.",Low income
+LMY,Low & middle income,XKX,Kosovo,Upper middle income
+LMY,Low & middle income,KGZ,Kyrgyz Republic,Lower middle income
+LMY,Low & middle income,LAO,Lao PDR,Lower middle income
+LMY,Low & middle income,LBN,Lebanon,Lower middle income
+LMY,Low & middle income,LSO,Lesotho,Lower middle income
+LMY,Low & middle income,LBR,Liberia,Low income
+LMY,Low & middle income,LBY,Libya,Upper middle income
+LMY,Low & middle income,MDG,Madagascar,Low income
+LMY,Low & middle income,MWI,Malawi,Low income
+LMY,Low & middle income,MYS,Malaysia,Upper middle income
+LMY,Low & middle income,MDV,Maldives,Upper middle income
+LMY,Low & middle income,MLI,Mali,Low income
+LMY,Low & middle income,MHL,Marshall Islands,Upper middle income
+LMY,Low & middle income,MRT,Mauritania,Lower middle income
+LMY,Low & middle income,MUS,Mauritius,Upper middle income
+LMY,Low & middle income,MEX,Mexico,Upper middle income
+LMY,Low & middle income,FSM,"Micronesia, Fed. Sts.",Lower middle income
+LMY,Low & middle income,MDA,Moldova,Upper middle income
+LMY,Low & middle income,MNG,Mongolia,Lower middle income
+LMY,Low & middle income,MNE,Montenegro,Upper middle income
+LMY,Low & middle income,MAR,Morocco,Lower middle income
+LMY,Low & middle income,MOZ,Mozambique,Low income
+LMY,Low & middle income,MMR,Myanmar,Lower middle income
+LMY,Low & middle income,NAM,Namibia,Upper middle income
+LMY,Low & middle income,NPL,Nepal,Lower middle income
+LMY,Low & middle income,NIC,Nicaragua,Lower middle income
+LMY,Low & middle income,NER,Niger,Low income
+LMY,Low & middle income,NGA,Nigeria,Lower middle income
+LMY,Low & middle income,MKD,North Macedonia,Upper middle income
+LMY,Low & middle income,PAK,Pakistan,Lower middle income
+LMY,Low & middle income,PLW,Palau,Upper middle income
+LMY,Low & middle income,PNG,Papua New Guinea,Lower middle income
+LMY,Low & middle income,PRY,Paraguay,Upper middle income
+LMY,Low & middle income,PER,Peru,Upper middle income
+LMY,Low & middle income,PHL,Philippines,Lower middle income
+LMY,Low & middle income,RUS,Russian Federation,Upper middle income
+LMY,Low & middle income,RWA,Rwanda,Low income
+LMY,Low & middle income,WSM,Samoa,Lower middle income
+LMY,Low & middle income,STP,São Tomé and Príncipe,Lower middle income
+LMY,Low & middle income,SEN,Senegal,Lower middle income
+LMY,Low & middle income,SRB,Serbia,Upper middle income
+LMY,Low & middle income,SLE,Sierra Leone,Low income
+LMY,Low & middle income,SLB,Solomon Islands,Lower middle income
+LMY,Low & middle income,SOM,Somalia,Low income
+LMY,Low & middle income,ZAF,South Africa,Upper middle income
+LMY,Low & middle income,SSD,South Sudan,Low income
+LMY,Low & middle income,LKA,Sri Lanka,Lower middle income
+LMY,Low & middle income,LCA,St. Lucia,Upper middle income
+LMY,Low & middle income,VCT,St. Vincent and the Grenadines,Upper middle income
+LMY,Low & middle income,SDN,Sudan,Low income
+LMY,Low & middle income,SUR,Suriname,Upper middle income
+LMY,Low & middle income,SYR,Syrian Arab Republic,Low income
+LMY,Low & middle income,TJK,Tajikistan,Lower middle income
+LMY,Low & middle income,TZA,Tanzania,Lower middle income
+LMY,Low & middle income,THA,Thailand,Upper middle income
+LMY,Low & middle income,TLS,Timor-Leste,Lower middle income
+LMY,Low & middle income,TGO,Togo,Low income
+LMY,Low & middle income,TON,Tonga,Upper middle income
+LMY,Low & middle income,TUN,Tunisia,Lower middle income
+LMY,Low & middle income,TUR,Türkiye,Upper middle income
+LMY,Low & middle income,TKM,Turkmenistan,Upper middle income
+LMY,Low & middle income,TUV,Tuvalu,Upper middle income
+LMY,Low & middle income,UGA,Uganda,Low income
+LMY,Low & middle income,UKR,Ukraine,Lower middle income
+LMY,Low & middle income,UZB,Uzbekistan,Lower middle income
+LMY,Low & middle income,VUT,Vanuatu,Lower middle income
+LMY,Low & middle income,VNM,Vietnam,Lower middle income
+LMY,Low & middle income,PSE,West Bank and Gaza,Upper middle income
+LMY,Low & middle income,YEM,"Yemen, Rep.",Low income
+LMY,Low & middle income,ZMB,Zambia,Lower middle income
+LMY,Low & middle income,ZWE,Zimbabwe,Lower middle income
+LTE,Late-demographic dividend,ALB,Albania,Upper middle income
+LTE,Late-demographic dividend,ARM,Armenia,Upper middle income
+LTE,Late-demographic dividend,ABW,Aruba,High income
+LTE,Late-demographic dividend,AZE,Azerbaijan,Upper middle income
+LTE,Late-demographic dividend,BHS,"Bahamas, The",High income
+LTE,Late-demographic dividend,BRA,Brazil,Upper middle income
+LTE,Late-demographic dividend,BRN,Brunei Darussalam,High income
+LTE,Late-demographic dividend,CHL,Chile,High income
+LTE,Late-demographic dividend,CHN,China,Upper middle income
+LTE,Late-demographic dividend,COL,Colombia,Upper middle income
+LTE,Late-demographic dividend,CRI,Costa Rica,Upper middle income
+LTE,Late-demographic dividend,CYP,Cyprus,High income
+LTE,Late-demographic dividend,EST,Estonia,High income
+LTE,Late-demographic dividend,FJI,Fiji,Upper middle income
+LTE,Late-demographic dividend,PYF,French Polynesia,High income
+LTE,Late-demographic dividend,GEO,Georgia,Upper middle income
+LTE,Late-demographic dividend,GUM,Guam,High income
+LTE,Late-demographic dividend,GUY,Guyana,High income
+LTE,Late-demographic dividend,ISL,Iceland,High income
+LTE,Late-demographic dividend,IRL,Ireland,High income
+LTE,Late-demographic dividend,JAM,Jamaica,Upper middle income
+LTE,Late-demographic dividend,KAZ,Kazakhstan,Upper middle income
+LTE,Late-demographic dividend,PRK,"Korea, Dem. People's Rep.",Low income
+LTE,Late-demographic dividend,KWT,Kuwait,High income
+LTE,Late-demographic dividend,KGZ,Kyrgyz Republic,Lower middle income
+LTE,Late-demographic dividend,LVA,Latvia,High income
+LTE,Late-demographic dividend,LBN,Lebanon,Lower middle income
+LTE,Late-demographic dividend,MYS,Malaysia,Upper middle income
+LTE,Late-demographic dividend,MUS,Mauritius,Upper middle income
+LTE,Late-demographic dividend,MDA,Moldova,Upper middle income
+LTE,Late-demographic dividend,MNG,Mongolia,Lower middle income
+LTE,Late-demographic dividend,MNE,Montenegro,Upper middle income
+LTE,Late-demographic dividend,MAR,Morocco,Lower middle income
+LTE,Late-demographic dividend,NCL,New Caledonia,High income
+LTE,Late-demographic dividend,MKD,North Macedonia,Upper middle income
+LTE,Late-demographic dividend,OMN,Oman,High income
+LTE,Late-demographic dividend,POL,Poland,High income
+LTE,Late-demographic dividend,PRI,Puerto Rico,High income
+LTE,Late-demographic dividend,QAT,Qatar,High income
+LTE,Late-demographic dividend,ROU,Romania,High income
+LTE,Late-demographic dividend,RUS,Russian Federation,Upper middle income
+LTE,Late-demographic dividend,SRB,Serbia,Upper middle income
+LTE,Late-demographic dividend,SYC,Seychelles,High income
+LTE,Late-demographic dividend,SVK,Slovak Republic,High income
+LTE,Late-demographic dividend,LKA,Sri Lanka,Lower middle income
+LTE,Late-demographic dividend,LCA,St. Lucia,Upper middle income
+LTE,Late-demographic dividend,VCT,St. Vincent and the Grenadines,Upper middle income
+LTE,Late-demographic dividend,THA,Thailand,Upper middle income
+LTE,Late-demographic dividend,TTO,Trinidad and Tobago,High income
+LTE,Late-demographic dividend,TUN,Tunisia,Lower middle income
+LTE,Late-demographic dividend,ARE,United Arab Emirates,High income
+LTE,Late-demographic dividend,URY,Uruguay,High income
+LTE,Late-demographic dividend,VNM,Vietnam,Lower middle income
+LTE,Late-demographic dividend,VIR,Virgin Islands (U.S.),High income
+MEA,Middle East & North Africa,DZA,Algeria,Lower middle income
+MEA,Middle East & North Africa,BHR,Bahrain,High income
+MEA,Middle East & North Africa,DJI,Djibouti,Lower middle income
+MEA,Middle East & North Africa,EGY,"Egypt, Arab Rep.",Lower middle income
+MEA,Middle East & North Africa,IRN,"Iran, Islamic Rep.",Lower middle income
+MEA,Middle East & North Africa,IRQ,Iraq,Upper middle income
+MEA,Middle East & North Africa,ISR,Israel,High income
+MEA,Middle East & North Africa,JOR,Jordan,Lower middle income
+MEA,Middle East & North Africa,KWT,Kuwait,High income
+MEA,Middle East & North Africa,LBN,Lebanon,Lower middle income
+MEA,Middle East & North Africa,LBY,Libya,Upper middle income
+MEA,Middle East & North Africa,MLT,Malta,High income
+MEA,Middle East & North Africa,MAR,Morocco,Lower middle income
+MEA,Middle East & North Africa,OMN,Oman,High income
+MEA,Middle East & North Africa,QAT,Qatar,High income
+MEA,Middle East & North Africa,SAU,Saudi Arabia,High income
+MEA,Middle East & North Africa,SYR,Syrian Arab Republic,Low income
+MEA,Middle East & North Africa,TUN,Tunisia,Lower middle income
+MEA,Middle East & North Africa,ARE,United Arab Emirates,High income
+MEA,Middle East & North Africa,PSE,West Bank and Gaza,Upper middle income
+MEA,Middle East & North Africa,YEM,"Yemen, Rep.",Low income
+MIC,Middle income,ALB,Albania,Upper middle income
+MIC,Middle income,DZA,Algeria,Lower middle income
+MIC,Middle income,AGO,Angola,Lower middle income
+MIC,Middle income,ARG,Argentina,Upper middle income
+MIC,Middle income,ARM,Armenia,Upper middle income
+MIC,Middle income,AZE,Azerbaijan,Upper middle income
+MIC,Middle income,BGD,Bangladesh,Lower middle income
+MIC,Middle income,BLR,Belarus,Upper middle income
+MIC,Middle income,BLZ,Belize,Upper middle income
+MIC,Middle income,BEN,Benin,Lower middle income
+MIC,Middle income,BTN,Bhutan,Lower middle income
+MIC,Middle income,BOL,Bolivia,Lower middle income
+MIC,Middle income,BIH,Bosnia and Herzegovina,Upper middle income
+MIC,Middle income,BWA,Botswana,Upper middle income
+MIC,Middle income,BRA,Brazil,Upper middle income
+MIC,Middle income,BGR,Bulgaria,Upper middle income
+MIC,Middle income,CPV,Cabo Verde,Lower middle income
+MIC,Middle income,KHM,Cambodia,Lower middle income
+MIC,Middle income,CMR,Cameroon,Lower middle income
+MIC,Middle income,CHN,China,Upper middle income
+MIC,Middle income,COL,Colombia,Upper middle income
+MIC,Middle income,COM,Comoros,Lower middle income
+MIC,Middle income,COG,"Congo, Rep.",Lower middle income
+MIC,Middle income,CRI,Costa Rica,Upper middle income
+MIC,Middle income,CIV,Côte d’Ivoire,Lower middle income
+MIC,Middle income,CUB,Cuba,Upper middle income
+MIC,Middle income,DJI,Djibouti,Lower middle income
+MIC,Middle income,DMA,Dominica,Upper middle income
+MIC,Middle income,DOM,Dominican Republic,Upper middle income
+MIC,Middle income,ECU,Ecuador,Upper middle income
+MIC,Middle income,EGY,"Egypt, Arab Rep.",Lower middle income
+MIC,Middle income,SLV,El Salvador,Upper middle income
+MIC,Middle income,GNQ,Equatorial Guinea,Upper middle income
+MIC,Middle income,SWZ,Eswatini,Lower middle income
+MIC,Middle income,FJI,Fiji,Upper middle income
+MIC,Middle income,GAB,Gabon,Upper middle income
+MIC,Middle income,GEO,Georgia,Upper middle income
+MIC,Middle income,GHA,Ghana,Lower middle income
+MIC,Middle income,GRD,Grenada,Upper middle income
+MIC,Middle income,GTM,Guatemala,Upper middle income
+MIC,Middle income,GIN,Guinea,Lower middle income
+MIC,Middle income,HTI,Haiti,Lower middle income
+MIC,Middle income,HND,Honduras,Lower middle income
+MIC,Middle income,IND,India,Lower middle income
+MIC,Middle income,IDN,Indonesia,Upper middle income
+MIC,Middle income,IRN,"Iran, Islamic Rep.",Lower middle income
+MIC,Middle income,IRQ,Iraq,Upper middle income
+MIC,Middle income,JAM,Jamaica,Upper middle income
+MIC,Middle income,JOR,Jordan,Lower middle income
+MIC,Middle income,KAZ,Kazakhstan,Upper middle income
+MIC,Middle income,KEN,Kenya,Lower middle income
+MIC,Middle income,KIR,Kiribati,Lower middle income
+MIC,Middle income,XKX,Kosovo,Upper middle income
+MIC,Middle income,KGZ,Kyrgyz Republic,Lower middle income
+MIC,Middle income,LAO,Lao PDR,Lower middle income
+MIC,Middle income,LBN,Lebanon,Lower middle income
+MIC,Middle income,LSO,Lesotho,Lower middle income
+MIC,Middle income,LBY,Libya,Upper middle income
+MIC,Middle income,MYS,Malaysia,Upper middle income
+MIC,Middle income,MDV,Maldives,Upper middle income
+MIC,Middle income,MHL,Marshall Islands,Upper middle income
+MIC,Middle income,MRT,Mauritania,Lower middle income
+MIC,Middle income,MUS,Mauritius,Upper middle income
+MIC,Middle income,MEX,Mexico,Upper middle income
+MIC,Middle income,FSM,"Micronesia, Fed. Sts.",Lower middle income
+MIC,Middle income,MDA,Moldova,Upper middle income
+MIC,Middle income,MNG,Mongolia,Lower middle income
+MIC,Middle income,MNE,Montenegro,Upper middle income
+MIC,Middle income,MAR,Morocco,Lower middle income
+MIC,Middle income,MMR,Myanmar,Lower middle income
+MIC,Middle income,NAM,Namibia,Upper middle income
+MIC,Middle income,NPL,Nepal,Lower middle income
+MIC,Middle income,NIC,Nicaragua,Lower middle income
+MIC,Middle income,NGA,Nigeria,Lower middle income
+MIC,Middle income,MKD,North Macedonia,Upper middle income
+MIC,Middle income,PAK,Pakistan,Lower middle income
+MIC,Middle income,PLW,Palau,Upper middle income
+MIC,Middle income,PNG,Papua New Guinea,Lower middle income
+MIC,Middle income,PRY,Paraguay,Upper middle income
+MIC,Middle income,PER,Peru,Upper middle income
+MIC,Middle income,PHL,Philippines,Lower middle income
+MIC,Middle income,RUS,Russian Federation,Upper middle income
+MIC,Middle income,WSM,Samoa,Lower middle income
+MIC,Middle income,STP,São Tomé and Príncipe,Lower middle income
+MIC,Middle income,SEN,Senegal,Lower middle income
+MIC,Middle income,SRB,Serbia,Upper middle income
+MIC,Middle income,SLB,Solomon Islands,Lower middle income
+MIC,Middle income,ZAF,South Africa,Upper middle income
+MIC,Middle income,LKA,Sri Lanka,Lower middle income
+MIC,Middle income,LCA,St. Lucia,Upper middle income
+MIC,Middle income,VCT,St. Vincent and the Grenadines,Upper middle income
+MIC,Middle income,SUR,Suriname,Upper middle income
+MIC,Middle income,TJK,Tajikistan,Lower middle income
+MIC,Middle income,TZA,Tanzania,Lower middle income
+MIC,Middle income,THA,Thailand,Upper middle income
+MIC,Middle income,TLS,Timor-Leste,Lower middle income
+MIC,Middle income,TON,Tonga,Upper middle income
+MIC,Middle income,TUN,Tunisia,Lower middle income
+MIC,Middle income,TUR,Türkiye,Upper middle income
+MIC,Middle income,TKM,Turkmenistan,Upper middle income
+MIC,Middle income,TUV,Tuvalu,Upper middle income
+MIC,Middle income,UKR,Ukraine,Lower middle income
+MIC,Middle income,UZB,Uzbekistan,Lower middle income
+MIC,Middle income,VUT,Vanuatu,Lower middle income
+MIC,Middle income,VNM,Vietnam,Lower middle income
+MIC,Middle income,PSE,West Bank and Gaza,Upper middle income
+MIC,Middle income,ZMB,Zambia,Lower middle income
+MIC,Middle income,ZWE,Zimbabwe,Lower middle income
+MNA,Middle East & North Africa (excluding high income),DZA,Algeria,Lower middle income
+MNA,Middle East & North Africa (excluding high income),DJI,Djibouti,Lower middle income
+MNA,Middle East & North Africa (excluding high income),EGY,"Egypt, Arab Rep.",Lower middle income
+MNA,Middle East & North Africa (excluding high income),IRN,"Iran, Islamic Rep.",Lower middle income
+MNA,Middle East & North Africa (excluding high income),IRQ,Iraq,Upper middle income
+MNA,Middle East & North Africa (excluding high income),JOR,Jordan,Lower middle income
+MNA,Middle East & North Africa (excluding high income),LBN,Lebanon,Lower middle income
+MNA,Middle East & North Africa (excluding high income),LBY,Libya,Upper middle income
+MNA,Middle East & North Africa (excluding high income),MAR,Morocco,Lower middle income
+MNA,Middle East & North Africa (excluding high income),SYR,Syrian Arab Republic,Low income
+MNA,Middle East & North Africa (excluding high income),TUN,Tunisia,Lower middle income
+MNA,Middle East & North Africa (excluding high income),PSE,West Bank and Gaza,Upper middle income
+MNA,Middle East & North Africa (excluding high income),YEM,"Yemen, Rep.",Low income
+NAC,North America,BMU,Bermuda,High income
+NAC,North America,CAN,Canada,High income
+NAC,North America,USA,United States,High income
+OED,OECD members,AUS,Australia,High income
+OED,OECD members,AUT,Austria,High income
+OED,OECD members,BEL,Belgium,High income
+OED,OECD members,CAN,Canada,High income
+OED,OECD members,CHL,Chile,High income
+OED,OECD members,COL,Colombia,Upper middle income
+OED,OECD members,CRI,Costa Rica,Upper middle income
+OED,OECD members,CZE,Czechia,High income
+OED,OECD members,DNK,Denmark,High income
+OED,OECD members,EST,Estonia,High income
+OED,OECD members,FIN,Finland,High income
+OED,OECD members,FRA,France,High income
+OED,OECD members,DEU,Germany,High income
+OED,OECD members,GRC,Greece,High income
+OED,OECD members,HUN,Hungary,High income
+OED,OECD members,ISL,Iceland,High income
+OED,OECD members,IRL,Ireland,High income
+OED,OECD members,ISR,Israel,High income
+OED,OECD members,ITA,Italy,High income
+OED,OECD members,JPN,Japan,High income
+OED,OECD members,KOR,"Korea, Rep.",High income
+OED,OECD members,LVA,Latvia,High income
+OED,OECD members,LTU,Lithuania,High income
+OED,OECD members,LUX,Luxembourg,High income
+OED,OECD members,MEX,Mexico,Upper middle income
+OED,OECD members,NLD,Netherlands,High income
+OED,OECD members,NZL,New Zealand,High income
+OED,OECD members,NOR,Norway,High income
+OED,OECD members,POL,Poland,High income
+OED,OECD members,PRT,Portugal,High income
+OED,OECD members,SVK,Slovak Republic,High income
+OED,OECD members,SVN,Slovenia,High income
+OED,OECD members,ESP,Spain,High income
+OED,OECD members,SWE,Sweden,High income
+OED,OECD members,CHE,Switzerland,High income
+OED,OECD members,TUR,Türkiye,Upper middle income
+OED,OECD members,GBR,United Kingdom,High income
+OED,OECD members,USA,United States,High income
+OSS,Other small states,BHR,Bahrain,High income
+OSS,Other small states,BTN,Bhutan,Lower middle income
+OSS,Other small states,BWA,Botswana,Upper middle income
+OSS,Other small states,BRN,Brunei Darussalam,High income
+OSS,Other small states,CPV,Cabo Verde,Lower middle income
+OSS,Other small states,COM,Comoros,Lower middle income
+OSS,Other small states,CYP,Cyprus,High income
+OSS,Other small states,DJI,Djibouti,Lower middle income
+OSS,Other small states,GNQ,Equatorial Guinea,Upper middle income
+OSS,Other small states,EST,Estonia,High income
+OSS,Other small states,SWZ,Eswatini,Lower middle income
+OSS,Other small states,GAB,Gabon,Upper middle income
+OSS,Other small states,GMB,"Gambia, The",Low income
+OSS,Other small states,GNB,Guinea-Bissau,Low income
+OSS,Other small states,ISL,Iceland,High income
+OSS,Other small states,LSO,Lesotho,Lower middle income
+OSS,Other small states,MDV,Maldives,Upper middle income
+OSS,Other small states,MLT,Malta,High income
+OSS,Other small states,MUS,Mauritius,Upper middle income
+OSS,Other small states,MNE,Montenegro,Upper middle income
+OSS,Other small states,NAM,Namibia,Upper middle income
+OSS,Other small states,QAT,Qatar,High income
+OSS,Other small states,SMR,San Marino,High income
+OSS,Other small states,STP,São Tomé and Príncipe,Lower middle income
+OSS,Other small states,SYC,Seychelles,High income
+OSS,Other small states,TLS,Timor-Leste,Lower middle income
+PRE,Pre-demographic dividend,AFG,Afghanistan,Low income
+PRE,Pre-demographic dividend,AGO,Angola,Lower middle income
+PRE,Pre-demographic dividend,BEN,Benin,Lower middle income
+PRE,Pre-demographic dividend,BFA,Burkina Faso,Low income
+PRE,Pre-demographic dividend,BDI,Burundi,Low income
+PRE,Pre-demographic dividend,CMR,Cameroon,Lower middle income
+PRE,Pre-demographic dividend,CAF,Central African Republic,Low income
+PRE,Pre-demographic dividend,TCD,Chad,Low income
+PRE,Pre-demographic dividend,COM,Comoros,Lower middle income
+PRE,Pre-demographic dividend,COD,"Congo, Dem. Rep.",Low income
+PRE,Pre-demographic dividend,COG,"Congo, Rep.",Lower middle income
+PRE,Pre-demographic dividend,CIV,Côte d’Ivoire,Lower middle income
+PRE,Pre-demographic dividend,GNQ,Equatorial Guinea,Upper middle income
+PRE,Pre-demographic dividend,ERI,Eritrea,Low income
+PRE,Pre-demographic dividend,GMB,"Gambia, The",Low income
+PRE,Pre-demographic dividend,GIN,Guinea,Lower middle income
+PRE,Pre-demographic dividend,GNB,Guinea-Bissau,Low income
+PRE,Pre-demographic dividend,IRQ,Iraq,Upper middle income
+PRE,Pre-demographic dividend,KEN,Kenya,Lower middle income
+PRE,Pre-demographic dividend,LBR,Liberia,Low income
+PRE,Pre-demographic dividend,MDG,Madagascar,Low income
+PRE,Pre-demographic dividend,MWI,Malawi,Low income
+PRE,Pre-demographic dividend,MLI,Mali,Low income
+PRE,Pre-demographic dividend,MRT,Mauritania,Lower middle income
+PRE,Pre-demographic dividend,MOZ,Mozambique,Low income
+PRE,Pre-demographic dividend,NER,Niger,Low income
+PRE,Pre-demographic dividend,NGA,Nigeria,Lower middle income
+PRE,Pre-demographic dividend,SEN,Senegal,Lower middle income
+PRE,Pre-demographic dividend,SLE,Sierra Leone,Low income
+PRE,Pre-demographic dividend,SOM,Somalia,Low income
+PRE,Pre-demographic dividend,SSD,South Sudan,Low income
+PRE,Pre-demographic dividend,SDN,Sudan,Low income
+PRE,Pre-demographic dividend,TZA,Tanzania,Lower middle income
+PRE,Pre-demographic dividend,TLS,Timor-Leste,Lower middle income
+PRE,Pre-demographic dividend,TGO,Togo,Low income
+PRE,Pre-demographic dividend,UGA,Uganda,Low income
+PRE,Pre-demographic dividend,ZMB,Zambia,Lower middle income
+PSS,Pacific island small states,FJI,Fiji,Upper middle income
+PSS,Pacific island small states,KIR,Kiribati,Lower middle income
+PSS,Pacific island small states,MHL,Marshall Islands,Upper middle income
+PSS,Pacific island small states,FSM,"Micronesia, Fed. Sts.",Lower middle income
+PSS,Pacific island small states,NRU,Nauru,High income
+PSS,Pacific island small states,PLW,Palau,Upper middle income
+PSS,Pacific island small states,WSM,Samoa,Lower middle income
+PSS,Pacific island small states,SLB,Solomon Islands,Lower middle income
+PSS,Pacific island small states,TON,Tonga,Upper middle income
+PSS,Pacific island small states,TUV,Tuvalu,Upper middle income
+PSS,Pacific island small states,VUT,Vanuatu,Lower middle income
+PST,Post-demographic dividend,ATG,Antigua and Barbuda,High income
+PST,Post-demographic dividend,AUS,Australia,High income
+PST,Post-demographic dividend,AUT,Austria,High income
+PST,Post-demographic dividend,BRB,Barbados,High income
+PST,Post-demographic dividend,BLR,Belarus,Upper middle income
+PST,Post-demographic dividend,BEL,Belgium,High income
+PST,Post-demographic dividend,BIH,Bosnia and Herzegovina,Upper middle income
+PST,Post-demographic dividend,BGR,Bulgaria,Upper middle income
+PST,Post-demographic dividend,CAN,Canada,High income
+PST,Post-demographic dividend,HRV,Croatia,High income
+PST,Post-demographic dividend,CUB,Cuba,Upper middle income
+PST,Post-demographic dividend,CZE,Czechia,High income
+PST,Post-demographic dividend,DNK,Denmark,High income
+PST,Post-demographic dividend,FIN,Finland,High income
+PST,Post-demographic dividend,FRA,France,High income
+PST,Post-demographic dividend,DEU,Germany,High income
+PST,Post-demographic dividend,GRC,Greece,High income
+PST,Post-demographic dividend,HKG,"Hong Kong SAR, China",High income
+PST,Post-demographic dividend,HUN,Hungary,High income
+PST,Post-demographic dividend,ITA,Italy,High income
+PST,Post-demographic dividend,JPN,Japan,High income
+PST,Post-demographic dividend,KOR,"Korea, Rep.",High income
+PST,Post-demographic dividend,LTU,Lithuania,High income
+PST,Post-demographic dividend,LUX,Luxembourg,High income
+PST,Post-demographic dividend,MAC,"Macao SAR, China",High income
+PST,Post-demographic dividend,MLT,Malta,High income
+PST,Post-demographic dividend,NLD,Netherlands,High income
+PST,Post-demographic dividend,NZL,New Zealand,High income
+PST,Post-demographic dividend,NOR,Norway,High income
+PST,Post-demographic dividend,PRT,Portugal,High income
+PST,Post-demographic dividend,SGP,Singapore,High income
+PST,Post-demographic dividend,SVN,Slovenia,High income
+PST,Post-demographic dividend,ESP,Spain,High income
+PST,Post-demographic dividend,SWE,Sweden,High income
+PST,Post-demographic dividend,CHE,Switzerland,High income
+PST,Post-demographic dividend,UKR,Ukraine,Lower middle income
+PST,Post-demographic dividend,GBR,United Kingdom,High income
+PST,Post-demographic dividend,USA,United States,High income
+SAS,South Asia,AFG,Afghanistan,Low income
+SAS,South Asia,BGD,Bangladesh,Lower middle income
+SAS,South Asia,BTN,Bhutan,Lower middle income
+SAS,South Asia,IND,India,Lower middle income
+SAS,South Asia,MDV,Maldives,Upper middle income
+SAS,South Asia,NPL,Nepal,Lower middle income
+SAS,South Asia,PAK,Pakistan,Lower middle income
+SAS,South Asia,LKA,Sri Lanka,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),AGO,Angola,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),BEN,Benin,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),BWA,Botswana,Upper middle income
+SSA,Sub-Saharan Africa (excluding high income),BFA,Burkina Faso,Low income
+SSA,Sub-Saharan Africa (excluding high income),BDI,Burundi,Low income
+SSA,Sub-Saharan Africa (excluding high income),CPV,Cabo Verde,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),CMR,Cameroon,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),CAF,Central African Republic,Low income
+SSA,Sub-Saharan Africa (excluding high income),TCD,Chad,Low income
+SSA,Sub-Saharan Africa (excluding high income),COM,Comoros,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),COD,"Congo, Dem. Rep.",Low income
+SSA,Sub-Saharan Africa (excluding high income),COG,"Congo, Rep.",Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),CIV,Côte d’Ivoire,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),GNQ,Equatorial Guinea,Upper middle income
+SSA,Sub-Saharan Africa (excluding high income),ERI,Eritrea,Low income
+SSA,Sub-Saharan Africa (excluding high income),SWZ,Eswatini,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),ETH,Ethiopia,Low income
+SSA,Sub-Saharan Africa (excluding high income),GAB,Gabon,Upper middle income
+SSA,Sub-Saharan Africa (excluding high income),GMB,"Gambia, The",Low income
+SSA,Sub-Saharan Africa (excluding high income),GHA,Ghana,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),GIN,Guinea,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),GNB,Guinea-Bissau,Low income
+SSA,Sub-Saharan Africa (excluding high income),KEN,Kenya,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),LSO,Lesotho,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),LBR,Liberia,Low income
+SSA,Sub-Saharan Africa (excluding high income),MDG,Madagascar,Low income
+SSA,Sub-Saharan Africa (excluding high income),MWI,Malawi,Low income
+SSA,Sub-Saharan Africa (excluding high income),MLI,Mali,Low income
+SSA,Sub-Saharan Africa (excluding high income),MRT,Mauritania,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),MUS,Mauritius,Upper middle income
+SSA,Sub-Saharan Africa (excluding high income),MOZ,Mozambique,Low income
+SSA,Sub-Saharan Africa (excluding high income),NAM,Namibia,Upper middle income
+SSA,Sub-Saharan Africa (excluding high income),NER,Niger,Low income
+SSA,Sub-Saharan Africa (excluding high income),NGA,Nigeria,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),RWA,Rwanda,Low income
+SSA,Sub-Saharan Africa (excluding high income),STP,São Tomé and Príncipe,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),SEN,Senegal,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),SLE,Sierra Leone,Low income
+SSA,Sub-Saharan Africa (excluding high income),SOM,Somalia,Low income
+SSA,Sub-Saharan Africa (excluding high income),ZAF,South Africa,Upper middle income
+SSA,Sub-Saharan Africa (excluding high income),SSD,South Sudan,Low income
+SSA,Sub-Saharan Africa (excluding high income),SDN,Sudan,Low income
+SSA,Sub-Saharan Africa (excluding high income),TZA,Tanzania,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),TGO,Togo,Low income
+SSA,Sub-Saharan Africa (excluding high income),UGA,Uganda,Low income
+SSA,Sub-Saharan Africa (excluding high income),ZMB,Zambia,Lower middle income
+SSA,Sub-Saharan Africa (excluding high income),ZWE,Zimbabwe,Lower middle income
+SSF,Sub-Saharan Africa,AGO,Angola,Lower middle income
+SSF,Sub-Saharan Africa,BEN,Benin,Lower middle income
+SSF,Sub-Saharan Africa,BWA,Botswana,Upper middle income
+SSF,Sub-Saharan Africa,BFA,Burkina Faso,Low income
+SSF,Sub-Saharan Africa,BDI,Burundi,Low income
+SSF,Sub-Saharan Africa,CPV,Cabo Verde,Lower middle income
+SSF,Sub-Saharan Africa,CMR,Cameroon,Lower middle income
+SSF,Sub-Saharan Africa,CAF,Central African Republic,Low income
+SSF,Sub-Saharan Africa,TCD,Chad,Low income
+SSF,Sub-Saharan Africa,COM,Comoros,Lower middle income
+SSF,Sub-Saharan Africa,COD,"Congo, Dem. Rep.",Low income
+SSF,Sub-Saharan Africa,COG,"Congo, Rep.",Lower middle income
+SSF,Sub-Saharan Africa,CIV,Côte d’Ivoire,Lower middle income
+SSF,Sub-Saharan Africa,GNQ,Equatorial Guinea,Upper middle income
+SSF,Sub-Saharan Africa,ERI,Eritrea,Low income
+SSF,Sub-Saharan Africa,SWZ,Eswatini,Lower middle income
+SSF,Sub-Saharan Africa,ETH,Ethiopia,Low income
+SSF,Sub-Saharan Africa,GAB,Gabon,Upper middle income
+SSF,Sub-Saharan Africa,GMB,"Gambia, The",Low income
+SSF,Sub-Saharan Africa,GHA,Ghana,Lower middle income
+SSF,Sub-Saharan Africa,GIN,Guinea,Lower middle income
+SSF,Sub-Saharan Africa,GNB,Guinea-Bissau,Low income
+SSF,Sub-Saharan Africa,KEN,Kenya,Lower middle income
+SSF,Sub-Saharan Africa,LSO,Lesotho,Lower middle income
+SSF,Sub-Saharan Africa,LBR,Liberia,Low income
+SSF,Sub-Saharan Africa,MDG,Madagascar,Low income
+SSF,Sub-Saharan Africa,MWI,Malawi,Low income
+SSF,Sub-Saharan Africa,MLI,Mali,Low income
+SSF,Sub-Saharan Africa,MRT,Mauritania,Lower middle income
+SSF,Sub-Saharan Africa,MUS,Mauritius,Upper middle income
+SSF,Sub-Saharan Africa,MOZ,Mozambique,Low income
+SSF,Sub-Saharan Africa,NAM,Namibia,Upper middle income
+SSF,Sub-Saharan Africa,NER,Niger,Low income
+SSF,Sub-Saharan Africa,NGA,Nigeria,Lower middle income
+SSF,Sub-Saharan Africa,RWA,Rwanda,Low income
+SSF,Sub-Saharan Africa,STP,São Tomé and Príncipe,Lower middle income
+SSF,Sub-Saharan Africa,SEN,Senegal,Lower middle income
+SSF,Sub-Saharan Africa,SYC,Seychelles,High income
+SSF,Sub-Saharan Africa,SLE,Sierra Leone,Low income
+SSF,Sub-Saharan Africa,SOM,Somalia,Low income
+SSF,Sub-Saharan Africa,ZAF,South Africa,Upper middle income
+SSF,Sub-Saharan Africa,SSD,South Sudan,Low income
+SSF,Sub-Saharan Africa,SDN,Sudan,Low income
+SSF,Sub-Saharan Africa,TZA,Tanzania,Lower middle income
+SSF,Sub-Saharan Africa,TGO,Togo,Low income
+SSF,Sub-Saharan Africa,UGA,Uganda,Low income
+SSF,Sub-Saharan Africa,ZMB,Zambia,Lower middle income
+SSF,Sub-Saharan Africa,ZWE,Zimbabwe,Lower middle income
+SST,Small states,ATG,Antigua and Barbuda,High income
+SST,Small states,BHS,"Bahamas, The",High income
+SST,Small states,BHR,Bahrain,High income
+SST,Small states,BRB,Barbados,High income
+SST,Small states,BLZ,Belize,Upper middle income
+SST,Small states,BTN,Bhutan,Lower middle income
+SST,Small states,BWA,Botswana,Upper middle income
+SST,Small states,BRN,Brunei Darussalam,High income
+SST,Small states,CPV,Cabo Verde,Lower middle income
+SST,Small states,COM,Comoros,Lower middle income
+SST,Small states,CYP,Cyprus,High income
+SST,Small states,DJI,Djibouti,Lower middle income
+SST,Small states,DMA,Dominica,Upper middle income
+SST,Small states,GNQ,Equatorial Guinea,Upper middle income
+SST,Small states,EST,Estonia,High income
+SST,Small states,SWZ,Eswatini,Lower middle income
+SST,Small states,FJI,Fiji,Upper middle income
+SST,Small states,GAB,Gabon,Upper middle income
+SST,Small states,GMB,"Gambia, The",Low income
+SST,Small states,GRD,Grenada,Upper middle income
+SST,Small states,GNB,Guinea-Bissau,Low income
+SST,Small states,GUY,Guyana,High income
+SST,Small states,ISL,Iceland,High income
+SST,Small states,JAM,Jamaica,Upper middle income
+SST,Small states,KIR,Kiribati,Lower middle income
+SST,Small states,LSO,Lesotho,Lower middle income
+SST,Small states,MDV,Maldives,Upper middle income
+SST,Small states,MLT,Malta,High income
+SST,Small states,MHL,Marshall Islands,Upper middle income
+SST,Small states,MUS,Mauritius,Upper middle income
+SST,Small states,FSM,"Micronesia, Fed. Sts.",Lower middle income
+SST,Small states,MNE,Montenegro,Upper middle income
+SST,Small states,NAM,Namibia,Upper middle income
+SST,Small states,NRU,Nauru,High income
+SST,Small states,PLW,Palau,Upper middle income
+SST,Small states,QAT,Qatar,High income
+SST,Small states,WSM,Samoa,Lower middle income
+SST,Small states,SMR,San Marino,High income
+SST,Small states,STP,São Tomé and Príncipe,Lower middle income
+SST,Small states,SYC,Seychelles,High income
+SST,Small states,SLB,Solomon Islands,Lower middle income
+SST,Small states,KNA,St. Kitts and Nevis,High income
+SST,Small states,LCA,St. Lucia,Upper middle income
+SST,Small states,VCT,St. Vincent and the Grenadines,Upper middle income
+SST,Small states,SUR,Suriname,Upper middle income
+SST,Small states,TLS,Timor-Leste,Lower middle income
+SST,Small states,TON,Tonga,Upper middle income
+SST,Small states,TTO,Trinidad and Tobago,High income
+SST,Small states,TUV,Tuvalu,Upper middle income
+SST,Small states,VUT,Vanuatu,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),KHM,Cambodia,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),CHN,China,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),FJI,Fiji,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),IDN,Indonesia,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),KIR,Kiribati,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),LAO,Lao PDR,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),MYS,Malaysia,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),MHL,Marshall Islands,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),FSM,"Micronesia, Fed. Sts.",Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),MNG,Mongolia,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),MMR,Myanmar,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),NRU,Nauru,High income
+TEA,East Asia & Pacific (IDA & IBRD),PLW,Palau,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),PNG,Papua New Guinea,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),PHL,Philippines,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),WSM,Samoa,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),SLB,Solomon Islands,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),THA,Thailand,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),TLS,Timor-Leste,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),TON,Tonga,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),TUV,Tuvalu,Upper middle income
+TEA,East Asia & Pacific (IDA & IBRD),VUT,Vanuatu,Lower middle income
+TEA,East Asia & Pacific (IDA & IBRD),VNM,Vietnam,Lower middle income
+TEC,Europe & Central Asia (IDA & IBRD),ALB,Albania,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),ARM,Armenia,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),AZE,Azerbaijan,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),BLR,Belarus,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),BIH,Bosnia and Herzegovina,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),BGR,Bulgaria,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),HRV,Croatia,High income
+TEC,Europe & Central Asia (IDA & IBRD),GEO,Georgia,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),KAZ,Kazakhstan,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),XKX,Kosovo,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),KGZ,Kyrgyz Republic,Lower middle income
+TEC,Europe & Central Asia (IDA & IBRD),MDA,Moldova,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),MNE,Montenegro,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),MKD,North Macedonia,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),POL,Poland,High income
+TEC,Europe & Central Asia (IDA & IBRD),ROU,Romania,High income
+TEC,Europe & Central Asia (IDA & IBRD),RUS,Russian Federation,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),SRB,Serbia,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),TJK,Tajikistan,Lower middle income
+TEC,Europe & Central Asia (IDA & IBRD),TUR,Türkiye,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),TKM,Turkmenistan,Upper middle income
+TEC,Europe & Central Asia (IDA & IBRD),UKR,Ukraine,Lower middle income
+TEC,Europe & Central Asia (IDA & IBRD),UZB,Uzbekistan,Lower middle income
+TLA,Latin America & Caribbean (IDA & IBRD),ATG,Antigua and Barbuda,High income
+TLA,Latin America & Caribbean (IDA & IBRD),ARG,Argentina,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),BLZ,Belize,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),BOL,Bolivia,Lower middle income
+TLA,Latin America & Caribbean (IDA & IBRD),BRA,Brazil,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),CHL,Chile,High income
+TLA,Latin America & Caribbean (IDA & IBRD),COL,Colombia,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),CRI,Costa Rica,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),DMA,Dominica,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),DOM,Dominican Republic,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),ECU,Ecuador,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),SLV,El Salvador,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),GRD,Grenada,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),GTM,Guatemala,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),GUY,Guyana,High income
+TLA,Latin America & Caribbean (IDA & IBRD),HTI,Haiti,Lower middle income
+TLA,Latin America & Caribbean (IDA & IBRD),HND,Honduras,Lower middle income
+TLA,Latin America & Caribbean (IDA & IBRD),JAM,Jamaica,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),MEX,Mexico,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),NIC,Nicaragua,Lower middle income
+TLA,Latin America & Caribbean (IDA & IBRD),PAN,Panama,High income
+TLA,Latin America & Caribbean (IDA & IBRD),PRY,Paraguay,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),PER,Peru,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),KNA,St. Kitts and Nevis,High income
+TLA,Latin America & Caribbean (IDA & IBRD),LCA,St. Lucia,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),VCT,St. Vincent and the Grenadines,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),SUR,Suriname,Upper middle income
+TLA,Latin America & Caribbean (IDA & IBRD),TTO,Trinidad and Tobago,High income
+TLA,Latin America & Caribbean (IDA & IBRD),URY,Uruguay,High income
+TLA,Latin America & Caribbean (IDA & IBRD),VEN,"Venezuela, RB",0
+TMN,Middle East & North Africa (IDA & IBRD),DZA,Algeria,Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),DJI,Djibouti,Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),EGY,"Egypt, Arab Rep.",Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),IRN,"Iran, Islamic Rep.",Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),IRQ,Iraq,Upper middle income
+TMN,Middle East & North Africa (IDA & IBRD),JOR,Jordan,Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),LBN,Lebanon,Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),LBY,Libya,Upper middle income
+TMN,Middle East & North Africa (IDA & IBRD),MAR,Morocco,Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),SYR,Syrian Arab Republic,Low income
+TMN,Middle East & North Africa (IDA & IBRD),TUN,Tunisia,Lower middle income
+TMN,Middle East & North Africa (IDA & IBRD),YEM,"Yemen, Rep.",Low income
+TSA,South Asia (IDA & IBRD),AFG,Afghanistan,Low income
+TSA,South Asia (IDA & IBRD),BGD,Bangladesh,Lower middle income
+TSA,South Asia (IDA & IBRD),BTN,Bhutan,Lower middle income
+TSA,South Asia (IDA & IBRD),IND,India,Lower middle income
+TSA,South Asia (IDA & IBRD),MDV,Maldives,Upper middle income
+TSA,South Asia (IDA & IBRD),NPL,Nepal,Lower middle income
+TSA,South Asia (IDA & IBRD),PAK,Pakistan,Lower middle income
+TSA,South Asia (IDA & IBRD),LKA,Sri Lanka,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),AGO,Angola,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),BEN,Benin,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),BWA,Botswana,Upper middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),BFA,Burkina Faso,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),BDI,Burundi,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),CPV,Cabo Verde,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),CMR,Cameroon,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),CAF,Central African Republic,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),TCD,Chad,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),COM,Comoros,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),COD,"Congo, Dem. Rep.",Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),COG,"Congo, Rep.",Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),CIV,Côte d’Ivoire,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),GNQ,Equatorial Guinea,Upper middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),ERI,Eritrea,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),SWZ,Eswatini,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),ETH,Ethiopia,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),GAB,Gabon,Upper middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),GMB,"Gambia, The",Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),GHA,Ghana,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),GIN,Guinea,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),GNB,Guinea-Bissau,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),KEN,Kenya,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),LSO,Lesotho,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),LBR,Liberia,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),MDG,Madagascar,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),MWI,Malawi,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),MLI,Mali,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),MRT,Mauritania,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),MUS,Mauritius,Upper middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),MOZ,Mozambique,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),NAM,Namibia,Upper middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),NER,Niger,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),NGA,Nigeria,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),RWA,Rwanda,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),STP,São Tomé and Príncipe,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),SEN,Senegal,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),SYC,Seychelles,High income
+TSS,Sub-Saharan Africa (IDA & IBRD),SLE,Sierra Leone,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),SOM,Somalia,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),ZAF,South Africa,Upper middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),SSD,South Sudan,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),SDN,Sudan,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),TZA,Tanzania,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),TGO,Togo,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),UGA,Uganda,Low income
+TSS,Sub-Saharan Africa (IDA & IBRD),ZMB,Zambia,Lower middle income
+TSS,Sub-Saharan Africa (IDA & IBRD),ZWE,Zimbabwe,Lower middle income
+UMC,Upper middle income,ALB,Albania,Upper middle income
+UMC,Upper middle income,ARG,Argentina,Upper middle income
+UMC,Upper middle income,ARM,Armenia,Upper middle income
+UMC,Upper middle income,AZE,Azerbaijan,Upper middle income
+UMC,Upper middle income,BLR,Belarus,Upper middle income
+UMC,Upper middle income,BLZ,Belize,Upper middle income
+UMC,Upper middle income,BIH,Bosnia and Herzegovina,Upper middle income
+UMC,Upper middle income,BWA,Botswana,Upper middle income
+UMC,Upper middle income,BRA,Brazil,Upper middle income
+UMC,Upper middle income,BGR,Bulgaria,Upper middle income
+UMC,Upper middle income,CHN,China,Upper middle income
+UMC,Upper middle income,COL,Colombia,Upper middle income
+UMC,Upper middle income,CRI,Costa Rica,Upper middle income
+UMC,Upper middle income,CUB,Cuba,Upper middle income
+UMC,Upper middle income,DMA,Dominica,Upper middle income
+UMC,Upper middle income,DOM,Dominican Republic,Upper middle income
+UMC,Upper middle income,ECU,Ecuador,Upper middle income
+UMC,Upper middle income,SLV,El Salvador,Upper middle income
+UMC,Upper middle income,GNQ,Equatorial Guinea,Upper middle income
+UMC,Upper middle income,FJI,Fiji,Upper middle income
+UMC,Upper middle income,GAB,Gabon,Upper middle income
+UMC,Upper middle income,GEO,Georgia,Upper middle income
+UMC,Upper middle income,GRD,Grenada,Upper middle income
+UMC,Upper middle income,GTM,Guatemala,Upper middle income
+UMC,Upper middle income,IDN,Indonesia,Upper middle income
+UMC,Upper middle income,IRQ,Iraq,Upper middle income
+UMC,Upper middle income,JAM,Jamaica,Upper middle income
+UMC,Upper middle income,KAZ,Kazakhstan,Upper middle income
+UMC,Upper middle income,XKX,Kosovo,Upper middle income
+UMC,Upper middle income,LBY,Libya,Upper middle income
+UMC,Upper middle income,MYS,Malaysia,Upper middle income
+UMC,Upper middle income,MDV,Maldives,Upper middle income
+UMC,Upper middle income,MHL,Marshall Islands,Upper middle income
+UMC,Upper middle income,MUS,Mauritius,Upper middle income
+UMC,Upper middle income,MEX,Mexico,Upper middle income
+UMC,Upper middle income,MDA,Moldova,Upper middle income
+UMC,Upper middle income,MNE,Montenegro,Upper middle income
+UMC,Upper middle income,NAM,Namibia,Upper middle income
+UMC,Upper middle income,MKD,North Macedonia,Upper middle income
+UMC,Upper middle income,PLW,Palau,Upper middle income
+UMC,Upper middle income,PRY,Paraguay,Upper middle income
+UMC,Upper middle income,PER,Peru,Upper middle income
+UMC,Upper middle income,RUS,Russian Federation,Upper middle income
+UMC,Upper middle income,SRB,Serbia,Upper middle income
+UMC,Upper middle income,ZAF,South Africa,Upper middle income
+UMC,Upper middle income,LCA,St. Lucia,Upper middle income
+UMC,Upper middle income,VCT,St. Vincent and the Grenadines,Upper middle income
+UMC,Upper middle income,SUR,Suriname,Upper middle income
+UMC,Upper middle income,THA,Thailand,Upper middle income
+UMC,Upper middle income,TON,Tonga,Upper middle income
+UMC,Upper middle income,TUR,Türkiye,Upper middle income
+UMC,Upper middle income,TKM,Turkmenistan,Upper middle income
+UMC,Upper middle income,TUV,Tuvalu,Upper middle income
+UMC,Upper middle income,PSE,West Bank and Gaza,Upper middle income
+WLD,World,AFG,Afghanistan,Low income
+WLD,World,ALB,Albania,Upper middle income
+WLD,World,DZA,Algeria,Lower middle income
+WLD,World,ASM,American Samoa,High income
+WLD,World,AND,Andorra,High income
+WLD,World,AGO,Angola,Lower middle income
+WLD,World,ATG,Antigua and Barbuda,High income
+WLD,World,ARG,Argentina,Upper middle income
+WLD,World,ARM,Armenia,Upper middle income
+WLD,World,ABW,Aruba,High income
+WLD,World,AUS,Australia,High income
+WLD,World,AUT,Austria,High income
+WLD,World,AZE,Azerbaijan,Upper middle income
+WLD,World,BHS,"Bahamas, The",High income
+WLD,World,BHR,Bahrain,High income
+WLD,World,BGD,Bangladesh,Lower middle income
+WLD,World,BRB,Barbados,High income
+WLD,World,BLR,Belarus,Upper middle income
+WLD,World,BEL,Belgium,High income
+WLD,World,BLZ,Belize,Upper middle income
+WLD,World,BEN,Benin,Lower middle income
+WLD,World,BMU,Bermuda,High income
+WLD,World,BTN,Bhutan,Lower middle income
+WLD,World,BOL,Bolivia,Lower middle income
+WLD,World,BIH,Bosnia and Herzegovina,Upper middle income
+WLD,World,BWA,Botswana,Upper middle income
+WLD,World,BRA,Brazil,Upper middle income
+WLD,World,VGB,British Virgin Islands,High income
+WLD,World,BRN,Brunei Darussalam,High income
+WLD,World,BGR,Bulgaria,Upper middle income
+WLD,World,BFA,Burkina Faso,Low income
+WLD,World,BDI,Burundi,Low income
+WLD,World,CPV,Cabo Verde,Lower middle income
+WLD,World,KHM,Cambodia,Lower middle income
+WLD,World,CMR,Cameroon,Lower middle income
+WLD,World,CAN,Canada,High income
+WLD,World,CYM,Cayman Islands,High income
+WLD,World,CAF,Central African Republic,Low income
+WLD,World,TCD,Chad,Low income
+WLD,World,CHI,Channel Islands,High income
+WLD,World,CHL,Chile,High income
+WLD,World,CHN,China,Upper middle income
+WLD,World,COL,Colombia,Upper middle income
+WLD,World,COM,Comoros,Lower middle income
+WLD,World,COD,"Congo, Dem. Rep.",Low income
+WLD,World,COG,"Congo, Rep.",Lower middle income
+WLD,World,CRI,Costa Rica,Upper middle income
+WLD,World,CIV,Côte d’Ivoire,Lower middle income
+WLD,World,HRV,Croatia,High income
+WLD,World,CUB,Cuba,Upper middle income
+WLD,World,CUW,Curaçao,High income
+WLD,World,CYP,Cyprus,High income
+WLD,World,CZE,Czechia,High income
+WLD,World,DNK,Denmark,High income
+WLD,World,DJI,Djibouti,Lower middle income
+WLD,World,DMA,Dominica,Upper middle income
+WLD,World,DOM,Dominican Republic,Upper middle income
+WLD,World,ECU,Ecuador,Upper middle income
+WLD,World,EGY,"Egypt, Arab Rep.",Lower middle income
+WLD,World,SLV,El Salvador,Upper middle income
+WLD,World,GNQ,Equatorial Guinea,Upper middle income
+WLD,World,ERI,Eritrea,Low income
+WLD,World,EST,Estonia,High income
+WLD,World,SWZ,Eswatini,Lower middle income
+WLD,World,ETH,Ethiopia,Low income
+WLD,World,FRO,Faroe Islands,High income
+WLD,World,FJI,Fiji,Upper middle income
+WLD,World,FIN,Finland,High income
+WLD,World,FRA,France,High income
+WLD,World,PYF,French Polynesia,High income
+WLD,World,GAB,Gabon,Upper middle income
+WLD,World,GMB,"Gambia, The",Low income
+WLD,World,GEO,Georgia,Upper middle income
+WLD,World,DEU,Germany,High income
+WLD,World,GHA,Ghana,Lower middle income
+WLD,World,GIB,Gibraltar,High income
+WLD,World,GRC,Greece,High income
+WLD,World,GRL,Greenland,High income
+WLD,World,GRD,Grenada,Upper middle income
+WLD,World,GUM,Guam,High income
+WLD,World,GTM,Guatemala,Upper middle income
+WLD,World,GIN,Guinea,Lower middle income
+WLD,World,GNB,Guinea-Bissau,Low income
+WLD,World,GUY,Guyana,High income
+WLD,World,HTI,Haiti,Lower middle income
+WLD,World,HND,Honduras,Lower middle income
+WLD,World,HKG,"Hong Kong SAR, China",High income
+WLD,World,HUN,Hungary,High income
+WLD,World,ISL,Iceland,High income
+WLD,World,IND,India,Lower middle income
+WLD,World,IDN,Indonesia,Upper middle income
+WLD,World,IRN,"Iran, Islamic Rep.",Lower middle income
+WLD,World,IRQ,Iraq,Upper middle income
+WLD,World,IRL,Ireland,High income
+WLD,World,IMN,Isle of Man,High income
+WLD,World,ISR,Israel,High income
+WLD,World,ITA,Italy,High income
+WLD,World,JAM,Jamaica,Upper middle income
+WLD,World,JPN,Japan,High income
+WLD,World,JOR,Jordan,Lower middle income
+WLD,World,KAZ,Kazakhstan,Upper middle income
+WLD,World,KEN,Kenya,Lower middle income
+WLD,World,KIR,Kiribati,Lower middle income
+WLD,World,PRK,"Korea, Dem. People's Rep.",Low income
+WLD,World,KOR,"Korea, Rep.",High income
+WLD,World,XKX,Kosovo,Upper middle income
+WLD,World,KWT,Kuwait,High income
+WLD,World,KGZ,Kyrgyz Republic,Lower middle income
+WLD,World,LAO,Lao PDR,Lower middle income
+WLD,World,LVA,Latvia,High income
+WLD,World,LBN,Lebanon,Lower middle income
+WLD,World,LSO,Lesotho,Lower middle income
+WLD,World,LBR,Liberia,Low income
+WLD,World,LBY,Libya,Upper middle income
+WLD,World,LIE,Liechtenstein,High income
+WLD,World,LTU,Lithuania,High income
+WLD,World,LUX,Luxembourg,High income
+WLD,World,MAC,"Macao SAR, China",High income
+WLD,World,MDG,Madagascar,Low income
+WLD,World,MWI,Malawi,Low income
+WLD,World,MYS,Malaysia,Upper middle income
+WLD,World,MDV,Maldives,Upper middle income
+WLD,World,MLI,Mali,Low income
+WLD,World,MLT,Malta,High income
+WLD,World,MHL,Marshall Islands,Upper middle income
+WLD,World,MRT,Mauritania,Lower middle income
+WLD,World,MUS,Mauritius,Upper middle income
+WLD,World,MEX,Mexico,Upper middle income
+WLD,World,FSM,"Micronesia, Fed. Sts.",Lower middle income
+WLD,World,MDA,Moldova,Upper middle income
+WLD,World,MCO,Monaco,High income
+WLD,World,MNG,Mongolia,Lower middle income
+WLD,World,MNE,Montenegro,Upper middle income
+WLD,World,MAR,Morocco,Lower middle income
+WLD,World,MOZ,Mozambique,Low income
+WLD,World,MMR,Myanmar,Lower middle income
+WLD,World,NAM,Namibia,Upper middle income
+WLD,World,NRU,Nauru,High income
+WLD,World,NPL,Nepal,Lower middle income
+WLD,World,NLD,Netherlands,High income
+WLD,World,NCL,New Caledonia,High income
+WLD,World,NZL,New Zealand,High income
+WLD,World,NIC,Nicaragua,Lower middle income
+WLD,World,NER,Niger,Low income
+WLD,World,NGA,Nigeria,Lower middle income
+WLD,World,MKD,North Macedonia,Upper middle income
+WLD,World,MNP,Northern Mariana Islands,High income
+WLD,World,NOR,Norway,High income
+WLD,World,OMN,Oman,High income
+WLD,World,PAK,Pakistan,Lower middle income
+WLD,World,PLW,Palau,Upper middle income
+WLD,World,PAN,Panama,High income
+WLD,World,PNG,Papua New Guinea,Lower middle income
+WLD,World,PRY,Paraguay,Upper middle income
+WLD,World,PER,Peru,Upper middle income
+WLD,World,PHL,Philippines,Lower middle income
+WLD,World,POL,Poland,High income
+WLD,World,PRT,Portugal,High income
+WLD,World,PRI,Puerto Rico,High income
+WLD,World,QAT,Qatar,High income
+WLD,World,ROU,Romania,High income
+WLD,World,RUS,Russian Federation,Upper middle income
+WLD,World,RWA,Rwanda,Low income
+WLD,World,WSM,Samoa,Lower middle income
+WLD,World,SMR,San Marino,High income
+WLD,World,STP,São Tomé and Príncipe,Lower middle income
+WLD,World,SAU,Saudi Arabia,High income
+WLD,World,SEN,Senegal,Lower middle income
+WLD,World,SRB,Serbia,Upper middle income
+WLD,World,SYC,Seychelles,High income
+WLD,World,SLE,Sierra Leone,Low income
+WLD,World,SGP,Singapore,High income
+WLD,World,SXM,Sint Maarten (Dutch part),High income
+WLD,World,SVK,Slovak Republic,High income
+WLD,World,SVN,Slovenia,High income
+WLD,World,SLB,Solomon Islands,Lower middle income
+WLD,World,SOM,Somalia,Low income
+WLD,World,ZAF,South Africa,Upper middle income
+WLD,World,SSD,South Sudan,Low income
+WLD,World,ESP,Spain,High income
+WLD,World,LKA,Sri Lanka,Lower middle income
+WLD,World,KNA,St. Kitts and Nevis,High income
+WLD,World,LCA,St. Lucia,Upper middle income
+WLD,World,MAF,St. Martin (French part),High income
+WLD,World,VCT,St. Vincent and the Grenadines,Upper middle income
+WLD,World,SDN,Sudan,Low income
+WLD,World,SUR,Suriname,Upper middle income
+WLD,World,SWE,Sweden,High income
+WLD,World,CHE,Switzerland,High income
+WLD,World,SYR,Syrian Arab Republic,Low income
+WLD,World,TWN,"Taiwan, China",High income
+WLD,World,TJK,Tajikistan,Lower middle income
+WLD,World,TZA,Tanzania,Lower middle income
+WLD,World,THA,Thailand,Upper middle income
+WLD,World,TLS,Timor-Leste,Lower middle income
+WLD,World,TGO,Togo,Low income
+WLD,World,TON,Tonga,Upper middle income
+WLD,World,TTO,Trinidad and Tobago,High income
+WLD,World,TUN,Tunisia,Lower middle income
+WLD,World,TUR,Türkiye,Upper middle income
+WLD,World,TKM,Turkmenistan,Upper middle income
+WLD,World,TCA,Turks and Caicos Islands,High income
+WLD,World,TUV,Tuvalu,Upper middle income
+WLD,World,UGA,Uganda,Low income
+WLD,World,UKR,Ukraine,Lower middle income
+WLD,World,ARE,United Arab Emirates,High income
+WLD,World,GBR,United Kingdom,High income
+WLD,World,USA,United States,High income
+WLD,World,URY,Uruguay,High income
+WLD,World,UZB,Uzbekistan,Lower middle income
+WLD,World,VUT,Vanuatu,Lower middle income
+WLD,World,VEN,"Venezuela, RB",0
+WLD,World,VNM,Vietnam,Lower middle income
+WLD,World,VIR,Virgin Islands (U.S.),High income
+WLD,World,PSE,West Bank and Gaza,Upper middle income
+WLD,World,YEM,"Yemen, Rep.",Low income
+WLD,World,ZMB,Zambia,Lower middle income
+WLD,World,ZWE,Zimbabwe,Lower middle income
