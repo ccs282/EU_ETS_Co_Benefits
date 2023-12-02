@@ -35,7 +35,7 @@ The free software R is required and can be downloaded [here](https://www.r-proje
 
 ### R Packages
 
-The packages needed to prepare the data, run the analysis, and plot results are listed at the beginning of [./master.r](./master.r). The core package to conduct the GSCM analysis is the [gsynth package](https://yiqingxu.org/packages/gsynth/index.html) by [Yiqing Xu](https://yiqingxu.org/).
+The packages needed to prepare the data, run the analysis, and plot results are listed at the beginning of [./master.r](./master.r). The core package to conduct the GSCM analysis is the [gsynth package](https://yiqingxu.org/packages/gsynth/index.html) by [Yiqing Xu](https://yiqingxu.org/) and [Licheng Liu](https://polisci.mit.edu/people/licheng-liu).
 
 To install them all, run:
 
