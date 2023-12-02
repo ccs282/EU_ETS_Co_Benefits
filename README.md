@@ -31,7 +31,7 @@ Please note that this README-file explains the main analysis, robustness checks,
 
 ### Software requirements
 
-The free software R is required and can be downloaded [here](https://www.r-project.org/). Furthermore, we recommend a code editor/IDE such as [Visual Studio Code](https://code.visualstudio.com/download) or [RStudio](https://posit.co/downloads/).
+The free software R is required and can be downloaded [here](https://www.r-project.org/). Furthermore, we recommend a code editor/IDE such as [Visual Studio Code](https://code.visualstudio.com/download) (VSC) or [RStudio](https://posit.co/downloads/).
 
 ### R Packages
 
