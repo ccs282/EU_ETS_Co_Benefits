@@ -531,7 +531,7 @@ misc_parameters$arg_validation <- modifyList(
                         1970:1995
                 ),
                 year_last = c(
-                        2016:2021
+                        2018:2021
                 ),
                 balanced_panel = c(
                         "TRUE",
