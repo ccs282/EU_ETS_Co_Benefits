@@ -10,7 +10,7 @@
 # Last update:  December 2023
 
 # TECHNICAL DISCLAIMER
-# Analysis run using R version 4.3.2 using VSC 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
+# Analysis run using R version 4.3.2 in VSC 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
 
 # License: Please see the LICENSE file in the root directory of the repository.
 
@@ -45,17 +45,17 @@ source(here("src", "R", "functions.r"))
 
 # Results main paper ----------------------------------------------------------
 
-# Main specification
-# Fig. 1 & Col. 2 of Fig. 2 in the Brief Report
-execute_analysis(
-        pollutant = "so2" # "nox", "so2", "pm25"
-)
-
 # Main specification without covariates
 # Fig.2, Col. 1 in the Brief Report
 execute_analysis(
         pollutant = "so2", # "nox", "so2", "pm25"
         covariates = "none"
+)
+
+# Main specification
+# Fig. 1 & Col. 2 of Fig. 2 in the Brief Report
+execute_analysis(
+        pollutant = "so2" # "nox", "so2", "pm25"
 )
 
 # Main specification with concurrent policy covariates
