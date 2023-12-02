@@ -16,23 +16,23 @@ execute_analysis <- function(
                 year_first = 1990,
                 year_last = 2021,
                 main_data = "emep23/un",
-                include_1a2 = "emep21+23/un", # "edgar_fully_treated" or "emep/un" or "no" # nolint
+                include_1a2 = "emep21+23/un",
                 include_bio = "yes",
                 include_uk = TRUE,
                 include_aviation = "control", # following Bayer & Aklin (2020)
                 balanced_panel = FALSE,
-                gaps_in_years = "interpolate", # "interpolate" or "drop"
+                gaps_in_years = "interpolate",
                 damage_est_source = "uba_eu_27",
                 time_var_damages = FALSE,
 
                 # specification choices
                 pollutant,
                 ets_start_year = 2005,
-                treatment_timing = "common", # staggered or common
+                treatment_timing = "common",
                 ensure_common = TRUE,
-                unit_of_analysis = "country_treat", # "country_sector" (disaggregated), "country_treat" (aggregated) #nolint
+                unit_of_analysis = "country_treat",
                 donor_countries = "same_as_treat",
-                donor_sectors = "all_available", # "all_available", "non_ETS_sectors", "ETS_sectors", "same_as_treat" # nolint
+                donor_sectors = "all_available",
                 treat_countries = "eu25_countries",
                 treat_sectors = "ets_sectors",
                 leave_one_out = FALSE,
@@ -51,7 +51,7 @@ execute_analysis <- function(
 
                 # plot options
                 save_plots = TRUE,
-                annotate_plots = "att", # "detailed", "att" or anything
+                annotate_plots = "att",
                 show_lines = c("tr", "ct"),
                 loop_mode = FALSE,
 
