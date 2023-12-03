@@ -5,19 +5,19 @@
 
 # Purpose:      Preparing the data for and running the GSCM analysis, creating plots and saving results through the custom function execute_analysis(). # nolint
 
-# Data input:   Multiple files saved under './data/...'
-# Output files: Plots saved under './plots/...' and results under './results/...' # nolint
+# Data input:   Multiple files saved under './data/'
+# Output files: Plots saved under './plots/' and results under './results/' # nolint
 # Last update:  December 2023
 
 # TECHNICAL DISCLAIMER
-# Analysis run using R version 4.3.2 in VSC 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
+# Analysis run using R version 4.3.2 in Visual Studio Code 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
 
 # License: Please see the LICENSE file in the root directory of the repository.
 
 # Contact:
 # Email: jonas.sebastian.grunau@uni-hamburg.de
 
-# Note: The synthetic DID analysis is in a separate folder './Stata_SDID/...' # nolint
+# Note: The synthetic DID analysis is in a separate folder './Stata_SDID/' # nolint
 
 
 
@@ -161,7 +161,28 @@ execute_analysis(
 
 
 
-# GSCM with custom arguments -------------------------------------------------
+# How to obtain the data for SDID and paper plots -----------------------------
+# creating data input for './Stata_SDID/dofiles/EUETS_SDID_SCM_DiD.do' and
+# './src/R/plots_paper.r'
+
+execute_analysis(
+        pollutant = "so2" # "nox", "so2", "pm25"
+)
+
+# Data needed for SDID analysis ('./Stata_SDID/')
+write_csv(
+        gscm,
+        here("Stata_SDID", "data_in", glue("so2_gscm_data.csv")) # replace "so2" with "nox" or "pm25" for other pollutants # nolint
+)
+
+# Data needed to create the plots in the Brief Report
+write_csv(plots$data, here(
+        "plots", "data", glue("so2.csv") # replace "so2" with "nox" or "pm25" for other pollutants # nolint
+))
+
+
+
+# GSCM with custom arguments --------------------------------------------------
 
 # description of all arguments under './README.md'
 execute_analysis(

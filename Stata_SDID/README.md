@@ -39,11 +39,7 @@ ssc install estout, replace // To export tables with results
 
 ### Data inputs
 
-``` Stata
-Stata_SDID/data_in/so2_gscm_data.csv
-Stata_SDID/data_in/pm25_gscm_data.csv
-Stata_SDID/data_in/nox_gscm_data.csv
-```
+The data sets used for the SDID analysis are provided under [./data_in/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID/data_in). The file [master.r](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/master.r) contains the code that has generated the data sets.
 
 ---
 

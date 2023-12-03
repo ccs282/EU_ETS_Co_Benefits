@@ -14,7 +14,7 @@ here()
 # Figure 1 --------------------------------------------------------------------
 
 # read plot data
-# plot data was saved from plots$data after having run the "Main Specification" in 'master.r' for each pollutant # nolint
+# see 'master.r' for how the data was created # nolint
 so2 <- read_csv(here(
         "plots",
         "data",
