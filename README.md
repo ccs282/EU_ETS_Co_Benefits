@@ -155,7 +155,7 @@ There are two kinds of plots in this repository: (1) rough plots saved after eac
 
 ### Plots created after each run
 
-After each run, `execute_analysis()` creates multiple plots and saves them. The plots can be called through the following commands in [./master.r](./master.r): `plots$panelview` for a plot that shows the completeness of the panel data, `plots$att` (`plots$ct_tr`) for a plot similar to the bottom (top) panel of Figure 1 in the Brief Report.
+After each run, `execute_analysis()` creates multiple plots and saves them. The plots can be called through the following commands in [./master.r]([./master.r](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/master.r)): `plots$panelview` for a plot that shows the completeness of the panel data, `plots$att` (`plots$ct_tr`) for a plot similar to the bottom (top) panel of Figure 1 in the Brief Report.
 
 These plots are saved under [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots) in the folders named after the three pollutants and [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) if `save_plots == TRUE`. The path to the plots is based on specification choices. For instance, the main specification plot for SO$_2$ is located under [./plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png). When the specification choice cannot be expressed as a file path, they are saved under [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) in a folder named after a unique identifier for each run.
 
