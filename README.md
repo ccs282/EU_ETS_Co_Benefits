@@ -23,7 +23,7 @@ Welcome to the online repository of the paper *"The European Union Emissions Tra
 
 The following sections lay out the structure of the repository and provide instructions on how to replicate the analysis and plots of the paper. For information on methodological details, please refer to the Brief Report and the Supplementary Information (SI) Appendix first.
 
-Please note that this README-file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [/Stata_SDID/README.md](/Stata_SDID/README.md).
+Please note that this README-file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md).
 
 ---
 
@@ -35,7 +35,7 @@ The free software R is required and can be downloaded [here](https://www.r-proje
 
 ### R Packages
 
-The packages needed to prepare the data, run the analysis, and plot results are listed at the beginning of [/master.r](/master.r). The core package to conduct the GSCM analysis is the [gsynth package](https://yiqingxu.org/packages/gsynth/index.html) developed by [Yiqing Xu](https://yiqingxu.org/) and [Licheng Liu](https://polisci.mit.edu/people/licheng-liu).
+The packages needed to prepare the data, run the analysis, and plot results are listed at the beginning of [./master.r](./master.r). The core package to conduct the GSCM analysis is the [gsynth package](https://yiqingxu.org/packages/gsynth/index.html) developed by [Yiqing Xu](https://yiqingxu.org/) and [Licheng Liu](https://polisci.mit.edu/people/licheng-liu).
 
 To install them all, run:
 
@@ -62,11 +62,11 @@ install.packages(c(
 
 ### Running the analysis
 
-Having saved the repository locally on your computer, the entire analysis can be controlled from the custom function `execute_analysis()` in [/master.r](/master.r). Before doing so, it is important to start a fresh R process *from within the repository [EU_ETS_Co_Benefits](https://github.com/ccs282/EU_ETS_Co_Benefits.git)*. For instance, in VSC, use 'CTRL+K CTRL+O' to open the repository and only then start a new R process. Alternatively, initiate the editor/IDE of your choice, such as VSC or RStudio, by opening [/master.r](/master.r) with the respective software and then start a new R terminal.
+Having saved the repository locally on your computer, the entire analysis can be controlled from the custom function `execute_analysis()` in [./master.r](./master.r). Before doing so, it is important to start a fresh R process *from within the repository [EU_ETS_Co_Benefits](https://github.com/ccs282/EU_ETS_Co_Benefits.git)*. For instance, in VSC, use 'CTRL+K CTRL+O' to open the repository and only then start a new R process. Alternatively, initiate the editor/IDE of your choice, such as VSC or RStudio, by opening [./master.r](./master.r) with the respective software and then start a new R terminal.
 
-It is not recommended to run the entire script [/master.r](/master.r) all at once as it mostly consists of repeated calls of the function `execute_analysis()` for the different specifications in the Brief Report and SI Appendix. Instead, run the code blocks from `library(tidyverse)`, $\ldots$, `here()`, $\ldots$ up until `source(here("src", "R", "functions.r"))`, which automatically load the required packages, set the starting point for relative paths, and load the custom functions required for the analysis.
+It is not recommended to run the entire script [./master.r](./master.r) all at once as it mostly consists of repeated calls of the function `execute_analysis()` for the different specifications in the Brief Report and SI Appendix. Instead, run the code blocks from `library(tidyverse)`, $\ldots$, `here()`, $\ldots$ up until `source(here("src", "R", "functions.r"))`, which automatically load the required packages, set the starting point for relative paths, and load the custom functions required for the analysis.
 
-The rest of [/master.r](/master.r) after `source(here("src", "R", "functions.r"))` contains specific commands that replicate the results for the specifications of our model presented in the Brief Report and SI Appendix, such as the two below, which also illustrate the ease of use of `execute_analysis()`.
+The rest of [./master.r](./master.r) after `source(here("src", "R", "functions.r"))` contains specific commands that replicate the results for the specifications of our model presented in the Brief Report and SI Appendix, such as the two below, which also illustrate the ease of use of `execute_analysis()`.
 
 ```R
 # Main specification
@@ -85,7 +85,7 @@ execute_analysis(
 
 The different specifications should be run separately so that after each run the user can explore the [results](#accessing-results) and [plots](#accessing-plots).
 
-`execute_analysis()` draws upon several R scripts in [/src/R/](/src/R/), which are not explained further. A list of the relevant arguments of `execute_analysis()` is provided in the [next section](#function-arguments-of-execute_analysis).
+`execute_analysis()` draws upon several R scripts in [./src/R](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/src/R), which are not explained further. A list of the relevant arguments of `execute_analysis()` is provided in the [next section](#function-arguments-of-execute_analysis).
 
 ---
 
@@ -105,7 +105,7 @@ The following table contains a description of the relevant function arguments as
 | `ets_start_year` | Sets the start year of the EU ETS, i.e., the beginning of the treatment. | `2002:2008`; **`2005`*** |
 | `year_first` | The first year to consider in the analysis. EMEP data starts in 1990, whereas EDGAR data starts in 1970. | `1970:1995`; **`1990`*** |
 | `year_last` | The last year to consider in the analysis. EMEP data is available until 2021, whereas EDGAR ends in 2018. | `2018:2021`; **`2021`*** |
-| `treat_countries` | Sets the pool of treated countries. Can be one of the country groups listed or a vector of country names. For definitions of the country groups, check the script [/src/R/vectors_df.r](/src/R/vectors_df.r). | `"ets_countries"` `"eu28_countries"` **`"eu25_countries"`*** `"eu15_countries"` `"eu10_countries"` `"sdid_countries"` |
+| `treat_countries` | Sets the pool of treated countries. Can be one of the country groups listed or a vector of country names. For definitions of the country groups, check the script [./src/R/vectors_df.r](./src/R/vectors_df.r). | `"ets_countries"` `"eu28_countries"` **`"eu25_countries"`*** `"eu15_countries"` `"eu10_countries"` `"sdid_countries"` |
 | `treat_sectors` | Determines which treated sectors to analyze. `"ets_sectors"` considers all treated sectors available in the data. Also possible to choose only certain sectors. | **`"ets_sectors"`*** `"energy_sectors"` `"metals_sectors"` `"minerals_sectors"` `"chemicals_sectors"` `"paper_sectors"` |
 | `donor_countries` | Countries to include in the donor pool. Same country groups (or country name vectors) as in `treat_countries` possible. `"same_as_treat"` chooses the same countries as are specified in `treat_countries`. | `"ets_countries"` `"eu28_countries"` `"eu25_countries"` `"eu10_countries"` `"eu15_countries"` `"sdid_countries"` **`"same_as_treat"`*** |
 | `donor_sectors` | The sectors to contribute to the units in the donor pool. For the current analysis, `"all_available"` chooses all non-ETS-regulated sectors. Also possible to insert a vector of sector codes. | **`"all_available"`*** |
@@ -149,32 +149,32 @@ The following table contains a description of the relevant function arguments as
 
 | Argument |  Description | Values |
 | --- |  --- | --- |
-| `prep_data` | Determines whether the data for the analysis shall be prepared from scratch or read from a csv. Setting it to `TRUE` requires downloading two large data sets. First, download [EMEP21](https://sdi.eea.europa.eu/catalogue/srv/api/records/22accc6a-dfbd-4ed0-9c38-d0b51f86a81a) and save it under [/data/pollution/emep/CLRTAP_NVFR14_V21_GF.csv](/data/pollution/emep/CLRTAP_NVFR14_V21_GF.csv). Second, download [EMEP23](https://sdi.eea.europa.eu/catalogue/srv/api/records/2999364f-be52-4012-b4fd-f98e2cc8fab6?language=all) and save it under [/data/pollution/emep/CLRTAP_NVFR19_V23_1_GF_csv.csv](/data/pollution/emep/CLRTAP_NVFR19_V23_1_GF_csv.csv). | `TRUE` **`FALSE`*** |
+| `prep_data` | Determines whether the data for the analysis shall be prepared from scratch or read from a csv. Setting it to `TRUE` requires downloading two large data sets. First, download [EMEP21](https://sdi.eea.europa.eu/catalogue/srv/api/records/22accc6a-dfbd-4ed0-9c38-d0b51f86a81a) and save it under [./data/pollution/emep/CLRTAP_NVFR14_V21_GF.csv](./data/pollution/emep/CLRTAP_NVFR14_V21_GF.csv). Second, download [EMEP23](https://sdi.eea.europa.eu/catalogue/srv/api/records/2999364f-be52-4012-b4fd-f98e2cc8fab6?language=all) and save it under [./data/pollution/emep/CLRTAP_NVFR19_V23_1_GF_csv.csv](./data/pollution/emep/CLRTAP_NVFR19_V23_1_GF_csv.csv). | `TRUE` **`FALSE`*** |
 | `write_files` | Only relevant when `prep_data == TRUE`. Determines whether the prepared data sets shall be saved as .csv. | `TRUE` **`FALSE`*** |
-| `save_plots` | Determines whether to save plots under [/plots/](/plots/). | **`TRUE`*** `FALSE` |
-| `annotate_plots` | Determines how to annotate plots (not the polished paper plots under [/plots/paper/](/plots/paper/) but the plots displayed after each run when calling `plots$att` and `plots$ct_tr`). `"att"` inserts the average ATT into the Figure, while `"no"` provides no annotation. | **`"att"`*** `"no"` |
+| `save_plots` | Determines whether to save plots under [./plots/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots). | **`TRUE`*** `FALSE` |
+| `annotate_plots` | Determines how to annotate plots (not the polished paper plots under [./plots/paper/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) but the plots displayed after each run when calling `plots$att` and `plots$ct_tr`). `"att"` inserts the average ATT into the Figure, while `"no"` provides no annotation. | **`"att"`*** `"no"` |
 | `show_lines` | Determines which lines to show in the plots post-analysis when running `plots$ct_tr`. `"tr"` `"ct"`, and `"co"` refer to treated, counterfactual, and control units, respectively. | `"ct"` `"co"` `"tr"`; **`c("tr", "ct")`*** |
 | `conduct_analysis` | Determines whether to conduct the GSCM analysis. If `FALSE`, `execute_analysis()` will only prepare the data. | **`TRUE`*** `FALSE` |
-| `write_results_table` | Determines whether to write the results tables under [/results/](/results/). See [here](#accessing-results) for more information. | **`TRUE`*** `FALSE` |
+| `write_results_table` | Determines whether to write the results tables under [./results](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/results). See [here](#accessing-results) for more information. | **`TRUE`*** `FALSE` |
 </details>
 
 ---
 
 ## Accessing plots
 
-There are two kinds of plots in this repository: (1) rough plots saved after each run of `execute_analysis()` under [/plots/](/plots/) and (2) polished plots in the design used in the Brief Report that are saved under [/plots/paper/](/plots/paper/).
+There are two kinds of plots in this repository: (1) rough plots saved after each run of `execute_analysis()` under [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots) and (2) polished plots in the design used in the Brief Report that are saved under [./plots/paper](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper).
 
 ### Plots created after each run
 
-After each run, `execute_analysis()` creates multiple plots and saves them. The plots can be called through the following commands in [/master.r](/master.r): `plots$panelview` for a plot that shows the completeness of the panel data, `plots$att` (`plots$ct_tr`) for a plot similar to the bottom (top) panel of Figure 1 in the Brief Report.
+After each run, `execute_analysis()` creates multiple plots and saves them. The plots can be called through the following commands in [./master.r](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/master.r): `plots$panelview` for a plot that shows the completeness of the panel data, `plots$att` (`plots$ct_tr`) for a plot similar to the bottom (top) panel of Figure 1 in the Brief Report.
 
-These plots are saved under [/plots/](/plots/) in the folders named after the three pollutants and [/plots/misc/](/plots/misc/) if `save_plots == TRUE`. The path to the plots is based on specification choices. For instance, the main specification plot for SO$_2$ is located under [/plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png](/plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png). When the specification choice cannot be expressed as a file path, they are saved under [/plots/misc/](/plots/misc/) in a folder named after a unique identifier for each run.
+These plots are saved under [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots) in the folders named after the three pollutants and [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) if `save_plots == TRUE`. The path to the plots is based on specification choices. For instance, the main specification plot for SO$_2$ is located under [./plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png). When the specification choice cannot be expressed as a file path, they are saved under [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) in a folder named after a unique identifier for each run.
 
 To make locating plots convenient, users can call `misc_parameters$uuid` after each run to obtain the unique identifier. Searching the repository for this identifier will lead to the location under which the plots were saved. In the main results table ([see below](#accessing-results)), the unique identifier is also listed.
 
 ### Plots of the Brief Report and SI Appendix
 
-The plots displayed in the Brief Report and mentioned in the SI Appendix are in [/plots/paper/](/plots/paper/) and [/plots/robustness_checks/](/plots/robustness_checks/), respectively. Please refer to the two documents for more details. The plots of the Brief Report can be replicated in [/src/R/plots_paper.r](/src/R/plots_paper.r).
+The plots displayed in the Brief Report and mentioned in the SI Appendix are in [./plots/paper/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) and [./plots/robustness_checks/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/robustness_checks), respectively. Please refer to the two documents for more details. The plots of the Brief Report can be replicated in [./src/R/plots_paper.r](./src/R/plots_paper.r).
 
 ---
 
@@ -182,9 +182,9 @@ The plots displayed in the Brief Report and mentioned in the SI Appendix are in 
 
 The results of each run are saved in the list `gscm_analysis`. Please see the `gsynth()` documentation (`help("gsynth")`) for more information on the structure of the list.
 
-Moreover, the results are saved in a .csv under [/results/results_table.csv](/results/results_table.csv), which is also available in .xlsx format under [/results/2023_11_30_results_table.xlsx](/results/2023_11_30_results_table.xlsx). The columns of the table closely mirror the function arguments of `execute_analysis()` (see [here](#function-arguments-of-execute_analysis)), output of the `gsynth()` function as well as manual calculations of the absolute effect in physical units. For details, users are encouraged to search the code under [/src/R/results_table.r](/src/R/results_table.r) for the respective column name.
+Moreover, the results are saved in a .csv under [./results/results_table.csv](./results/results_table.csv), which is also available in .xlsx format under [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx). The columns of the table closely mirror the function arguments of `execute_analysis()` (see [here](#function-arguments-of-execute_analysis)), output of the `gsynth()` function as well as manual calculations of the absolute effect in physical units. For details, users are encouraged to search the code under [./src/R/results_table.r](./src/R/results_table.r) for the respective column name.
 
-The tables contain the results of all our runs. As it also lists the unique identifier of each run, users can easily locate the plots linked to the respective specification (see [here](#plots-created-after-each-run)) by searching the repository for that ID. Moreover, filtering the columns (e.g., via Excel in [/results/2023_11_30_results_table.xlsx](/results/2023_11_30_results_table.xlsx)) allows user to find the results of a specific run.
+The tables contain the results of all our runs. As it also lists the unique identifier of each run, users can easily locate the plots linked to the respective specification (see [here](#plots-created-after-each-run)) by searching the repository for that ID. Moreover, filtering the columns (e.g., via Excel in [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx)) allows user to find the results of a specific run.
 
 ---
 
@@ -192,13 +192,13 @@ The tables contain the results of all our runs. As it also lists the unique iden
 
 ### Replication information
 
-More information on the technical details of how the analysis was conducted can be found at the top of [/master.r](/master.r).
+More information on the technical details of how the analysis was conducted can be found at the top of [./master.r](./master.r).
 
-Please note that the repository is self-contained, i.e., contains all materials necessary to replicate the findings. The only exception to this is when setting `data_prep == TRUE` (see [here](#misc-arguments)), which manually constructs the data set again. This is not necessary as the prepared data is saved under [/data/final_data/](/data/final_data/) already.
+Please note that the repository is self-contained, i.e., contains all materials necessary to replicate the findings. The only exception to this is when setting `data_prep == TRUE` (see [here](#misc-arguments)), which manually constructs the data set again. This is not necessary as the prepared data is saved under [./data/final_data/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/data/final_data) already.
 
 ### Synthetic Difference-in-Difference Analysis
 
-As mentioned above, the synthetic difference-in-difference analysis (SDID) was conducted in Stata. The material to replicate it can be found under [/Stata_SDID/](/Stata_SDID/). Please refer to [/Stata_SDID/README.md](/Stata_SDID/README.md) for further details.
+As mentioned above, the synthetic difference-in-difference analysis (SDID) was conducted in Stata. The material to replicate it can be found under [./Stata_SDID/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID). Please refer to [./Stata_SDID/README.md](./Stata_SDID/README.md) for further details.
 
 ### Contact information
 
@@ -206,4 +206,4 @@ For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastia
 
 ### Copyright
 
-To see the license of our repository, please see [/LICENSE](/LICENSE).
+To see the license of our repository, please see [./LICENSE](./LICENSE).
