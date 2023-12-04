@@ -64,7 +64,7 @@ install.packages(c(
 
 Having saved the repository locally on your computer, the entire analysis can be controlled from the custom function `execute_analysis()` in [./master.r](./master.r). Before doing so, it is important to start a fresh R process *from within the repository [EU_ETS_Co_Benefits](https://github.com/ccs282/EU_ETS_Co_Benefits.git)*. For instance, in VSC, use 'CTRL+K CTRL+O' to open the repository and only then start a new R process. Alternatively, initiate the editor/IDE of your choice, such as VSC or RStudio, by opening [./master.r](./master.r) with the respective software and then start a new R terminal.
 
-It is not recommended to run the entire script [./master.r](./master.r) all at once. Instead, run the code from `library(tidyverse)` until `source(here("src", "R", "functions.r"))` to load the required packages, set the starting point for relative paths using `here()`, and load the custom functions required for the analysis.
+It is not recommended to run the entire script [./master.r](./master.r) all at once as it mostly consists of repeated calls of the function `execute_analysis()` for the different specifications in the Brief Report and SI Appendix. Instead, run the code blocks from `library(tidyverse)`, $\ldots$, `here()`, $\ldots$ up until `source(here("src", "R", "functions.r"))`, which automatically load the required packages, set the starting point for relative paths, and load the custom functions required for the analysis.
 
 The rest of [./master.r](./master.r) after `source(here("src", "R", "functions.r"))` contains specific commands that replicate the results for the specifications of our model presented in the Brief Report and SI Appendix, such as the two below, which also illustrate the ease of use of `execute_analysis()`.
 
@@ -81,7 +81,6 @@ execute_analysis(
         pollutant = "so2", # "nox", "so2", "pm25"
         estimator = "mc"
 )
-
 ```
 
 The different specifications should be run separately so that after each run the user can explore the [results](#accessing-results) and [plots](#accessing-plots).
