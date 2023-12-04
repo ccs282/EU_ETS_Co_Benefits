@@ -39,7 +39,7 @@ mac drop _all
 // Location of the repository --> adjust according to who's running the file
 
 * Insert Code for Adjusting Directory
-global repo "/Users/pierbasaglia/Documents/GitHub/EU_ETS_Co_Benefits/"
+global repo "C:/.../EU_ETS_Co_Benefits/"
 
 // Location of the Stata SDID code within the repository
 global home ${repo}Stata_SDID/
