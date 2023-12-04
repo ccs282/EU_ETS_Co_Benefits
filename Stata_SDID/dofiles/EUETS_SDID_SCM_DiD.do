@@ -91,7 +91,7 @@ log using EUETS_SDID.log, replace
 
 clear all
 
-*Loop analyis over the pollutants under investigation
+*Loop analysis over the pollutants under investigation
 local varlist "so2 pm25 nox"
 
 foreach v in `varlist' {
@@ -108,7 +108,7 @@ foreach v in `varlist' {
 
         // First step: Cleaning the sample
 
-        *The command sdid requires a balanced sample so (i) we need to exclude a number of Eastern European countries due to missing data in the early 90s and (ii) need to restrict the sample prrior to 2019 not to drop the UK out of the sample 
+        *The command sdid requires a balanced sample so (i) we need to exclude a number of Eastern European countries due to missing data in the early 90s and (ii) need to restrict the sample prior to 2019 not to drop the UK out of the sample 
 
         keep if year<=2019
 
@@ -132,7 +132,10 @@ foreach v in `varlist' {
         * Select a random number of seeds to replicate the same bootstrapped sample on the grounds of transparency and enhanced replicability.
 
         cd "${figures}"
-        eststo sdid_1: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) reps(800) seed(1615) graph g1on  g1_opt(xtitle(""))  g2_opt(xtitle("") saving(`v')) graph_export(`v', .png)
+        eststo sdid_1: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) reps(800) seed(1615) 
+	
+	* Add this additional part of the code to line 135, graphs will be displayed in the style of Figure 1 from Arkhangelsky et al. (2021). Use the option "help sdid" for further details.
+	* graph g1on  g1_opt(xtitle(""))  g2_opt(xtitle("") saving(`v')) graph_export(`v', .png)
 
         *Results come from a log-linear model, save results to compute exp() transformation in a later step
         cd "${tables}"
@@ -140,7 +143,7 @@ foreach v in `varlist' {
         putexcel A1=("estimate") B1=("standarderror")  A2=matrix(e(ATT)) B2=matrix(e(se))
 
         *TWFE-DiD
-        *Three options here: (i) run it with the same sdid command or (ii) absorb fixed effects with reghdfe. If using (ii), then we can additionally aborb country-year effects which refelcts option (iii).
+        *Three options here: (i) run it with the same sdid command or (ii) absorb fixed effects with reghdfe. If using (ii), then we can additionally absorb country-year effects which reflect a third option (iii).
         *They all yield almost identical results, we prefer option (i) so we rely on a consistent package to yield all our DiD estimations
         eststo sdid_2: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) method(did) reps(800) seed(1615)
         *eststo sdid_2: reghdfe log_emissions treat_post log_gdp log_gdp_2, abs(i.id i.year)
@@ -211,7 +214,7 @@ log using EUETS_SDID_2008.log, replace
 
 clear all
 
-*Loop analyis over the pollutants under investigation
+*Loop analysis over the pollutants under investigation
 local varlist "so2 pm25 nox"
 
 foreach v in `varlist' {
@@ -225,7 +228,7 @@ foreach v in `varlist' {
         preserve
 
         // First step: Cleaning the sample
-        *The command sdid requires a balanced sample so (i) we need to exclude a number of Eastern European countries due to missing data in the early 90s and (ii) need to restrict the sample prrior to 2019 not to drop the UK out of the sample 
+        *The command sdid requires a balanced sample so (i) we need to exclude a number of Eastern European countries due to missing data in the early 90s and (ii) need to restrict the sample prior to 2019 not to drop the UK out of the sample 
 
         keep if year<=2019
 
@@ -263,7 +266,7 @@ foreach v in `varlist' {
         putexcel A1=("estimate") B1=("standarderror")  A2=matrix(e(ATT)) B2=matrix(e(se))
 
         *TWFE-DiD
-        *Three options here: (i) run it with the same sdid command or (ii) absorb fixed effects with reghdfe. If using (ii), then we can additionally aborb country-year effects which refelcts option (iii).
+        *Three options here: (i) run it with the same sdid command or (ii) absorb fixed effects with reghdfe. If using (ii), then we can additionally absorb country-year effects which reflect a third option (iii).
         eststo sdid_2: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) method(did) reps(800) seed(1615)
         *eststo sdid_2: reghdfe log_emissions treat_post log_gdp log_gdp_2, abs(i.id i.year)
         *eststo sdid_2: reghdfe log_emissions treat_post log_gdp log_gdp_2, abs(i.id i.year i.country_id##i.year)
