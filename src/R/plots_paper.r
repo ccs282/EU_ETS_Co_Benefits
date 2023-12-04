@@ -260,6 +260,13 @@ fig1[[2]] <- fig1[[2]] +
 
 fig1
 
+ggsave(
+        here("plots", "paper", "Fig1", "fig1.png"),
+        plot = fig1,
+        width = 13,
+        height = 8
+)
+
 
 
 # Figure 2 --------------------------------------------------------------------
@@ -626,3 +633,15 @@ fig2[[1]] <- fig2[[1]] +
         )
 
 fig2
+
+ggsave(
+        filename = here(
+                "plots",
+                "paper",
+                "Fig2",
+                "fig2.png"
+        ),
+        plot = fig2,
+        width = 10,
+        height = 7
+)
