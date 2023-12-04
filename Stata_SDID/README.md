@@ -52,7 +52,7 @@ Users can refer to these log files for detailed information on each step of the 
 
 ## Accessing results
 
-Results presented in the SI Appendix (expressed in percentage terms) from the SDID and TWFE analyses can be found in [Stata_SDID/results/](/Stata_SDID/results/) in a CSV format. The estimated log-linear coefficients prior to the exponential transformation are available in CSV tables located at [Stata_SDID/tables/](/Stata_SDID/tables/). These coefficients are additionally stored as XSLX files within [Stata_SDID/tables/](/Stata_SDID/tables/) during Step 2 of the code structure (refer to Overview above). These files are saved with the '_tbc' tag for future reference within the code, where they will undergo transformation into percentage terms during Step 3 of the analysis.
+Results presented in the SI Appendix (expressed in percentage terms) from the SDID and TWFE analyses can be found in [Stata_SDID/results/](/Stata_SDID/results/) in a CSV format. The estimated log-linear coefficients prior to the exponential transformation are available in CSV tables located at [Stata_SDID/tables/](/Stata_SDID/tables/). These coefficients are additionally stored as XSLX files within [Stata_SDID/tables/](/Stata_SDID/tables/) during Step 2 of the SDID analysis (refer to Overview above). These files are saved with the '_tbc' tag for future reference within the code, where they will undergo exponential transformation into percentage terms during Step 3 of the analysis.
 
 ---
 
