@@ -127,6 +127,7 @@ The following table contains a description of the relevant function arguments as
 
 <details>
 <summary> Click here for the arguments directly entering `gsynth()` </summary>
+
 ### Direct `gsynth()` input
 
 | Argument |  Description | Values |
