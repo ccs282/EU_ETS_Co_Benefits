@@ -39,7 +39,7 @@ mac drop _all
 // Location of the repository --> adjust according to who's running the file
 
 * Insert Code for Adjusting Directory
-global repo "C:/.../EU_ETS_Co_Benefits/"
+global repo "/Users/pierbasaglia/Documents/GitHub/EU_ETS_Co_Benefits/"
 
 // Location of the Stata SDID code within the repository
 global home ${repo}Stata_SDID/
@@ -85,7 +85,7 @@ global fileformat png
 
 ******* Begin recording .log file *******
 
-cd "${home}STATA/logs"
+cd "${home}logs"
 
 log using EUETS_SDID.log, replace
 
@@ -133,9 +133,9 @@ foreach v in `varlist' {
         cd "${figures}"
         eststo sdid_1: sdid log_emissions id year treat_post, vce(bootstrap) covariates(log_gdp log_gdp_2, projected) reps(800) seed(1615) 
 	
-	* If you add the additional part of the code below to line 135, graphs will be displayed in the style of Figure 1 from Arkhangelsky et al. (2021). Use the option "help sdid" for further details.
-	* Graphs are already saved in the Online Repository in "EU_ETS_Co_Benefits/Stata_SDID/figure". Please make sure to delete the existing gph files in the folder before running the following code to prevent any errors arising from attempts to overwrite the existing files.
-	* graph g1on  g1_opt(xtitle(""))  g2_opt(xtitle("") saving(`v')) graph_export(`v', .png)
+	    * If you add the additional part of the code below to line 135, graphs will be displayed in the style of Figure 1 from Arkhangelsky et al. (2021). Use the option "help sdid" for further details.
+	    * Graphs are already saved in the Online Repository in "EU_ETS_Co_Benefits/Stata_SDID/figure". Please make sure to delete the existing gph files in the folder before running the following code to prevent any errors arising from attempts to overwrite the existing files.
+	    * graph g1on  g1_opt(xtitle(""))  g2_opt(xtitle("") saving(`v')) graph_export(`v', .png)
 
         *Results come from a log-linear model, save results to compute exp() transformation in a later step
         cd "${tables}"
@@ -208,7 +208,7 @@ log close
 
 ******* Begin recording .log file *******
 
-cd "${home}STATA/logs"
+cd "${home}logs"
 
 log using EUETS_SDID_2008.log, replace
 
