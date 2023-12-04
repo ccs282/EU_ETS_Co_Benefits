@@ -18,7 +18,7 @@ The SDID and TWFE analyses are structured in three parts:
 
 Refer to the provided do-file [Stata_SDID/dofiles/EUETS_SDID_SCM_DiD.do](/Stata_SDID/dofiles/EUETS_SDID_SCM_DiD.do), which contains commented codes to run the analyses step by step. It is crucial, as a first step, to adjust the directory of the code to where the data is being stored when running the analysis to ensure the code runs correctly. An example of how to do it is provided below:
 
-``` Stata
+```Stata
 * Insert Code for Adjusting Directory
 global repo "C:/.../EU_ETS_Co_Benefits/"
 ```
@@ -31,7 +31,7 @@ Everything between `global repo` and `"/EU_ETS_Co_Benefits"` needs to be adjuste
 
 ### Stata packages
 
-``` Stata
+```Stata
 ssc install sdid, replace
 ssc install reghdfe, replace // (version 4.4.0)
 ssc install estout, replace // To export tables with results
