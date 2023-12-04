@@ -39,7 +39,7 @@ The packages needed to prepare the data, run the analysis, and plot results are 
 
 To install them all, run:
 
-``` r
+```R
 install.packages(c(
         "tidyverse",    # version 2.0.0
         "gsynth",       # version 1.2.1
@@ -52,7 +52,7 @@ install.packages(c(
 
 Moreover, packages needed to replicate the polished plots in the paper ([click here for more details on the plots](#accessing-plots)) are:
 
-``` r
+```R
 install.packages(c(
         "patchwork",    # version 1.1.3
         "ggh4x",        # version 0.2.6
@@ -68,7 +68,7 @@ It is not recommended to run the entire script [./master.r](./master.r) all at o
 
 The rest of [./master.r](./master.r) after `source(here("src", "R", "functions.r"))` contains specific commands that replicate the results for the specifications of our model presented in the Brief Report and SI Appendix, such as the two below, which also illustrate the ease of use of `execute_analysis()`.
 
-``` r
+```R
 # Main specification
 # Fig. 1 & Col. 2 of Fig. 2 in the Brief Report
 execute_analysis(
@@ -92,6 +92,9 @@ The different specifications should be run separately so that after each run the
 ## Function arguments of `execute_analysis()`
 
 The following table contains a description of the relevant function arguments as well as default values and alternative options. Default values are highlighted in **bold** and marked with an asterisk*. For the best understanding of what each argument is doing, users are encouraged to search the code in the repository for the respective argument name and consult the Brief Report and SI Appendix.
+
+<details>
+<summary> Click here for various data-related specification choices </summary>
 
 ### Specification choices
 
@@ -120,7 +123,10 @@ The following table contains a description of the relevant function arguments as
 | `per_capita_emissions` | Determines whether to use per capita emissions data. | `TRUE` **`FALSE`*** |
 | `per_capita_gdp` | Determines whether to use per capita GDP data (not as an additional covariate but for the main covariates log(GDP) and log(GDP)$^2$). | `TRUE` **`FALSE`*** |
 | `gdp` | Determines the type of GDP data to use. | **`"constant"`*** `"current"` |
+</details>
 
+<details>
+<summary> Click here for the arguments directly entering `gsynth()` </summary>
 ### Direct `gsynth()` input
 
 | Argument |  Description | Values |
@@ -133,6 +139,10 @@ The following table contains a description of the relevant function arguments as
 | `inference_type` | The type of inference to use. `"choose"` selects `"parametric"` when the number of treated units is too small ($N_{Tr} \leq 40$) as recommended [in the gsynth tutorial](https://yiqingxu.org/packages/gsynth/articles/tutorial.html) and `"nonparametric"` otherwise. Entering `gsynth()` through its `inference` argument. | `"parametric"` `"nonparametric"` **`"choose"`*** |
 | `alpha` | Sets the significance level. Entering `gsynth()` through its `alpha` argument. | $[0, 1]$; **`0.05`*** |
 | `min_t0` | The minimum number of pre-treatment years, $T_0$. Entering `gsynth()` through its `min.T0` argument. | (integer); **`7`*** |
+</details>
+
+<details>
+<summary> Click here for miscellaneous arguments that do not affect the analysis </summary>
 
 ### Misc. arguments
 
@@ -145,6 +155,7 @@ The following table contains a description of the relevant function arguments as
 | `show_lines` | Determines which lines to show in the plots post-analysis when running `plots$ct_tr`. `"tr"` `"ct"`, and `"co"` refer to treated, counterfactual, and control units, respectively. | `"ct"` `"co"` `"tr"`; **`c("tr", "ct")`*** |
 | `conduct_analysis` | Determines whether to conduct the GSCM analysis. If `FALSE`, `execute_analysis()` will only prepare the data. | **`TRUE`*** `FALSE` |
 | `write_results_table` | Determines whether to write the results tables under [./results](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/results). See [here](#accessing-results) for more information. | **`TRUE`*** `FALSE` |
+</details>
 
 ---
 
