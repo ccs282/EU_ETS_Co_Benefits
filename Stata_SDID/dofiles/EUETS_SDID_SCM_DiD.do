@@ -85,7 +85,7 @@ global fileformat png
 
 ******* Begin recording .log file *******
 
-cd "${home}logs"
+cd "${home}STATA/logs"
 
 log using EUETS_SDID.log, replace
 
@@ -103,9 +103,8 @@ foreach v in `varlist' {
 
         preserve
 
-        cd "${home}results"
-
-
+        cd "${paper_results}"
+        
         // First step: Cleaning the sample
 
         *The command sdid requires a balanced sample so (i) we need to exclude a number of Eastern European countries due to missing data in the early 90s and (ii) need to restrict the sample prior to 2019 not to drop the UK out of the sample 
@@ -209,7 +208,7 @@ log close
 
 ******* Begin recording .log file *******
 
-cd "${home}logs"
+cd "${home}STATA/logs"
 
 log using EUETS_SDID_2008.log, replace
 
