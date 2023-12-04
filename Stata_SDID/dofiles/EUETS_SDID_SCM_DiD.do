@@ -85,7 +85,7 @@ global fileformat png
 
 ******* Begin recording .log file *******
 
-cd "${home}STATA/logs"
+cd "${home}logs"
 
 log using EUETS_SDID.log, replace
 
@@ -208,7 +208,7 @@ log close
 
 ******* Begin recording .log file *******
 
-cd "${home}STATA/logs"
+cd "${home}logs"
 
 log using EUETS_SDID_2008.log, replace
 
