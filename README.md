@@ -134,7 +134,7 @@ There are two kinds of plots in this repository: (1) polished plots in the desig
 
 ### Plots of the Brief Report and SI Appendix
 
-The plots displayed in the Brief Report and mentioned in the SI Appendix are in [./plots/paper/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) and [./plots/robustness_checks/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/robustness_checks), respectively. Please refer to the two documents for more details. They can be replicated by [./src/R/plots_paper.r](./src/R/plots_paper.r).
+The plots displayed in the Brief Report and mentioned in the SI Appendix are in [./plots/paper/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) and [./plots/robustness_checks/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/robustness_checks), respectively. Please refer to the Brief Report and SI Appendix for more details. They can be replicated by [./src/R/plots_paper.r](./src/R/plots_paper.r).
 
 ### Plots created after each run
 
@@ -152,7 +152,7 @@ The results of each run are saved in the list `gscm_analysis`. Please see the `g
 
 Moreover, the results are saved in a .csv under [./results/results_table.csv](./results/results_table.csv), which is also available in .xlsx format under [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx). The columns of the table closely mirror the function arguments of `execute_analysis()` (see [here](#function-arguments-of-execute_analysis)), output of the `gsynth()` function as well as manual calculations of the absolute effect in physical units. For details, users are encouraged to search the code under [./src/R/results_table.r](./src/R/results_table.r) for the respective column name.
 
-The tables contain the results of all our runs, including the unique identifier of each run ([see above](#plots-created-after-each-run)). Filtering the table columns (e.g., via Excel in [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx)) allows user to find the results of a specific run. Moreover, the unique identifier (column `spec_id`) is the same as the one printed by `misc_parameters$uuid` after running `execute_analysis()`. Therefore, users can search [./results/results_table.csv](./results/results_table.csv) after a model run for the respective unique identifier and find the detailed results of that run.
+The tables contain the results of all our runs, including the unique identifier of each run ([see above](#plots-created-after-each-run)). Filtering the table columns (e.g., via Excel in [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx)) allows user to find the results of a specific run (e.g., for a particular combination of covariates). Moreover, the unique identifier (column `spec_id`) is the same as the one printed by `misc_parameters$uuid` after running `execute_analysis()`. Therefore, users can search [./results/results_table.csv](./results/results_table.csv) after a model run for the respective unique identifier and find the detailed results of that run.
 
 ---
 
@@ -170,7 +170,7 @@ As mentioned above, the synthetic difference-in-difference analysis (SDID) was c
 
 ### Contact information
 
-For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the SDID analysis, please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
+For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the Stata code for the [SDID analysis](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID), please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
 
 ### Copyright
 
