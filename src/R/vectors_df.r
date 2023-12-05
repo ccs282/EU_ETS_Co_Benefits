@@ -487,66 +487,50 @@ misc_parameters$arg_validation <- modifyList(
                         "FALSE"
                 ),
                 include_1a2 = c(
-                        "no",
-                        "edgar_fully_treated",
-                        "edgar_fully_control",
-                        # "emep21/un",
-                        # "emep23/un",
                         "emep21+23/un"
                 ),
                 include_bio = c(
-                        "yes",
-                        "no"
+                        "yes"
                 ),
                 include_uk = c(
-                        "TRUE",
-                        "FALSE"
+                        "TRUE"
                 ),
                 include_aviation = c(
                         "control",
                         "exclude"
                 ),
                 ensure_common = c(
-                        "TRUE",
-                        "FALSE"
+                        "TRUE"
                 ),
                 main_data = c(
                         "edgar",
-                        # "emep21/un",
                         "emep23/un"
                 ),
                 per_capita_emissions = c(
-                        "TRUE",
                         "FALSE"
                 ),
                 per_capita_gdp = c(
-                        "TRUE",
                         "FALSE"
                 ),
                 gdp = c(
-                        "constant",
-                        "current"
+                        "constant"
                 ),
                 year_first = c(
-                        1970:1995
+                        1990
                 ),
                 year_last = c(
                         2018:2021
                 ),
                 balanced_panel = c(
-                        "TRUE",
                         "FALSE"
                 ),
                 gaps_in_years = c(
-                        "interpolate",
-                        "drop"
+                        "interpolate"
                 ),
                 damage_est_source = c(
-                        "uba_germany_3_1",
                         "uba_eu_27"
                 ),
                 time_var_damages = c(
-                        #"TRUE",
                         "FALSE"
                 ),
                 ets_start_year = c(
@@ -556,51 +540,20 @@ misc_parameters$arg_validation <- modifyList(
                         "country_treat"
                 ),
                 treatment_timing = c(
-                        "staggered",
                         "common"
                 ),
                 treat_countries = c(
-                        "ets_countries",
-                        "eu28_countries",
-                        "eu10_countries",
-                        "eu15_countries",
                         "eu25_countries",
-                        "sdid_countries",
-                        countries_list$ets_countries
+                        "sdid_countries"
                 ),
                 treat_sectors = c(
-                        "ets_sectors",
-                        "energy_sectors",
-                        "metals_sectors",
-                        "minerals_sectors",
-                        "chemicals_sectors",
-                        "paper_sectors",
-                        sectors_list$ets_sectors
+                        "ets_sectors"
                 ),
                 donor_countries = c(
-                        "eu28_countries",
-                        "eu10_countries",
-                        "eu15_countries",
-                        "eu25_countries",
-                        "sdid_countries",
-                        "ets_countries",
-                        # "oecd_countries",
-                        # "oecd_ets_countries",
-                        # "oecd_eu25_countries",
-                        # "hic_countries",
-                        # "up_mid_inc_countries",
-                        # "up_mid_high_inc_countries",
-                        # "all_countries",
-                        "same_as_treat",
-                        countries_list$all_countries
+                        "same_as_treat"
                 ),
                 donor_sectors = c(
-                        "all_available",
-                        # "hybrid",
-                        # "non_ETS_sectors",
-                        # "ETS_sectors",
-                        # "same_as_treat",
-                        sectors_list$all_sectors_codes
+                        "all_available"
                 ),
                 leave_one_out = c(
                         "TRUE",
@@ -615,7 +568,6 @@ misc_parameters$arg_validation <- modifyList(
                         "gdp_pc",
                         "renew_elec",
                         "carbon_pricing_dummy",
-                        # "elv",
                         "standard",
                         "none"
                 ),
@@ -623,8 +575,7 @@ misc_parameters$arg_validation <- modifyList(
                         7:20
                 ),
                 criterion = c(
-                        "mspe",
-                        "pc"
+                        "mspe"
                 ),
                 alpha = c(0.05, 0.5),
                 estimator = c(
@@ -632,12 +583,10 @@ misc_parameters$arg_validation <- modifyList(
                         "mc"
                 ),
                 em = c(
-                        "TRUE",
                         "FALSE"
                 ),
                 cv = c(
-                        "TRUE",
-                        "FALSE"
+                        "TRUE"
                 ),
                 r = c(
                         0:10
@@ -649,7 +598,6 @@ misc_parameters$arg_validation <- modifyList(
                 ),
                 annotate_plots = c(
                         "att",
-                        # "detailed",
                         "no"
                 ),
                 save_plots = c(
@@ -658,11 +606,9 @@ misc_parameters$arg_validation <- modifyList(
                 ),
                 show_lines = c(
                         "ct",
-                        "co",
                         "tr"
                 ),
                 loop_mode = c(
-                        # "TRUE",
                         "FALSE"
                 ),
                 conduct_analysis = c(
