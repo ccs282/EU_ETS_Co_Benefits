@@ -1,21 +1,5 @@
 # Online Materials: Data, Code, Results, and Plots
 
-- [Online Materials: Data, Code, Results, and Plots](#online-materials-data-code-results-and-plots)
-  - [How to use](#how-to-use)
-    - [Software requirements](#software-requirements)
-    - [R Packages](#r-packages)
-    - [Running the analysis](#running-the-analysis)
-    - [Function arguments of `execute_analysis()`](#function-arguments-of-execute_analysis)
-  - [Accessing plots](#accessing-plots)
-    - [Plots of the Brief Report and SI Appendix](#plots-of-the-brief-report-and-si-appendix)
-    - [Plots created after each run](#plots-created-after-each-run)
-  - [Accessing results](#accessing-results)
-  - [Miscellaneous](#miscellaneous)
-    - [Replication information](#replication-information)
-    - [Synthetic Difference-in-Difference Analysis](#synthetic-difference-in-difference-analysis)
-    - [Contact information](#contact-information)
-    - [Copyright](#copyright)
-
 Welcome to the online repository of the paper *"The European Union Emissions Trading System yields large co-benefits from pollution reduction"* (by Pier Basaglia, Jonas Grunau, Moritz Drupp).
 
 The following sections lay out the structure of the repository and provide instructions on how to replicate the analysis and plots of the paper. For information on methodological details, please refer to the Brief Report and the Supplementary Information (SI) Appendix first.
