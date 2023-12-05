@@ -192,34 +192,17 @@ execute_analysis(
         pollutant = "so2",
         # main_data = "emep23/un",
         # ets_start_year = 2005,
-        # year_first = 1990,
         # year_last = 2021,
-        # treat_countries = "eu25_countries",
-        # treat_sectors = "ets_sectors",
+        # treat_countries = "sdid_countries",
         # donor_countries = "same_as_treat",
-        # donor_sectors = "all_available",
         # leave_one_out = FALSE,
         # country_to_leave_out = "Germany",
-        # include_1a2 = "emep21+23/un",
-        # include_bio = "yes",
-        # include_uk = TRUE,
         # include_aviation = "control",
-        # balanced_panel = FALSE,
-        # gaps_in_years = "interpolate",
-        # treatment_timing = "common",
-        # ensure_common = TRUE,
-        # damage_est_source = "uba_eu_27",
-        # per_capita_emissions = FALSE,
-        # per_capita_gdp = FALSE,
-        # gdp = "constant",
 
         # # direct gsynth() input
 
         # estimator = "ife",
         # covariates = "standard",
-        # cv = TRUE,
-        # r = 0,
-        # criterion = "mspe",
         # inference_type = "choose",
 
         # # misc. arguments
@@ -227,8 +210,6 @@ execute_analysis(
         # prep_data = TRUE,
         # write_files = TRUE,
         # save_plots = TRUE,
-        # annotate_plots = "att",
-        # show_lines = c("tr", "ct"),
         # conduct_analysis = TRUE,
         # write_results_table = TRUE
 )
