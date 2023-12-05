@@ -7,8 +7,8 @@
     - [Running the analysis](#running-the-analysis)
     - [Function arguments of `execute_analysis()`](#function-arguments-of-execute_analysis)
   - [Accessing plots](#accessing-plots)
-    - [Plots created after each run](#plots-created-after-each-run)
     - [Plots of the Brief Report and SI Appendix](#plots-of-the-brief-report-and-si-appendix)
+    - [Plots created after each run](#plots-created-after-each-run)
   - [Accessing results](#accessing-results)
   - [Miscellaneous](#miscellaneous)
     - [Replication information](#replication-information)
@@ -130,19 +130,19 @@ The following table contains a description of the relevant function arguments as
 
 ## Accessing plots
 
-There are two kinds of plots in this repository: (1) rough plots saved after each run of `execute_analysis()` under [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots) and (2) polished plots in the design used in the Brief Report that are saved under [./plots/paper](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper).
-
-### Plots created after each run
-
-After each run, `execute_analysis()` creates multiple plots and saves them. The plots can be called through the following commands in [./master.r](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/master.r): `plots$panelview` for a plot that shows the completeness of the panel data, `plots$att` (`plots$ct_tr`) for a plot similar to the bottom (top) panel of Figure 1 in the Brief Report.
-
-These plots are saved under [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots) in the folders named after the three pollutants and [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) if `save_plots == TRUE`. The path to the plots is based on specification choices. For instance, the main specification plot for SO$_2$ is located under [./plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png). When the specification choice cannot be expressed as a file path, they are saved under [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) in a folder named after a unique identifier for each run.
-
-To make locating plots convenient, users can call `misc_parameters$uuid` after each run to obtain the unique identifier. Searching the repository for this identifier will lead to the location under which the plots were saved. In the main results table ([see below](#accessing-results)), the unique identifier is also listed.
+There are two kinds of plots in this repository: (1) polished plots in the design used in the Brief Report that are saved under [./plots/paper](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) and (2) rough plots saved after each run of `execute_analysis()` in different sub-folders of [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots).
 
 ### Plots of the Brief Report and SI Appendix
 
-The plots displayed in the Brief Report and mentioned in the SI Appendix are in [./plots/paper/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) and [./plots/robustness_checks/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/robustness_checks), respectively. Please refer to the two documents for more details. The plots of the Brief Report can be replicated in [./src/R/plots_paper.r](./src/R/plots_paper.r).
+The plots displayed in the Brief Report and mentioned in the SI Appendix are in [./plots/paper/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/paper) and [./plots/robustness_checks/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/robustness_checks), respectively. Please refer to the two documents for more details. They can be replicated by [./src/R/plots_paper.r](./src/R/plots_paper.r).
+
+### Plots created after each run
+
+After each run, `execute_analysis()` creates multiple plots and saves them. The plots can be called through the following commands after each run: `plots$panelview` for a plot that shows the completeness of the panel data, `plots$att` (`plots$ct_tr`) for a plot similar to the bottom (top) panel of Figure 1 in the Brief Report (commands are also in [./master.r](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/master.r)).
+
+These plots are saved under [./plots](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots) in folders named after the three pollutants and [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) if `save_plots == TRUE`. The path to the plots is based on specification choices. For instance, the main specification plot for SO$_2$ would be located under [./plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/plots/so2/trse-ets_trco-eu25/dose-all_doco-eu25/em23/cov-std/1a2em2123_bio/1990_2005_2021_p_att.png). When the specification choice cannot be expressed as a file path, they are saved under [./plots/misc](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/misc) in a folder named after a unique identifier for each run.
+
+To make locating plots convenient, users can call `misc_parameters$uuid` after each run to obtain the unique identifier. Searching the repository for this identifier will lead to the location under which the plots were saved. In the main results table ([see below](#accessing-results)), the unique identifier is also listed.
 
 ---
 
@@ -152,7 +152,7 @@ The results of each run are saved in the list `gscm_analysis`. Please see the `g
 
 Moreover, the results are saved in a .csv under [./results/results_table.csv](./results/results_table.csv), which is also available in .xlsx format under [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx). The columns of the table closely mirror the function arguments of `execute_analysis()` (see [here](#function-arguments-of-execute_analysis)), output of the `gsynth()` function as well as manual calculations of the absolute effect in physical units. For details, users are encouraged to search the code under [./src/R/results_table.r](./src/R/results_table.r) for the respective column name.
 
-The tables contain the results of all our runs. As it also lists the unique identifier of each run, users can easily locate the plots linked to the respective specification (see [here](#plots-created-after-each-run)) by searching the repository for that ID. Moreover, filtering the columns (e.g., via Excel in [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx)) allows user to find the results of a specific run.
+The tables contain the results of all our runs, including the unique identifier of each run ([see above](#plots-created-after-each-run)). Filtering the table columns (e.g., via Excel in [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx)) allows user to find the results of a specific run. Moreover, the unique identifier (column `spec_id`) is the same as the one printed by `misc_parameters$uuid` after running `execute_analysis()`. Therefore, users can search [./results/results_table.csv](./results/results_table.csv) after a model run for the respective unique identifier and find the detailed results of that run.
 
 ---
 
@@ -162,7 +162,7 @@ The tables contain the results of all our runs. As it also lists the unique iden
 
 More information on the technical details of how the analysis was conducted can be found at the top of [./master.r](./master.r).
 
-Please note that the repository is self-contained, i.e., contains all materials necessary to replicate the findings. The only exception to this is when setting `data_prep == TRUE` (see [here](#misc-arguments)), which manually constructs the data set again. This is not necessary as the prepared data is saved under [./data/final_data/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/data/final_data) already.
+Please note that the repository is self-contained, i.e., contains all materials necessary to replicate the findings. The only exception to this is when setting `data_prep == TRUE` (see [here](#function-arguments-of-execute_analysis)), which manually constructs the data set again. This is not necessary as the prepared data is saved under [./data/final_data/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/data/final_data) already.
 
 ### Synthetic Difference-in-Difference Analysis
 
