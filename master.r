@@ -45,17 +45,17 @@ source(here("src", "R", "functions.r"))
 
 # Results main paper ----------------------------------------------------------
 
+# Main specification
+# Fig. 1 & Col. 2 of Fig. 2 in the Brief Report
+execute_analysis(
+        pollutant = "so2" # "nox", "so2", "pm25"
+)
+
 # Main specification without covariates
 # Fig.2, Col. 1 in the Brief Report
 execute_analysis(
         pollutant = "so2", # "nox", "so2", "pm25"
         covariates = "none"
-)
-
-# Main specification
-# Fig. 1 & Col. 2 of Fig. 2 in the Brief Report
-execute_analysis(
-        pollutant = "so2" # "nox", "so2", "pm25"
 )
 
 # Main specification with concurrent policy covariates
