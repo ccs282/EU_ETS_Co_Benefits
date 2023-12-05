@@ -285,6 +285,7 @@ if (all(file.exists(c(
         results_table_y %<>%
                 add_row(new_row_y) %>%
                 relocate(c(spec_id, date_time), .after = last_col()) %>%
+                arrange(desc(date_time)) %>%
                 distinct(pick(c(pollutant:r_cv, year_y)), .keep_all = TRUE) %>%
                 arrange(pollutant, main_data, ets_start_year, spec_id)
 
@@ -306,6 +307,7 @@ if (all(file.exists(c(
         results_table_c %<>%
                 add_row(new_row_c) %>%
                 relocate(c(spec_id, date_time), .after = last_col()) %>%
+                arrange(desc(date_time)) %>%
                 distinct(pick(c(pollutant:r_cv, country)), .keep_all = TRUE) %>%
                 arrange(pollutant, main_data, ets_start_year, spec_id)
 
@@ -344,6 +346,7 @@ if (all(file.exists(c(
                 ) %>%
                 relocate(c(spec_id, date_time), .after = last_col()) %>%
                 functions$tons_to_billions_eur() %>%
+                arrange(desc(date_time)) %>%
                 distinct(pick(c(pollutant:r_cv, year_y)), .keep_all = TRUE) %>%
                 arrange(pollutant, main_data, ets_start_year)
 
@@ -357,6 +360,7 @@ if (all(file.exists(c(
         )) %>%
                 relocate(c(spec_id, date_time), .after = last_col()) %>%
                 functions$tons_to_billions_eur() %>%
+                arrange(desc(date_time)) %>%
                 distinct(pick(c(pollutant:r_cv, country)), .keep_all = TRUE) %>%
                 arrange(pollutant, main_data, ets_start_year)
 
