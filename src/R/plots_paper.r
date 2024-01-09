@@ -261,7 +261,7 @@ fig1[[2]] <- fig1[[2]] +
 fig1
 
 ggsave(
-        here("plots", "paper", "Fig1", "fig1.png"), # change ending to .pdf if desired # nolint
+        here("plots", "paper", "Fig1", "fig1.pdf"), # change ending to .png if desired # nolint
         plot = fig1,
         width = 13,
         height = 8
@@ -639,7 +639,7 @@ ggsave(
                 "plots",
                 "paper",
                 "Fig2",
-                "fig2.png" # change ending to .pdf if desired # nolint
+                "fig2.pdf" # change ending to .png if desired # nolint
         ),
         plot = fig2,
         width = 10,
