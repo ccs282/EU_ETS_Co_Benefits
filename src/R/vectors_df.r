@@ -384,6 +384,24 @@ sectors_list$exclude_un <- c(
 
 
 # Estimates social cost of pollution ------------------------------------------
+misc_parameters$exchange_rate_eur_to_gbp_2022 <- read_csv(here(
+        "data",
+        "socioeconomic",
+        "Eurostat",
+        "tec00033_exchange_rates.csv"
+)) %>%
+        rename(currency = TIME) %>%
+        pivot_longer(
+                cols = -currency,
+                names_to = "year",
+                values_to = "exchange_rate"
+        ) %>%
+        filter(
+                currency %in% c("Pound sterling"),
+                year == 2022
+        ) %>%
+        pull(exchange_rate)
+
 hicp <- read_csv(here(
         "data",
         "socioeconomic",
@@ -419,6 +437,10 @@ misc_parameters$inflation_adjust <- list(
         "2020" = hicp %>%
                 filter(year == 2020) %>%
                 summarise(mean = mean(OBS_VALUE)) %>%
+                pull(),
+        "2022" = hicp %>%
+                filter(year == 2022) %>%
+                summarise(mean = mean(OBS_VALUE)) %>%
                 pull()
 )
 
@@ -429,18 +451,23 @@ misc_parameters$inflation_adjust <- list(
                 misc_parameters$inflation_adjust[["2010"]],
         "2020_to_most_recent" =
                 misc_parameters$inflation_adjust[["most_recent"]] /
-                misc_parameters$inflation_adjust[["2020"]]
+                misc_parameters$inflation_adjust[["2020"]],
+        "2022_to_most_recent" =
+                misc_parameters$inflation_adjust[["most_recent"]] /
+                misc_parameters$inflation_adjust[["2022"]]
 )
 
 rm(hicp)
 
-# uba_germany_3_1 in 2020 EUR; uba_eu_27 in 2010 EUR
-# both converted using the average CPI of the last 12 months
+# uba_germany_3_1 in 2020 EUR; uba_eu_27 in 2010 EUR; uk_2023 in 2022 GBP
+# converted using the average CPI of the last 12 months and the 2022 exchange rate for the latter # nolint 
 social_cost_est$so2 <- list(
         uba_germany_3_1 = 15800 *
                 misc_parameters$inflation_adjust[["2020_to_most_recent"]],
         uba_eu_27 = 10100 *
-                misc_parameters$inflation_adjust[["2010_to_most_recent"]]
+                misc_parameters$inflation_adjust[["2010_to_most_recent"]],
+        uk_2023 = 16616 / misc_parameters$exchange_rate_eur_to_gbp_2022 *
+                misc_parameters$inflation_adjust[["2022_to_most_recent"]]
 )
 social_cost_est$co2 <- list(
         uba_germany_3_1 = 195 *
@@ -450,13 +477,17 @@ social_cost_est$pm25 <- list(
         uba_germany_3_1 = 61500 *
                 misc_parameters$inflation_adjust[["2020_to_most_recent"]],
         uba_eu_27 = 40600 *
-                misc_parameters$inflation_adjust[["2010_to_most_recent"]]
+                misc_parameters$inflation_adjust[["2010_to_most_recent"]],
+        uk_2023 = 74769 / misc_parameters$exchange_rate_eur_to_gbp_2022 *
+                misc_parameters$inflation_adjust[["2022_to_most_recent"]]
 )
 social_cost_est$nox <- list(
         uba_germany_3_1 = 19000 *
                 misc_parameters$inflation_adjust[["2020_to_most_recent"]],
         uba_eu_27 = 10300 *
-                misc_parameters$inflation_adjust[["2010_to_most_recent"]]
+                misc_parameters$inflation_adjust[["2010_to_most_recent"]],
+        uk_2023 = 8148 / misc_parameters$exchange_rate_eur_to_gbp_2022 *
+                misc_parameters$inflation_adjust[["2022_to_most_recent"]]
 )
 
 misc_parameters$scp <- social_cost_est[[
@@ -528,7 +559,8 @@ misc_parameters$arg_validation <- modifyList(
                         "interpolate"
                 ),
                 damage_est_source = c(
-                        "uba_eu_27"
+                        "uba_eu_27",
+                        "uk_2023"
                 ),
                 time_var_damages = c(
                         "FALSE"
