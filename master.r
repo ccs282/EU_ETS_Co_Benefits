@@ -172,12 +172,18 @@ execute_analysis(
 # Data needed for SDID analysis ('./Stata_SDID/')
 write_csv(
         gscm,
-        here("Stata_SDID", "data_in", glue("so2_gscm_data.csv")) # replace "so2" with "nox" or "pm25" for other pollutants # nolint
+        here(
+                "Stata_SDID",
+                "data_in",
+                glue("{specification_choices$pollutant}_gscm_data.csv")
+        )
 )
 
 # Data needed to create the plots in the Brief Report
 write_csv(plots$data, here(
-        "plots", "data", glue("so2.csv") # replace "so2" with "nox" or "pm25" for other pollutants # nolint
+        "plots",
+        "data",
+        glue("{specification_choices$pollutant}.csv")
 ))
 
 
