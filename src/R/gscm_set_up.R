@@ -90,7 +90,7 @@ if (!misc_parameters$prep_data) { # nolint
         }
 }
 
-gscm  %<>%
+gscm <- gscm %>%
         filter(pollutant == specification_choices$pollutant)
 
 
@@ -99,14 +99,14 @@ gscm  %<>%
 if (specification_choices$main_data == "edgar" &&
         specification_choices$include_1a2 %in% # nolint
                         c("emep23/un", "emep21/un", "emep21+23/un")) { # nolint
-        final_data_1a2 %<>%
+        final_data_1a2 <- final_data_1a2 %>%
                 filter(pollutant == specification_choices$pollutant) %>%
                 select(-any_of(c(
                         "pollutant",
                         "data_source"
                 )))
 
-        gscm %<>%
+        gscm <- gscm %>%
                 full_join(
                         x = .,
                         y = final_data_1a2,
@@ -140,7 +140,7 @@ if (specification_choices$main_data == "edgar" &&
 
 # Per capita emissions ---------------------------------------------------
 if (specification_choices$per_capita_emissions) {
-        gscm %<>%
+        gscm <- gscm %>%
                 # convert data from t to t/population
                 mutate(emissions = emissions / population)
 }
@@ -151,7 +151,7 @@ if (specification_choices$per_capita_emissions) {
 
 functions$create_variable_vectors()
 
-gscm %<>%
+gscm <- gscm %>%
         mutate(gdp = get(glue("gdp{misc_parameters$gdp_pc}_{specification_choices$gdp}"))) %>% # nolint
         mutate(across(
                 .cols = misc_parameters$vars_to_log,
@@ -164,7 +164,7 @@ gscm %<>%
         )
 
 if (all(!specification_choices$covariates %in% c("none"))) {
-        gscm %<>%
+        gscm <- gscm %>%
                 mutate(log_gdp_2 = log_gdp^2)
 }
 
@@ -173,7 +173,7 @@ if (specification_choices$gaps_in_years == "interpolate" &&
         gscm_unfiltered_temp <- gscm
 }
 
-gscm %<>%
+gscm <- gscm %>%
         # gsynth() does not tolerate missing data
         filter(if_all(
                 .cols = c(misc_parameters$vars_to_analyse),
@@ -201,7 +201,7 @@ gscm %<>%
 
 # staggered treatment
 if (specification_choices$treatment_timing == "staggered") {
-        gscm %<>%
+        gscm <- gscm %>%
                 mutate(
                         treat = if_else(
                                 country %in% countries_list$ets_countries &
@@ -223,7 +223,7 @@ if (specification_choices$treatment_timing == "staggered") {
 # uniform treatment period
 if (specification_choices$treatment_timing %in% c("common")) {
 
-        gscm %<>%
+        gscm <- gscm %>%
                 mutate(
                         treat = if_else(
                                 country %in% countries_list$ets_countries &
@@ -246,7 +246,7 @@ if (specification_choices$treatment_timing %in% c("common")) {
         # drop countries that are not yet regulated at the beginning
         if (specification_choices$ensure_common) {
                 if (specification_choices$ets_start_year < 2007) {
-                        gscm %<>%
+                        gscm <- gscm %>%
                                 filter(if_else(
                                         treat == 1,
                                         !(country %in% c(
@@ -260,7 +260,7 @@ if (specification_choices$treatment_timing %in% c("common")) {
                                         TRUE
                                 ))
                 } else if (specification_choices$ets_start_year < 2008) {
-                        gscm %<>%
+                        gscm <- gscm %>%
                                 filter(if_else(
                                         treat == 1,
                                         !(country %in% c(
@@ -272,7 +272,7 @@ if (specification_choices$treatment_timing %in% c("common")) {
                                         TRUE
                                 ))
                 } else if (specification_choices$ets_start_year < 2013) {
-                        gscm %<>%
+                        gscm <- gscm %>%
                                 filter(if_else(
                                         treat == 1,
                                         !(country %in% c(
@@ -293,14 +293,14 @@ if (specification_choices$treatment_timing %in% c("common")) {
                 filter(year != specification_choices$ets_start_year) %>%
                 pull(unit_id)
 
-        gscm %<>%
+        gscm <- gscm %>%
                 filter(!(unit_id %in% exclude))
 }
 
 
 
 # Filter data according to treat pool and donor pool choices ------------------
-gscm %<>%
+gscm <- gscm %>%
         functions$filter_treat_countries(
                 df = .,
                 keep_treat_countries = specification_choices$treat_countries
@@ -324,7 +324,7 @@ gscm %<>%
 
 # Remove country for leave-one-out analysis -----------------------------------
 if (specification_choices$leave_one_out) {
-        gscm %<>%
+        gscm <- gscm %>%
                 filter(!country %in% specification_choices$country_to_leave_out)
 }
 
@@ -333,7 +333,7 @@ if (specification_choices$leave_one_out) {
 # remove UK if include_uk == FALSE --------------------------------------------
 # EMEP data after 2021 does not include the UK anymore
 if (!specification_choices$include_uk) {
-        gscm %<>%
+        gscm <- gscm %>%
                 filter(country != "United Kingdom")
 }
 
@@ -352,7 +352,7 @@ exclude_no_post_treat <- gscm %>%
         distinct() %>%
         pull(unit_id)
 
-gscm %<>%
+gscm <- gscm %>%
         filter(!(unit_id %in% exclude_no_post_treat))
 
 rm(list = ls(pattern = "exclude"))
@@ -361,7 +361,7 @@ rm(list = ls(pattern = "exclude"))
 
 # split sectors into regulated/unregulated ------------------------------------
 if (specification_choices$unit_of_analysis == "country_treat") { # nolint
-        gscm %<>%
+        gscm <- gscm %>%
                 # per unit
                 mutate(
                         n_years_unit = n(),
@@ -393,7 +393,7 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
 
         # keep only complete units?
         if (specification_choices$balanced_panel) {
-                gscm %<>%
+                gscm <- gscm %>%
                         filter(
                                 n_years_unit == max_n_years_overall,
                                 min_year_unit == min_year_overall,
@@ -402,7 +402,7 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
                         )
         } else {
                 # make sure that within each country-treat, the sectors used are consistent across years # nolint
-                gscm %<>%
+                gscm <- gscm %>%
                         filter(
                                 n_years_unit == max_n_years_country_treat,
                                 min_year_unit == min_year_country_treat,
@@ -416,17 +416,17 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
 
                 if (specification_choices$gaps_in_years == "drop" &&
                         misc_parameters$n_problematic_units != 0) { # nolint
-                        gscm %<>%
+                        gscm <- gscm %>%
                                 filter(n_na_years_within_unit == 0)
                 } else if (specification_choices$gaps_in_years == "interpolate" && # nolint
                         misc_parameters$n_problematic_units != 0) { # nolint
-                        gscm %<>%
+                        gscm <- gscm %>%
                                 filter(n_na_years_within_unit <= 1)
                 }
         }
 
         # aggregate emissions by country-treat-year
-        gscm %<>%
+        gscm <- gscm %>%
                 group_by(country, treat, year) %>%
                 mutate(emissions_agg = sum(emissions)) %>%
                 ungroup() %>%
@@ -504,7 +504,7 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
                                 .keep = "unused"
                         )
 
-                gscm_unfiltered_temp %<>%
+                gscm_unfiltered_temp <- gscm_unfiltered_temp %>%
                         select(
                                 any_of(names(problematic_units_temp)),
                                 # emissions are not included as they are at the sectoral level in gscm_unfiltered_temp, whereas problematic_units_temp works with emissions aggregated to the country-treat level # nolint
@@ -513,7 +513,7 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
                         ) %>%
                         distinct()
 
-                problematic_units_temp %<>%
+                problematic_units_temp <- problematic_units_temp %>%
                         rows_patch(
                                 x = .,
                                 y = gscm_unfiltered_temp,
@@ -541,11 +541,11 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
                         ))
 
                 if (all(!specification_choices$covariates %in% c("none"))) {
-                        gscm %<>%
+                        gscm <- gscm %>%
                                 mutate(log_gdp_2 = log_gdp^2)
                 }
 
-                gscm %<>%
+                gscm <- gscm %>%
                         filter(if_all(
                                 .cols = c(misc_parameters$vars_to_analyse),
                                 .fns = ~ !is.na(.)
@@ -574,7 +574,7 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
         # filter out data if balanced_panel == TRUE ----------------------
 } else if (specification_choices$unit_of_analysis == "country_sector" &&
         specification_choices$balanced_panel) { # nolint
-        gscm %<>%
+        gscm <- gscm %>%
                 # per unit, count for how many years data exists
                 mutate(
                         n_years_unit = n(),
