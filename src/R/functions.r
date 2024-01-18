@@ -280,6 +280,40 @@ functions[["clean_edgar_data"]] <- function(pollutant) {
                 mutate(emissions = emissions * 1000)
 }
 
+# clean GCPT data
+functions[["clean_plant_data"]] <- function(data, countrycode = FALSE) {
+        data <- data %>%
+                select(-where(~ all(is.na(.)))) %>%
+                filter(!if_all(everything(), ~ is.na(.))) %>%
+                rename_with(
+                        .fn = ~ str_replace_all(
+                                str_to_lower(.),
+                                c(
+                                        " " = "_",
+                                        "\\(" = "_",
+                                        "\\)" = "_",
+                                        "\n" = "_",
+                                        "," = "_",
+                                        "/" = "_"
+                                )
+                        ),
+                        .cols = everything()
+                )
+
+        if (countrycode) {
+                data %>%
+                        mutate(
+                                country = countrycode(
+                                        sourcevar = country,
+                                        origin = "country.name",
+                                        destination = "country.name"
+                                )
+                        )
+        } else {
+                data
+        }
+}
+
 # only needed when using EMEP/UN data
 functions[["clean_emep_data"]] <- function(df) {
         df <- df %>%
