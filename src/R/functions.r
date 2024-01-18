@@ -1418,6 +1418,7 @@ functions[["save_plot"]] <- function(plot_name, # nolint
                                 "gdp_pc_current" = "gpc",
                                 "renew_elec" = "ren",
                                 "carbon_pricing_dummy" = "cp",
+                                "^lcp_" = "lcp",
                                 "standard" = "std"
                         )
                 )

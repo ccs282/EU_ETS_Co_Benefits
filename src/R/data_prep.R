@@ -642,10 +642,15 @@ gcpt <- gcpt_retired_capacity %>%
         mutate(
                 start_group = case_when(
                         start_year <= 1987 ~
-                                "lcpd_87",
-                        start_year <= 1990 & start_year >= 1988 ~
-                                "1988_1990",
-                        start_year > 1990 ~ "geq_1991",
+                                "leq_87",
+                        start_year > 1987 & start_year <= 1990 ~
+                                "88_90",
+                        start_year > 1990 & start_year <= 2002 ~
+                                "91_02",
+                        start_year > 2002 & start_year <= 2005 ~
+                                "03_05",
+                        start_year > 2005 ~
+                                "geq_06",
                         .default = NA
                 ),
                 .after = c(start_year)
@@ -667,61 +672,51 @@ gcpt <- gcpt_retired_capacity %>%
         ) %>%
         rowwise() %>%
         mutate(
-                lcpd_90 = sum(
+                leq_90 = sum(
                         pick(c(
-                                "lcpd_87",
-                                "1988_1990"
+                                "leq_87",
+                                "88_90"
                         )),
                         na.rm = TRUE
                 ),
-                total_c = sum(
-                        pick(c(
-                                "lcpd_87",
-                                "1988_1990",
-                                "geq_1991"
+                total = sum(
+                        pick(-c(
+                                country,
+                                retired_year,
+                                leq_90
                         )),
                         na.rm = TRUE
                 )
-        ) %>%
-        mutate(
-                lcpd_87_ied = case_when(
-                        retired_year <= 2015 ~
-                                lcpd_87,
-                        retired_year > 2015 ~
-                                total_c,
-                        .default = NA
-                ),
-                .after = lcpd_87
-        ) %>%
-        mutate(
-                lcpd_90_ied = case_when(
-                        retired_year <= 2015 ~
-                                lcpd_90,
-                        retired_year > 2015 ~
-                                total_c,
-                        .default = NA
-                ),
-                .after = lcpd_90
         ) %>%
         ungroup() %>%
+        mutate(
+                lcp_87_08_na = case_when(
+                        retired_year < 2008 ~ NA,
+                        .default = leq_87
+                ),
+                lcp_90_05_na = case_when(
+                        retired_year < 2005 ~ NA,
+                        .default = leq_90
+                ),
+                lcp_90_08_na = case_when(
+                        retired_year < 2008 ~ NA,
+                        .default = leq_90
+                ),
+                lcp_90_08_16all = case_when(
+                        retired_year < 2008 ~ NA,
+                        retired_year >= 2016 ~ total,
+                        .default = leq_90
+                )
+        ) %>%
         complete(
                 country = countries_list$eu25_countries,
-                retired_year = c(1990:2021),
-                fill = list(
-                        lcpd_87 = 0,
-                        lcpd_87_ied = 0,
-                        geq_1991 = 0,
-                        "1988_1990" = 0,
-                        lcpd_90 = 0,
-                        lcpd_90_ied = 0,
-                        total_c = 0
-                )
+                retired_year = c(1990:2021)
         ) %>%
         arrange(country, retired_year) %>%
         mutate(
                 across(
                         .cols = c(
-                                lcpd_87:total_c
+                                lcp_87_08_na:lcp_90_08_16all
                         ),
                         .fns = ~ order_by(
                                 retired_year,
@@ -729,14 +724,13 @@ gcpt <- gcpt_retired_capacity %>%
                                         .x,
                                         0
                                 ))
-                        ),
-                        .names = "cum_{.col}"
+                        )
                 ),
                 .by = c(country)
         ) %>%
-        select(country, retired_year, matches("cum_lcpd")) %>%
+        select(country, retired_year, matches("lcp_")) %>%
         mutate(across(
-                .cols = starts_with("cum_"),
+                .cols = starts_with("lcp_"),
                 # Change code here to decide how to deal with log(0) values
                 .fns = ~ .x + 1e-10
         ))

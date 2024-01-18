@@ -600,6 +600,10 @@ misc_parameters$arg_validation <- modifyList(
                         "gdp_pc",
                         "renew_elec",
                         "carbon_pricing_dummy",
+                        "lcp_90_08_na",
+                        "lcp_90_08_16all",
+                        "lcp_87_08_na",
+                        "lcp_90_05_na",
                         "standard",
                         "none"
                 ),
