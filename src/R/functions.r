@@ -455,7 +455,11 @@ functions[["create_variable_vectors"]] <- function() {
                 "emissions",
                 specification_choices$covariates
         ) %>%
-                discard(. %in% c("standard", "carbon_pricing_dummy", "none"))
+                discard(. %in% c(
+                        "standard",
+                        "carbon_pricing_dummy",
+                        "none"
+                ))
 
         misc_parameters$vars_to_analyse <<- c(
                 "log_emissions",
@@ -603,7 +607,7 @@ functions[["filter_donor_sectors"]] <- function(df, keep_donor_sectors) {
                         if (all(specification_choices$treat_sectors %in%
                                 names(sectors_list))) { # nolint
 
-                                df %<>%
+                                df <- df %>%
                                         filter(
                                                 if_else(
                                                         treat == 0 &
@@ -618,7 +622,7 @@ functions[["filter_donor_sectors"]] <- function(df, keep_donor_sectors) {
                         } else if (all(specification_choices$treat_sectors %in%
                                 sectors_list$ets_sectors)) { # nolint
 
-                                df %<>%
+                                df <- df %>%
                                         filter(
                                                 if_else(
                                                         treat == 0 &
@@ -636,7 +640,7 @@ functions[["filter_donor_sectors"]] <- function(df, keep_donor_sectors) {
                         if (all(specification_choices$treat_sectors %in%
                                 names(sectors_list))) { # nolint
 
-                                df %<>%
+                                df <- df %>%
                                         filter(
                                                 if_else(
                                                         treat == 0 &
@@ -651,7 +655,7 @@ functions[["filter_donor_sectors"]] <- function(df, keep_donor_sectors) {
                         } else if (all(specification_choices$treat_sectors %in%
                                 sectors_list$ets_sectors)) { # nolint
 
-                                df %<>%
+                                df <- df %>%
                                         filter(
                                                 if_else(
                                                         treat == 0 &
@@ -794,7 +798,7 @@ functions[["aggregate_abs_emissions"]] <- function(agg_by,
                 )
 
         if (millions) {
-                df %<>%
+                df <- df %>%
                         mutate(across(
                                 .cols = -contains(c(
                                         "per",
@@ -1206,7 +1210,7 @@ functions[["plot_results_ct_tr"]] <- function(results) {
                                 ))
                 }
 
-                plot_data %<>%
+                plot_data <- plot_data %>%
                         select(time, type, outcome)
 
                 x_lab_name <- "Year"
