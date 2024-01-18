@@ -311,11 +311,8 @@ renew <- read_csv(
                 year = as.numeric(year)
         ) %>%
         filter(!is.na(country)) %>%
-        mutate(renew_elec = if_else(
-                renew_elec == 0,
-                1e-10,
-                renew_elec
-        ))
+        # Change code here to decide how to deal with log(0) values
+        mutate(renew_elec = renew_elec + 1e-10)
 
 socioeconomic <- full_join(
         x = socioeconomic,
@@ -471,6 +468,286 @@ socioeconomic <- full_join(
 )
 
 rm(oecd_eps)
+
+
+
+# Add data from the Global Coal Plant Tracker ---------------------------------
+path_gcpt_common <- c(
+        "data",
+        "socioeconomic",
+        "Global Energy Monitor"
+)
+
+gcpt_raw <- read_csv(file = functions$here_vec(c(
+        path_gcpt_common,
+        "Global-Coal-Plant-Tracker-July-2023.csv"
+))) %>%
+        functions$clean_plant_data(countrycode = TRUE) %>%
+        mutate(
+                capacity_plant = sum(capacity__mw_, na.rm = TRUE),
+                .by = c(plant_name),
+                .after = capacity__mw_
+        )
+
+gcpt_extended <- read_csv(file = functions$here_vec(c(
+        path_gcpt_common,
+        "July 2023 GCPT Status Changes - 2014 - 2023.csv"
+))) %>%
+        functions$clean_plant_data(countrycode = TRUE) %>%
+        full_join(
+                x = gcpt_raw,
+                y = .,
+                by = c(
+                        "gem_unit_phase_id"
+                ),
+                suffix = c("", "_s_c"),
+                relationship = "one-to-one"
+        ) %>%
+        select(-ends_with("_s_c")) %>%
+        pivot_longer(
+                cols = h2_2014:h1_2023,
+                names_to = c("year_half", "year"),
+                names_sep = "_",
+                values_to = "status_hist"
+        ) %>%
+        mutate(
+                year_half = case_when(
+                        year_half == "h1" ~ "1",
+                        year_half == "h2" ~ "2",
+                        .default = year_half
+                ) %>% as.numeric(),
+                year = as.numeric(year)
+        ) %>%
+        mutate(
+                time = glue("{year}.{year_half}") %>% as.numeric(),
+                .after = status_hist
+        )
+
+gcpt_reduced <- gcpt_extended %>%
+        filter(
+                # change if the GCPT specification shall work for samples other than the one used in the main specification (EU-25) # nolint
+                country %in% countries_list$eu25_countries
+        ) %>%
+        rename(status_current = status) %>%
+        select(c(
+                gem_unit_phase_id,
+                country,
+                plant_name,
+                unit_name,
+                capacity__mw_:capacity_plant,
+                status_hist:time,
+                year,
+                year_half,
+                status_current,
+                start_year:planned_retirement,
+                latitude:location_accuracy,
+                remaining_plant_lifetime__years_,
+                wiki_url
+        )) %>%
+        arrange(country, plant_name, unit_name, time) %>%
+        mutate(
+                plant_id = as.numeric(fct(plant_name)),
+                unit_id = as.numeric(fct(gem_unit_phase_id)),
+                .before = gem_unit_phase_id
+        ) %>%
+        mutate(across(
+                .cols = c(
+                        status_hist,
+                        status_current
+                ),
+                .fns = ~ str_to_lower(.)
+        )) %>%
+        group_by(unit_id) %>%
+        mutate(
+                lag_status_hist = lag(status_hist),
+                .after = status_hist
+        ) %>%
+        filter(
+                case_when(
+                        status_hist == lag_status_hist ~ FALSE,
+                        .default = TRUE
+                )
+        ) %>%
+        ungroup() %>%
+        select(-matches("(lead_)|(lag_)"))
+
+gcpt_retired_capacity <- gcpt_reduced %>%
+        filter(
+                capacity_plant >= 50
+        ) %>%
+        group_by(unit_id) %>%
+        # fill in missing values for retired_year using the GEM Wiki and mothballed status etc. # nolint
+        mutate(retired_year = case_when(
+                # only came back in 2022 due to the energy crisis
+                gem_unit_phase_id %in% c("G109639") ~
+                        2016,
+                gem_unit_phase_id %in% c("G106635") ~
+                        2020,
+                gem_unit_phase_id %in% c("G100064", "G100065") ~
+                        2020,
+                gem_unit_phase_id %in% c("G107597", "G107598") ~
+                        2007,
+                gem_unit_phase_id %in% c("G103105") ~
+                        2021,
+                # retired then, brought back later in 2022
+                gem_unit_phase_id %in% c("G106424") ~
+                        2020,
+                # mothballed in 2019; brought back in 2022
+                gem_unit_phase_id %in% c("G104971") ~
+                        2019,
+                # mothballed in 2018; brought back in 2022
+                gem_unit_phase_id %in% c("G104972") ~
+                        2018,
+                # mothballed in 2021; brought back in 2022
+                gem_unit_phase_id %in% c("G106802") ~
+                        2021,
+                # mothballed in 2019; brought back in 2022
+                gem_unit_phase_id %in% c("G107370") ~
+                        2019,
+                # mothballed in 2018; brought back in 2022
+                gem_unit_phase_id %in% c("G107426", "G107427") ~
+                        2018,
+                # mothballed in 2019; brought back in 2022
+                gem_unit_phase_id %in% c("G106799") ~
+                        2019,
+                # mothballed in 2018; brought back in 2022
+                gem_unit_phase_id %in% c(
+                        "G107677",
+                        "G107678",
+                        "G107679",
+                        "G107680"
+                ) ~
+                        2018,
+                .default = retired_year
+        )) %>%
+        filter(
+                any(
+                        status_hist %in% c(
+                                "operating",
+                                "mothballed",
+                                "retired"
+                        )
+                ),
+                time == last(time),
+                if_any(
+                        .cols = c(
+                                retired_year
+                        ),
+                        .fns = ~ !is.na(.)
+                )
+        ) %>%
+        ungroup()
+
+gcpt <- gcpt_retired_capacity %>%
+        mutate(
+                start_group = case_when(
+                        start_year <= 1987 ~
+                                "lcpd_87",
+                        start_year <= 1990 & start_year >= 1988 ~
+                                "1988_1990",
+                        start_year > 1990 ~ "geq_1991",
+                        .default = NA
+                ),
+                .after = c(start_year)
+        ) %>%
+        mutate(
+                retired_capacity = sum(capacity__mw_),
+                .by = c(country, retired_year, start_group),
+                .after = retired_year
+        ) %>%
+        distinct(
+                country,
+                start_group,
+                retired_year,
+                retired_capacity
+        ) %>%
+        pivot_wider(
+                names_from = start_group,
+                values_from = retired_capacity
+        ) %>%
+        rowwise() %>%
+        mutate(
+                lcpd_90 = sum(
+                        pick(c(
+                                "lcpd_87",
+                                "1988_1990"
+                        )),
+                        na.rm = TRUE
+                ),
+                total_c = sum(
+                        pick(c(
+                                "lcpd_87",
+                                "1988_1990",
+                                "geq_1991"
+                        )),
+                        na.rm = TRUE
+                )
+        ) %>%
+        mutate(
+                lcpd_87_ied = case_when(
+                        retired_year <= 2015 ~
+                                lcpd_87,
+                        retired_year > 2015 ~
+                                total_c,
+                        .default = NA
+                ),
+                .after = lcpd_87
+        ) %>%
+        mutate(
+                lcpd_90_ied = case_when(
+                        retired_year <= 2015 ~
+                                lcpd_90,
+                        retired_year > 2015 ~
+                                total_c,
+                        .default = NA
+                ),
+                .after = lcpd_90
+        ) %>%
+        ungroup() %>%
+        complete(
+                country = countries_list$eu25_countries,
+                retired_year = c(1990:2021),
+                fill = list(
+                        lcpd_87 = 0,
+                        lcpd_87_ied = 0,
+                        geq_1991 = 0,
+                        "1988_1990" = 0,
+                        lcpd_90 = 0,
+                        lcpd_90_ied = 0,
+                        total_c = 0
+                )
+        ) %>%
+        arrange(country, retired_year) %>%
+        mutate(
+                across(
+                        .cols = c(
+                                lcpd_87:total_c
+                        ),
+                        .fns = ~ order_by(
+                                retired_year,
+                                cumsum(replace_na(
+                                        .x,
+                                        0
+                                ))
+                        ),
+                        .names = "cum_{.col}"
+                ),
+                .by = c(country)
+        ) %>%
+        select(country, retired_year, matches("cum_lcpd")) %>%
+        mutate(across(
+                .cols = starts_with("cum_"),
+                # Change code here to decide how to deal with log(0) values
+                .fns = ~ .x + 1e-10
+        ))
+
+socioeconomic <- full_join(
+        socioeconomic,
+        gcpt,
+        by = c("country", "year" = "retired_year")
+)
+
+rm(list = ls(pattern = "gcpt"))
 
 
 
