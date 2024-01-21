@@ -7,7 +7,7 @@
 
 # Data input:   Multiple files saved under './data/'
 # Output files: Plots saved under './plots/' and results under './results/' # nolint
-# Last update:  December 2023
+# Last update:  January 2024
 
 # TECHNICAL DISCLAIMER
 # Analysis run using R version 4.3.2 in Visual Studio Code 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
