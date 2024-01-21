@@ -579,7 +579,9 @@ misc_parameters$arg_validation <- modifyList(
                         "sdid_countries"
                 ),
                 treat_sectors = c(
-                        "ets_sectors"
+                        "ets_sectors",
+                        "1.A.1.a",
+                        "1A1a"
                 ),
                 donor_countries = c(
                         "same_as_treat"
