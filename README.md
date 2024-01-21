@@ -37,7 +37,8 @@ Moreover, packages needed to replicate the polished plots in the paper ([click h
 install.packages(c(
         "patchwork",    # version 1.1.3
         "ggh4x",        # version 0.2.6
-        "viridis"       # version 0.6.4
+        "viridis",      # version 0.6.4
+        "ggtext"        # version 0.1.2
 ))
 ```
 
