@@ -23,6 +23,7 @@ path_common <- c(
         "main_specification"
 )
 
+# read in data from the main specification
 so2 <- read_csv(functions$here_vec(c(
         path_common,
         "so2_gscm_data.csv"
