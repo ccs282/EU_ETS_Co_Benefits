@@ -56,7 +56,7 @@ if (!is.null(gscm_analysis$est.ind)) {
 }
 
 # _c_y means country/year
-abs_emissions_c_y %<>%
+abs_emissions_c_y <- abs_emissions_c_y  %>%
         filter(if_all(
                 .cols = c(
                         year,
@@ -81,10 +81,10 @@ abs_emissions_c_y %<>%
         )
 
 if (gscm_analysis$sameT0) {
-        abs_emissions_c_y %<>%
+        abs_emissions_c_y <- abs_emissions_c_y  %>%
                 filter(year >= specification_choices$ets_start_year)
 } else {
-        abs_emissions_c_y %<>%
+        abs_emissions_c_y <- abs_emissions_c_y  %>%
                 filter(year >= 0)
 }
 
@@ -282,7 +282,7 @@ if (all(file.exists(c(
                 ) %>%
                 functions$tons_to_billions_eur()
 
-        results_table_y %<>%
+        results_table_y <- results_table_y  %>%
                 add_row(new_row_y) %>%
                 relocate(c(spec_id, date_time), .after = last_col()) %>%
                 arrange(desc(date_time)) %>%
@@ -304,7 +304,7 @@ if (all(file.exists(c(
         )) %>%
                 functions$tons_to_billions_eur()
 
-        results_table_c %<>%
+        results_table_c <- results_table_c  %>%
                 add_row(new_row_c) %>%
                 relocate(c(spec_id, date_time), .after = last_col()) %>%
                 arrange(desc(date_time)) %>%
