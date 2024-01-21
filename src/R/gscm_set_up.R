@@ -425,6 +425,9 @@ if (specification_choices$unit_of_analysis == "country_treat") { # nolint
                 }
         }
 
+        # retrieve non-aggregated data
+        plots$data_descriptive <- gscm
+
         # aggregate emissions by country-treat-year
         gscm <- gscm %>%
                 group_by(country, treat, year) %>%
