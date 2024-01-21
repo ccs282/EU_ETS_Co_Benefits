@@ -159,6 +159,15 @@ execute_analysis(
         country_to_leave_out = "Germany" # change to EU-25 country of your choice # nolint
 )
 
+# Power sector analysis
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        treat_sectors = c(
+                "1.A.1.a",
+                "1A1a"
+        )
+)
+
 
 
 # How to obtain the data for SDID and paper plots -----------------------------
