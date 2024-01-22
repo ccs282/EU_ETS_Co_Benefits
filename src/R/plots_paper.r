@@ -6,6 +6,7 @@ library(here)
 library(patchwork)
 library(ggh4x)
 library(viridis)
+library(ggtext)
 
 here()
 
@@ -298,7 +299,7 @@ specification_lims <- c(
 x_label_face <- c(
         "plain",
         "bold",
-        rep("plain", length(specification_lims) - 1)
+        rep("plain", length(specification_lims) - 2)
 )
 
 plot_title <- expression(bold(paste("Impact of the EU ETS from 2005-2021 on ", NO[x], ", ", PM[2.5], " and ", SO[2]))) # nolint
@@ -312,7 +313,9 @@ base_spec <- function(data,
                       treat_c = "eu25_countries",
                       covs = "log_gdp + log_gdp_2",
                       inf = "parametric",
-                      est = "ife") {
+                      est = "ife",
+                      damage_source = "uba_eu_27",
+                      sectors_treat = "ets_sectors") {
         data$year_last == year_l &
                 data$main_data == main_d &
                 data$include_aviation == aviation &
@@ -320,7 +323,9 @@ base_spec <- function(data,
                 data$treat_countries %in% c(treat_c) &
                 data$covariates == covs &
                 data$inference %in% c(inf) &
-                data$estimator %in% c(est)
+                data$estimator %in% c(est) &
+                data$damage_est_source %in% damage_source &
+                data$treat_sectors %in% sectors_treat
 }
 
 spec_chart_data <- plot_data_all %>%
@@ -362,6 +367,10 @@ spec_chart_data <- plot_data_all %>%
                 base_spec(.,
                         covs = "log_gdp + log_gdp_2 + log_renew_elec"
                 ) ~ "Renewable electricity production",
+                # Retired coal capacity added to main
+                base_spec(.,
+                        covs = "log_gdp + log_gdp_2 + log_lcp_90_05_na" # nolint
+                ) ~ "Main specification +<br>retired LCP capacity",
                 # Population
                 base_spec(.,
                         covs = "log_gdp + log_gdp_2 + log_population"
