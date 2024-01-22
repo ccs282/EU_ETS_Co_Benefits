@@ -208,11 +208,19 @@ execute_analysis(
         # main_data = "emep23/un",
         # ets_start_year = 2005,
         # year_last = 2021,
+        # covariates = c(
+        #         "carbon_pricing_dummy"
+        # ),
         # treat_countries = "sdid_countries",
+        # treat_sectors = c(
+        #         "1.A.1.a",
+        #         "1A1a"
+        # ),
         # donor_countries = "same_as_treat",
         # leave_one_out = FALSE,
         # country_to_leave_out = "Germany",
         # include_aviation = "control",
+        # damage_est_source = "uk_2023",
 
         # # direct gsynth() input
 
@@ -224,7 +232,7 @@ execute_analysis(
 
         # prep_data = TRUE,
         # write_files = TRUE,
-        # save_plots = TRUE,
+        # save_plots = FALSE,
         # conduct_analysis = FALSE,
-        # write_results_table = TRUE
+        # write_results_table = FALSE
 )
