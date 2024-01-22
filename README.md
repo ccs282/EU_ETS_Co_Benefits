@@ -154,6 +154,10 @@ Please note that the repository is self-contained, i.e., contains all materials 
 
 As mentioned above, the synthetic difference-in-difference analysis (SDID) was conducted in Stata. The material to replicate it can be found under [./Stata_SDID/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID). Please refer to [./Stata_SDID/README.md](./Stata_SDID/README.md) for further details.
 
+### Descriptive Plots
+
+Two descriptive plots showing the relative and absolute emissions reductions between 1990 and 2021 for the three pollutants, split by sectors, can be found under [./plots/descriptive/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/descriptive). The relevant code is in [./src/R/descriptive_changes.R](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/src/R/descriptive_changes.R).
+
 ### Contact information
 
 For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the Stata code for the [SDID analysis](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID), please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
