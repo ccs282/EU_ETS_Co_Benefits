@@ -120,6 +120,15 @@ execute_analysis(
         covariates = "lcp_90_05_na"
 )
 
+# Specification focusing only on power sector reductions
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        treat_sectors = c(
+                "1.A.1.a",
+                "1A1a"
+        )
+)
+
 # EMEP data; analysis ending in 2018 (to make it comparable to EDGAR estimate)
 execute_analysis(
         pollutant = "so2", # "nox", "so2", "pm25"
