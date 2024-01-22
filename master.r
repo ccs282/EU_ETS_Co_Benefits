@@ -114,6 +114,12 @@ execute_analysis(
         covariates = "gdp_pc"
 )
 
+# Additional covariate: Retired coal capacity
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        covariates = "lcp_90_05_na"
+)
+
 # EMEP data; analysis ending in 2018 (to make it comparable to EDGAR estimate)
 execute_analysis(
         pollutant = "so2", # "nox", "so2", "pm25"
