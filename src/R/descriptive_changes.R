@@ -278,7 +278,7 @@ ggsave(
                 "descriptive",
                 glue("descriptive_rel.pdf")
         ),
-        plot = plot,
+        plot = plot_rel,
         width = 15,
         height = 7
 )
