@@ -17,32 +17,70 @@ source(here("src", "R", "functions.r"))
 
 
 
+# Create function to retrieve descriptive data --------------------------------
+retrieve_desc_data <- function(pollutant, aggregation) {
+        execute_analysis(
+                pollutant = pollutant,
+                save_plots = FALSE,
+                conduct_analysis = FALSE,
+                write_results_table = FALSE
+        )
+
+        if (aggregation %in% c("disagg")) {
+                plots$data_descriptive %>%
+                        mutate(
+                                emissions_s_y = sum(emissions),
+                                .by = c("sector_code", "year")
+                        ) %>%
+                        distinct(
+                                year,
+                                sector_code,
+                                emissions_s_y
+                        ) %>%
+                        mutate(
+                                emissions_y = sum(emissions_s_y),
+                                .by = c("year")
+                        ) %>%
+                        mutate(sector_class = case_when(
+                                sector_code %in% sectors_list$non_ets_sectors ~
+                                        "Non-ETS",
+                                sector_code %in% sectors_list$energy_sectors ~
+                                        "Energy",
+                                sector_code %in% sectors_list$metals_sectors ~
+                                        "Metals",
+                                sector_code %in% sectors_list$minerals_sectors ~
+                                        "Minerals",
+                                sector_code %in% sectors_list$chemicals_sectors ~ # nolint
+                                        "Chemicals",
+                                sector_code %in% sectors_list$paper_sectors ~
+                                        "Paper",
+                                .default = NA
+                        )) %>%
+                        mutate(
+                                # in millions t
+                                emissions_cat_y = sum(emissions_s_y) / 1e6,
+                                .by = c("sector_class", "year")
+                        ) %>%
+                        mutate(pollutant = specification_choices$pollutant) %>%
+                        distinct(
+                                pollutant,
+                                year,
+                                sector_class,
+                                emissions_cat_y
+                        )
+        } else if (aggregation %in% c("agg")) {
+                gscm %>%
+                        mutate(pollutant = specification_choices$pollutant)
+        }
+}
+
+
+
 # Calculate percentage changes from 1990 to 2021 ------------------------------
-path_common <- c(
-        "data",
-        "main_specification"
-)
-
-# read in data from the main specification
-so2 <- read_csv(functions$here_vec(c(
-        path_common,
-        "so2_gscm_data.csv"
-))) %>%
-        mutate(pollutant = "so2")
-
-pm25 <- read_csv(functions$here_vec(c(
-        path_common,
-        "pm25_gscm_data.csv"
-))) %>%
-        mutate(pollutant = "pm25")
-
-nox <- read_csv(functions$here_vec(c(
-        path_common,
-        "nox_gscm_data.csv"
-))) %>%
-        mutate(pollutant = "nox")
-
-descriptive_changes_90_21 <- list(so2, pm25, nox) %>%
+descriptive_changes_90_21 <- map(
+        c("so2", "pm25", "nox"),
+        ~retrieve_desc_data(pollutant = .x, aggregation = "agg")
+) %>%
         reduce(full_join) %>%
         mutate(emissions = emissions / 1e6) %>%
         mutate(
@@ -75,66 +113,12 @@ descriptive_changes_90_21 <- list(so2, pm25, nox) %>%
                 .by = c("pollutant")
         )
 
-rm(so2, pm25, nox)
-
 
 
 # Plot absolute and relative changes from 1990 to 2021 ------------------------
-
-retrieve_desc_data <- function(pollutant) {
-        execute_analysis(
-                pollutant = pollutant,
-                save_plots = FALSE,
-                conduct_analysis = FALSE,
-                write_results_table = FALSE
-        )
-
-        plots$data_descriptive %>%
-                mutate(
-                        emissions_s_y = sum(emissions),
-                        .by = c("sector_code", "year")
-                ) %>%
-                distinct(
-                        year,
-                        sector_code,
-                        emissions_s_y
-                ) %>%
-                mutate(
-                        emissions_y = sum(emissions_s_y),
-                        .by = c("year")
-                ) %>%
-                mutate(sector_class = case_when(
-                        sector_code %in% sectors_list$non_ets_sectors ~
-                                "Non-ETS",
-                        sector_code %in% sectors_list$energy_sectors ~
-                                "Energy",
-                        sector_code %in% sectors_list$metals_sectors ~
-                                "Metals",
-                        sector_code %in% sectors_list$minerals_sectors ~
-                                "Minerals",
-                        sector_code %in% sectors_list$chemicals_sectors ~
-                                "Chemicals",
-                        sector_code %in% sectors_list$paper_sectors ~
-                                "Paper",
-                        .default = NA
-                )) %>%
-                mutate(
-                        # in millions t
-                        emissions_cat_y = sum(emissions_s_y) / 1e6,
-                        .by = c("sector_class", "year")
-                ) %>%
-                mutate(pollutant = specification_choices$pollutant) %>%
-                distinct(
-                        pollutant,
-                        year,
-                        sector_class,
-                        emissions_cat_y
-                )
-}
-
 descriptive_plot <- map(
         c("so2", "pm25", "nox"),
-        retrieve_desc_data
+        ~retrieve_desc_data(pollutant = .x, aggregation = "disagg")
 ) %>%
         reduce(full_join) %>%
         mutate(pollutant = fct(pollutant)) %>%
