@@ -77,7 +77,7 @@ retrieve_desc_data <- function(pollutant, aggregation) {
 
 
 # Calculate percentage changes from 1990 to 2021 ------------------------------
-descriptive_changes_90_21 <- map(
+descriptive_changes_05_21 <- map(
         c("so2", "pm25", "nox"),
         ~retrieve_desc_data(pollutant = .x, aggregation = "agg")
 ) %>%
@@ -99,7 +99,7 @@ descriptive_changes_90_21 <- map(
                 sum_emissions_y_reg
         ) %>%
         filter(
-                year %in% c(1990, 2021),
+                year %in% c(2005, 2021),
                 ets_coverage %in% c("Regulated")
         ) %>%
         select(-sum_emissions_y) %>%
@@ -109,7 +109,7 @@ descriptive_changes_90_21 <- map(
                 values_from = sum_emissions_y_reg
         ) %>%
         mutate(
-                percentage_change_90_21 = (1 - y_2021 / y_1990) * 100,
+                percentage_change_05_21 = (1 - y_2021 / y_2005) * 100,
                 .by = c("pollutant")
         )
 
