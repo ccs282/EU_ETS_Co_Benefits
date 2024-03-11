@@ -132,6 +132,8 @@ capt label variable coal_mean "Coal"
   
     preserve
 	
+*Generate correlograms including all IMF energy commodity prices considered	
+	
 	keep if timeperiod>=2005
   
   rename naturalgaseupngaseu PNGASEU
