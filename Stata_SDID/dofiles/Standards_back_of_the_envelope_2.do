@@ -79,11 +79,11 @@ drop if countryname=="Bulgaria" | countryname=="Croatia" | countryname=="Romania
 
 *Focus on the binding period of the LCPD and IED 2008-2021 in our estimation sample
 *In sum: We consider that any estimated pollution reductions estimated in the Main Specification are fully attributed to emission standards. 
-*Leveraging plant-level data from the EEA, we assume that emissions in each post-treatment period (i..e, from 2008) would have been higher relative to the previous year by a percentage equivalent to the ATTs presented in the Report.
+*Using plant-level data from the EEA, we now assume that without policy intervention, emissions for each year after 2008 would have been higher relative to the previous year by a percentage equivalent to the ATTs in the Report.
 
 *We leverage lagged emissions starting from the year prior to standards became binding (--> 2007-2020).
 *For instance, we consider that, in the absence of treatment, emissions in 2008 would have been higher relative to 2007 by an amount equal to the ATT (for SO2 that is 39% higher). 
-*We continue until we get to 2020 to predict emission reductions in 2021 associated with our ATTs.
+*We continue until we get to 2020 to predict emissions in 2021 without the estimated reductions induced by our ATTs.
 
 drop if reportingyear==2021
 drop if reportingyear==2022
