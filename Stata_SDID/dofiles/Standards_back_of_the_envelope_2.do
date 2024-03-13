@@ -50,9 +50,6 @@ global paper_results 		${home}results/
 // File format for figures:
 global fileformat png 
 
-// File format for figures:
-global fileformat png 
-
 *******************************************
 ********  Input requirements  *************
 *******************************************
