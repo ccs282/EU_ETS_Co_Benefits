@@ -69,30 +69,29 @@ keep if pollutant=="Nitrogen oxides (NOX)" | pollutant=="Sulphur oxides (SOX)" |
 drop if countryname=="Bulgaria" | countryname=="Croatia" | countryname=="Romania" | countryname=="Serbia" | countryname=="Switzerland" | countryname=="Norway"
 
 *Focus on the binding period of the LCPD and IED 2008-2021 in our estimation sample
-*In sum: We consider that any estimated pollution reductions estimated in the Main Specification are fully attributed to emission standards. 
-*Using plant-level data from the EEA, we now assume that without policy intervention, emissions for each year after 2008 would have been higher relative to the previous year by a percentage equivalent to the ATTs in the Report.
+*We leverage lagged emissions starting from the year prior to standards became binding (--> 2007-2020) and assume the subsequent reductions were driven by our ATTs
+*For instance, we assume that emissions in 2008 would be lower than 2007 by an amount equal to the ATT (for SO2 that is 39% less). 
+*We continue until we ge to 2020 to predict emission reductions in 2021.
 
-*We leverage lagged emissions starting from the year prior to standards became binding (--> 2007-2020).
-*For instance, we consider that, in the absence of treatment, emissions in 2008 would have been higher relative to 2007 by an amount equal to the ATT (for SO2 that is 39% higher). 
-*We continue until we get to 2020 to predict emissions in 2021 without the estimated reductions induced by our ATTs.
+*In sum: We assume their emissions in each post-treatment period (i..e, from 2008) would have been higher than the previous year by a percentage equivalent to the ATTs presented in the Report.
 
 drop if reportingyear==2021
 drop if reportingyear==2022
 
 gen year=2008 if reportingyear==2007
-gen year=2009 if reportingyear==2008
-gen year=2010 if reportingyear==2009
-gen year=2011 if reportingyear==2010
-gen year=2012 if reportingyear==2011
-gen year=2013 if reportingyear==2012
-gen year=2014 if reportingyear==2013
-gen year=2015 if reportingyear==2014
-gen year=2016 if reportingyear==2015
-gen year=2017 if reportingyear==2016
-gen year=2018 if reportingyear==2017
-gen year=2019 if reportingyear==2018
-gen year=2020 if reportingyear==2019
-gen year=2021 if reportingyear==2020
+replace year=2009 if reportingyear==2008
+replace year=2010 if reportingyear==2009
+replace year=2011 if reportingyear==2010
+replace year=2012 if reportingyear==2011
+replace year=2013 if reportingyear==2012
+replace year=2014 if reportingyear==2013
+replace year=2015 if reportingyear==2014
+replace year=2016 if reportingyear==2015
+replace year=2017 if reportingyear==2016
+replace year=2018 if reportingyear==2017
+replace year=2019 if reportingyear==2018
+replace year=2020 if reportingyear==2019
+replace year=2021 if reportingyear==2020
 
 *As we do not observe PM2.5 but only PM10, we follow the assumption in the UBA report (UBA, 2012) that 70% of PM10 is PM2.5
 replace emissions=emissions*0.70 if pollutant=="Particulate matter (PM10)" 
