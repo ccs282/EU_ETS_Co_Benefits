@@ -4,7 +4,7 @@ Welcome to the online repository of the paper *"The European Emissions Trading S
 
 The following sections lay out the structure of the repository and provide instructions on how to replicate the analysis and plots of the paper. For information on methodological details, please refer to the Brief Report and the Supplementary Information (SI) Appendix first.
 
-Please note that this README file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md). [Here](./Stata_SDID/README.md), you can additionally find details on our back-of-the-envelope calculations (included in the SI Appendix) and descriptive statistics on fuel prices.
+Please note that this README file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md).
 
 ---
 
@@ -156,7 +156,11 @@ As mentioned above, the synthetic difference-in-difference analysis (SDID) was c
 
 ### Descriptive Plots
 
-Two descriptive plots showing the relative and absolute emissions reductions between 1990 and 2021 for the three pollutants, split by sectors, can be found under [./plots/descriptive/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/descriptive). The relevant code is in [./src/R/descriptive_changes.R](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/src/R/descriptive_changes.R).
+Two descriptive plots showing the relative and absolute emissions reductions between 1990 and 2021 for the three pollutants, split by sectors, can be found under [./plots/descriptive/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/descriptive). The relevant code is in [./src/R/descriptive_changes.R](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/src/R/descriptive_changes.R). The replication codes for the descriptive statistics on fuel prices based on data from the [IMF Primary Commodity Prices](https://www.imf.org/en/Research/commodity-prices) can be found on [Stata_SDID/dofiles/Fuel_prices_graphs.do](/Stata_SDID/dofiles/Fuel_prices_graphs.do).
+
+### Back-of-the envelope calculations
+
+[Here](/Stata_SDID/dofiles/Standards_back_of_the_envelope_2.do), you can additionally find details on our back-of-the-envelope calculations (included in the SI Appendix) to bound the direct impacts of EU-wide combustion standards.  
 
 ### Contact information
 
