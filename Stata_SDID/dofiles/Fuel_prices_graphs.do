@@ -60,6 +60,7 @@ global fileformat png
 
 *Data inputs to run the codes: 
 	* ${home}STATA/data_in/PCPS_03-11-2024 11-09-48-75_panel.csv
+    *${home}STATA/data_in/fuel_prices_data.csv", clear 
 
 
 import delimited "${dataIn}PCPS_03-11-2024 11-09-48-75_panel.csv", delimiter(",") encoding(utf8) clear 
