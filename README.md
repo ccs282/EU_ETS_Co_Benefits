@@ -1,6 +1,6 @@
 # Online Materials: Data, Code, Results, and Plots
 
-Welcome to the online repository of the paper *"The European Union Emissions Trading System yields large co-benefits from pollution reduction"* (by Pier Basaglia, Jonas Grunau, Moritz Drupp).
+Welcome to the online repository of the paper *"The European Emissions Trading System might yield large co-benefits from pollution reduction"* (by Pier Basaglia, Jonas Grunau, Moritz Drupp).
 
 The following sections lay out the structure of the repository and provide instructions on how to replicate the analysis and plots of the paper. For information on methodological details, please refer to the Brief Report and the Supplementary Information (SI) Appendix first.
 
