@@ -164,7 +164,7 @@ Two descriptive plots showing the relative and absolute emissions reductions bet
 
 ### Contact information
 
-For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the Stata code for the [SDID analysis](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID), please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
+For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the Stata code, please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
 
 ### Copyright
 
