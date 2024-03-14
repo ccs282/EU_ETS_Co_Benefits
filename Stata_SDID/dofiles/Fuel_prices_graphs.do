@@ -13,8 +13,9 @@
 /**************************************************************************************************************************************************/
 
 /*
-This repository contains Stata codes to replicate the descriptive statistics on fuel price variations over time using data from the IMF Primary Commodity Prices (accessible fom here: https://www.imf.org/en/Research/commodity-prices)
-
+This repository contains Stata codes to: 
+(i) replicate the descriptive statistics on fuel price variations over time using data from the IMF Primary Commodity Prices (accessible fom here: https://www.imf.org/en/Research/commodity-prices)
+(ii) replicate the correlogram plotting correlations between weighted fuel price changes after the start of the EU ETS among EU-25 countries.
 */
 
 
