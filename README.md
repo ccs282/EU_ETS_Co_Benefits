@@ -4,7 +4,7 @@ Welcome to the online repository of the paper *"The European Union Emissions Tra
 
 The following sections lay out the structure of the repository and provide instructions on how to replicate the analysis and plots of the paper. For information on methodological details, please refer to the Brief Report and the Supplementary Information (SI) Appendix first.
 
-Please note that this README file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md).
+Please note that this README file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md), where you can additionally find details on our back-of-the-envelope calculations (included in the SI Appendix), and descriptive statistics on fuel prices.
 
 ---
 
