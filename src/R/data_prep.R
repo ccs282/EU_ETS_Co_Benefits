@@ -314,7 +314,7 @@ renew <- read_csv(
         # Change code here to decide how to deal with log(0) values
         mutate(renew_elec = renew_elec + 1e-10)
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         x = socioeconomic,
         y = renew,
         by = c("country", "year")
@@ -391,7 +391,7 @@ carbon_pricing <- read_csv(here(
         ungroup() %>%
         distinct(pick(country, implement, abolish))
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         socioeconomic,
         carbon_pricing,
         by = c("country")
@@ -461,7 +461,7 @@ oecd_eps <- read_csv(here(
                 values_from = value
         )
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         socioeconomic,
         oecd_eps,
         by = c("country", "year")
@@ -735,7 +735,7 @@ gcpt <- gcpt_retired_capacity %>%
                 .fns = ~ .x + 1e-10
         ))
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         socioeconomic,
         gcpt,
         by = c("country", "year" = "retired_year")
