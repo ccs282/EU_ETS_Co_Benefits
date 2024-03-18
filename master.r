@@ -7,7 +7,7 @@
 
 # Data input:   Multiple files saved under './data/'
 # Output files: Plots saved under './plots/' and results under './results/' # nolint
-# Last update:  January 2024
+# Last update:  March 2024
 
 # TECHNICAL DISCLAIMER
 # Analysis run using R version 4.3.2 in Visual Studio Code 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
@@ -180,6 +180,28 @@ execute_analysis(
         treat_sectors = c(
                 "1.A.1.a",
                 "1A1a"
+        )
+)
+
+# Analysis ending in 2019 (to address COVID-19 concerns)
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        year_last = 2019
+)
+
+# Analysis ending in 2016 (to make it more comparable to Bayer & Aklin, 2020)
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        year_last = 2016
+)
+
+# Add fuel prices as covariates
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        covariates = c(
+                "coal_price_weighted",
+                "oil_price_weighted",
+                "gas_price_weighted"
         )
 )
 
