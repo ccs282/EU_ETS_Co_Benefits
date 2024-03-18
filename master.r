@@ -68,13 +68,6 @@ execute_analysis(
         )
 )
 
-# Main specification with matrix completion estimator
-# Fig.2, Col. 4 in the Brief Report
-execute_analysis(
-        pollutant = "so2", # "nox", "so2", "pm25"
-        estimator = "mc"
-)
-
 
 
 # Show different plots and uuid -----------------------------------------------
@@ -203,6 +196,12 @@ execute_analysis(
                 "oil_price_weighted",
                 "gas_price_weighted"
         )
+)
+
+# Main specification with matrix completion estimator
+execute_analysis(
+        pollutant = "so2", # "nox", "so2", "pm25"
+        estimator = "mc"
 )
 
 
