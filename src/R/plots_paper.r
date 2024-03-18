@@ -331,7 +331,7 @@ spec_chart_data <- plot_data_all %>%
         filter(
                 case_when(
                         pollutant != "co2" &
-                                year_last %in% c(2018, 2019, 2021) &
+                                year_last %in% c(2016, 2018, 2019, 2021) &
                                 leave_one_out == FALSE &
                                 ets_start_year %in% c(2005, 2008) &
                                 ntr %in% c(19, 25) &
@@ -370,6 +370,10 @@ spec_chart_data <- plot_data_all %>%
                 base_spec(.,
                         covs = "log_gdp + log_gdp_2 + log_lcp_90_05_na" # nolint
                 ) ~ "Main specification +<br>retired LCP capacity",
+                # Fuel prices
+                base_spec(.,
+                        covs = "coal_price_weighted + gas_price_weighted + log_gdp + log_gdp_2 + oil_price_weighted" # nolint
+                ) ~ "Fuel prices",
                 # Population
                 base_spec(.,
                         covs = "log_gdp + log_gdp_2 + log_population"
@@ -410,11 +414,19 @@ spec_chart_data <- plot_data_all %>%
                 base_spec(.,
                         year_l = 2018,
                         main_d = "edgar"
-                ) ~ "Analysis ending in 2018 - EDGAR data",
+                ) ~ "Analysis ending in 2018:<br>EDGAR data",
+                # analysis ending in 2019 and emep
+                base_spec(.,
+                        year_l = 2019
+                ) ~ "Analysis ending in 2019",
+                # analysis ending in 2016 and emep
+                base_spec(.,
+                        year_l = 2016
+                ) ~ "Analysis ending in 2016",
                 # Aviation excluded from sample
                 base_spec(.,
                         aviation = "exclude"
-                ) ~ "Aviation excluded from sample",
+                ) ~ "Aviation excluded",
                 .default = NA
         )) %>%
         filter(specification %in% specification_lims) %>%
