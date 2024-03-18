@@ -280,6 +280,32 @@ functions[["clean_edgar_data"]] <- function(pollutant) {
                 mutate(emissions = emissions * 1000)
 }
 
+# clean energy balance data
+functions[["clean_energy_balance_data"]] <- function(fuel) {
+        data_out <- read_csv(here(
+                "data",
+                "socioeconomic",
+                "Eurostat",
+                glue("total_energy_supply_{fuel}.csv")
+        )) %>%
+                pivot_longer(
+                        cols = c("1990":"2022"),
+                        names_to = "year",
+                        values_to = "energy_tj"
+                ) %>%
+                mutate(
+                        country = countrycode(
+                                sourcevar = TIME,
+                                origin = "country.name",
+                                destination = "country.name"
+                        ),
+                        year = as.numeric(year),
+                        fuel = glue("{fuel}")
+                ) %>%
+                filter(!is.na(country)) %>%
+                select(-TIME)
+}
+
 # clean GCPT data
 functions[["clean_plant_data"]] <- function(data, countrycode = FALSE) {
         data <- data %>%
@@ -458,6 +484,13 @@ functions[["create_variable_vectors"]] <- function() {
                 discard(. %in% c(
                         "standard",
                         "carbon_pricing_dummy",
+                        "coal_price_rel",
+                        "oil_price_rel",
+                        "gas_price_rel",
+                        "coal_price_weighted",
+                        "oil_price_weighted",
+                        "gas_price_weighted",
+                        "fuel_price_weighted",
                         "none"
                 ))
 
@@ -467,10 +500,20 @@ functions[["create_variable_vectors"]] <- function() {
                 "log_gdp_2",
                 glue("log_{specification_choices$covariates}")
         ) %>%
-                discard(. %in% c("log_standard", "log_none")) %>%
+                discard(. %in% c(
+                        "log_standard",
+                        "log_none"
+                )) %>%
                 # add to this line other covariates that need no log
                 str_replace_all(c(
                         "log_carbon_pricing_dummy" = "carbon_pricing_dummy",
+                        "log_coal_price_rel" = "coal_price_rel",
+                        "log_oil_price_rel" = "oil_price_rel",
+                        "log_gas_price_rel" = "gas_price_rel",
+                        "log_coal_price_weighted" = "coal_price_weighted",
+                        "log_oil_price_weighted" = "oil_price_weighted",
+                        "log_gas_price_weighted" = "gas_price_weighted",
+                        "log_fuel_price_weighted" = "fuel_price_weighted",
                         "log_elv_sox" = "elv_sox",
                         "log_elv_nox" = "elv_nox",
                         "log_elv_pm" = "elv_pm"
@@ -1418,6 +1461,13 @@ functions[["save_plot"]] <- function(plot_name, # nolint
                                 "gdp_pc_current" = "gpc",
                                 "renew_elec" = "ren",
                                 "carbon_pricing_dummy" = "cp",
+                                "gas_price_rel" = "gas",
+                                "coal_price_rel" = "coal",
+                                "oil_price_rel" = "oil",
+                                "gas_price_weighted" = "gasw",
+                                "coal_price_weighted" = "coalw",
+                                "oil_price_weighted" = "oilw",
+                                "fuel_price_weighted" = "fuelw",
                                 "^lcp_" = "lcp",
                                 "standard" = "std"
                         )

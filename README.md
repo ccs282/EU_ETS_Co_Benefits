@@ -1,10 +1,10 @@
 # Online Materials: Data, Code, Results, and Plots
 
-Welcome to the online repository of the paper *"The European Union Emissions Trading System yields large co-benefits from pollution reduction"* (by Pier Basaglia, Jonas Grunau, Moritz Drupp).
+Welcome to the online repository of the paper *"The European Emissions Trading System might yield large co-benefits from pollution reduction"* (by Pier Basaglia, Jonas Grunau, Moritz Drupp).
 
 The following sections lay out the structure of the repository and provide instructions on how to replicate the analysis and plots of the paper. For information on methodological details, please refer to the Brief Report and the Supplementary Information (SI) Appendix first.
 
-Please note that this README file explains the main analysis, robustness checks, and plotting routines performed in R. The synthetic difference-in-difference analysis (SDID) was conducted in Stata and is explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md).
+Please note that this README file explains the main analysis, robustness checks, and plotting routines performed in R. Additional descriptive materials and the synthetic difference-in-difference analysis (SDID) were produced in Stata and are explained in the file [./Stata_SDID/README.md](./Stata_SDID/README.md).
 
 ---
 
@@ -96,7 +96,7 @@ The following table contains a description of the relevant function arguments as
 | Argument |  Description | Values |
 | --- |  --- | --- |
 | `estimator` | The estimator to use for the GSCM. Entering `gsynth()` through its `estimator` argument. | **`"ife"`*** `"mc"` |
-| `covariates` | The covariates to include in the IFE model (see SI Appendix). `"standard"` includes log(GDP) and log(GDP)$^2$ (as in Bayer & Aklin, 2020). `"none"` lets the IFE model run without any covariates. The other five options add one more variable to the `"standard"` version, respectively, namely population, GDP per capita, renewable electricity capacity, a dummy for carbon pricing schemes, and retired coal capacity (see SI Appendix). Entering `gsynth()` through its `formula` argument. | **`"standard"`*** `"population"` `"gdp_pc"` `"renew_elec"` `"carbon_pricing_dummy"` `"lcp_90_05_na"` `"none"` |
+| `covariates` | The covariates to include in the IFE model (see SI Appendix). `"standard"` includes log(GDP) and log(GDP)$^2$ (as in Bayer & Aklin, 2020). `"none"` lets the IFE model run without any covariates. The other five options add one more variable to the `"standard"` version, respectively, namely population, GDP per capita, renewable electricity capacity, a dummy for carbon pricing schemes, and retired coal capacity (see SI Appendix). Entering `gsynth()` through its `formula` argument. | **`"standard"`*** `"population"` `"gdp_pc"` `"renew_elec"` `"carbon_pricing_dummy"` `"lcp_90_05_na"` `"gas_price_weighted"` `"oil_price_weighted"` `"coal_price_weighted"` `"none"` |
 | `inference_type` | The type of inference to use. `"choose"` selects `"parametric"` when the number of treated units is too small ($N_{Tr} \leq 40$) as recommended [in the gsynth tutorial](https://yiqingxu.org/packages/gsynth/articles/tutorial.html) and `"nonparametric"` otherwise. Entering `gsynth()` through its `inference` argument. | `"parametric"` `"nonparametric"` **`"choose"`*** |
 </details>
 
@@ -136,9 +136,9 @@ To make locating plots convenient, users can call `misc_parameters$uuid` after e
 
 The results of each run are saved in the list `gscm_analysis`. Please see the `gsynth()` documentation (`help("gsynth")`) for more information on the structure of the list.
 
-Moreover, the results are saved in a .csv under [./results/results_table.csv](./results/results_table.csv), which is also available in .xlsx format under [./results/2023_11_30_results_table.xlsx](./results/2023_11_30_results_table.xlsx). The columns of the table closely mirror the function arguments of `execute_analysis()` (see [here](#function-arguments-of-execute_analysis)), the output of the `gsynth()` function as well as manual calculations of the absolute effect in physical units. For details, users are encouraged to search the code under [./src/R/results_table.r](./src/R/results_table.r) for the respective column name.
+Moreover, the results are saved in a .csv under [./results/results_table.csv](./results/results_table.csv), which is also available in .xlsx format under [./results/2024_03_18_results_table.xlsx](./results/2024_03_18_results_table.xlsx). The columns of the table closely mirror the function arguments of `execute_analysis()` (see [here](#function-arguments-of-execute_analysis)), the output of the `gsynth()` function as well as manual calculations of the absolute effect in physical units. For details, users are encouraged to search the code under [./src/R/results_table.r](./src/R/results_table.r) for the respective column name.
 
-The tables contain the results of all our runs, including the unique identifier of each run ([see above](#plots-created-after-each-run)). Filtering the table columns (e.g., via Excel in [./results/2024_01_22_results_table.xlsx](./results/2024_01_22_results_table.xlsx)) allows users to find the results of a specific run (e.g., for a particular combination of covariates). Moreover, the unique identifier (column `spec_id`) is the same as the one printed by `misc_parameters$uuid` after running `execute_analysis()`. Therefore, users can search [./results/results_table.csv](./results/results_table.csv) after a model run for the respective unique identifier and find the detailed results of that run.
+The tables contain the results of all our runs, including the unique identifier of each run ([see above](#plots-created-after-each-run)). Filtering the table columns (e.g., via Excel in [./results/2024_03_18_results_table.xlsx](./results/2024_03_18_results_table.xlsx)) allows users to find the results of a specific run (e.g., for a particular combination of covariates). Moreover, the unique identifier (column `spec_id`) is the same as the one printed by `misc_parameters$uuid` after running `execute_analysis()`. Therefore, users can search [./results/results_table.csv](./results/results_table.csv) after a model run for the respective unique identifier and find the detailed results of that run.
 
 ---
 
@@ -156,11 +156,15 @@ As mentioned above, the synthetic difference-in-difference analysis (SDID) was c
 
 ### Descriptive Plots
 
-Two descriptive plots showing the relative and absolute emissions reductions between 1990 and 2021 for the three pollutants, split by sectors, can be found under [./plots/descriptive/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/descriptive). The relevant code is in [./src/R/descriptive_changes.R](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/src/R/descriptive_changes.R).
+Two descriptive plots showing the relative and absolute emissions reductions between 1990 and 2021 for the three pollutants, split by sectors, can be found under [./plots/descriptive/](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/plots/descriptive). The relevant code is in [./src/R/descriptive_changes.R](https://github.com/ccs282/EU_ETS_Co_Benefits/blob/main/src/R/descriptive_changes.R). The replication codes for the descriptive statistics on fuel prices based on data from the [IMF Primary Commodity Prices](https://www.imf.org/en/Research/commodity-prices) can be found on [Stata_SDID/dofiles/Fuel_prices_graphs.do](/Stata_SDID/dofiles/Fuel_prices_graphs.do).
+
+### Back-of-the envelope calculations
+
+[Here](/Stata_SDID/dofiles/Standards_back_of_the_envelope_2.do), you can additionally find details on our back-of-the-envelope calculations (included in the SI Appendix) to bound the direct impacts of EU-wide combustion standards.  
 
 ### Contact information
 
-For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the Stata code for the [SDID analysis](https://github.com/ccs282/EU_ETS_Co_Benefits/tree/main/Stata_SDID), please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
+For questions on the R code, please contact [Jonas Grunau](mailto:jonas.sebastian.grunau@uni-hamburg.de). For questions on the Stata code, please contact [Pier Basaglia](mailto:piero.basaglia@uni-hamburg.de).
 
 ### Copyright
 

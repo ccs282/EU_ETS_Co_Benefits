@@ -314,7 +314,7 @@ renew <- read_csv(
         # Change code here to decide how to deal with log(0) values
         mutate(renew_elec = renew_elec + 1e-10)
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         x = socioeconomic,
         y = renew,
         by = c("country", "year")
@@ -391,7 +391,7 @@ carbon_pricing <- read_csv(here(
         ungroup() %>%
         distinct(pick(country, implement, abolish))
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         socioeconomic,
         carbon_pricing,
         by = c("country")
@@ -411,6 +411,109 @@ socioeconomic <- full_join(
         arrange(country, year)
 
 rm(carbon_pricing)
+
+
+
+# IMF commodity prices and energy balances ------------------------------------
+energy_balance <- map(
+        c("coal", "gas", "oil", "total"),
+        ~ functions$clean_energy_balance_data(
+                fuel = .x
+        )
+) %>%
+        reduce(full_join) %>%
+        select(country, year, fuel, energy_tj) %>%
+        arrange(country, year, fuel) %>%
+        pivot_wider(
+                names_from = fuel,
+                values_from = energy_tj
+        ) %>%
+        mutate(across(
+                .cols = c("coal", "gas", "oil"),
+                .fns = ~ . / total,
+                .names = "{.col}_share"
+        ), .keep = "unused") %>%
+        group_by(country) %>%
+        mutate(
+                across(
+                        .cols = c(
+                                coal_share,
+                                gas_share,
+                                oil_share
+                        ),
+                        .fns = ~ mean(.x[year < 2005], na.rm = TRUE),
+                        .names = "{.col}_mean"
+                )
+        ) %>%
+        ungroup() %>%
+        select(country, year, contains("mean"))
+
+imf_commodity <- read_csv(here(
+        "data",
+        "socioeconomic",
+        "IMF",
+        "commodity_prices.csv"
+)) %>%
+        select(-where(~ all(is.na(.)))) %>%
+        mutate(fuel = case_when(
+                fuel %in% c("Australian, export markets") ~ "coal_australia",
+                fuel %in% c("South African, export markets") ~
+                        "coal_south_africa",
+                fuel %in% c("Netherlands TFF") ~ "gas_price",
+                fuel %in% c("Spot Crude") ~ "oil_price",
+                .default = fuel
+        )) %>%
+        pivot_longer(
+                cols = c("1990":"2023"),
+                names_to = "year",
+                values_to = "price"
+        ) %>%
+        pivot_wider(
+                names_from = fuel,
+                values_from = price
+        ) %>%
+        mutate(coal_price = rowMeans(
+                pick(
+                        coal_australia,
+                        coal_south_africa
+                ),
+                na.rm = TRUE
+        ), .keep = "unused") %>%
+        select(any_of(c(
+                "year",
+                "coal_price",
+                "gas_price",
+                "oil_price"
+        ))) %>%
+        mutate(year = as.numeric(year)) %>%
+        mutate(across(
+                .cols = contains("_price"),
+                .fns = ~ .x / first(.x) * 100,
+                .names = "{.col}_rel"
+        ))
+
+fuel_prices <- full_join(
+        energy_balance,
+        imf_commodity
+) %>%
+        mutate(
+                coal_price_weighted = coal_share_mean * coal_price_rel,
+                gas_price_weighted = gas_share_mean * gas_price_rel,
+                oil_price_weighted = oil_share_mean * oil_price_rel
+        ) %>%
+        select(country, year, contains("_rel"), contains("_weighted")) #%>%
+        # mutate(across(
+        #         .cols = contains("weighted"),
+        #         # Change code here to decide how to deal with log(0) values
+        #         .fns = ~ .x + 1e-10
+        # ))
+
+socioeconomic <- left_join(
+        socioeconomic,
+        fuel_prices
+)
+
+rm(imf_commodity, fuel_prices, energy_balance)
 
 
 
@@ -461,7 +564,7 @@ oecd_eps <- read_csv(here(
                 values_from = value
         )
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         socioeconomic,
         oecd_eps,
         by = c("country", "year")
@@ -735,7 +838,7 @@ gcpt <- gcpt_retired_capacity %>%
                 .fns = ~ .x + 1e-10
         ))
 
-socioeconomic <- full_join(
+socioeconomic <- left_join(
         socioeconomic,
         gcpt,
         by = c("country", "year" = "retired_year")

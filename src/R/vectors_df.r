@@ -604,6 +604,12 @@ misc_parameters$arg_validation <- modifyList(
                         "carbon_pricing_dummy",
                         "lcp_90_05_na",
                         "standard",
+                        "coal_price_rel",
+                        "oil_price_rel",
+                        "gas_price_rel",
+                        "coal_price_weighted",
+                        "oil_price_weighted",
+                        "gas_price_weighted",
                         "none"
                 ),
                 min_t0 = c(

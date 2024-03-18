@@ -12167,30 +12167,6 @@ France,2021,EMEP_23,so2,1.A.2.g.vii,1.A.2,6.014483148718577e-4
 France,2021,EMEP_23,nox,1.A.2.g.viii,1.A.2,0.09599089795938481
 France,2021,EMEP_23,pm25,1.A.2.g.viii,1.A.2,0.12807036028996194
 France,2021,EMEP_23,so2,1.A.2.g.viii,1.A.2,0.06502863271303429
-France,2022,EMEP_23,nox,1.A.2.a,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.a,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.a,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.b,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.b,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.b,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.c,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.c,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.c,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.d,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.d,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.d,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.e,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.e,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.e,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.f,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.f,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.f,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.g.vii,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.g.vii,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.g.vii,1.A.2,NA
-France,2022,EMEP_23,nox,1.A.2.g.viii,1.A.2,NA
-France,2022,EMEP_23,pm25,1.A.2.g.viii,1.A.2,NA
-France,2022,EMEP_23,so2,1.A.2.g.viii,1.A.2,NA
 Germany,1970,EMEP_23,nox,1.A.2.a,1.A.2,NA
 Germany,1970,EMEP_23,pm25,1.A.2.a,1.A.2,NA
 Germany,1970,EMEP_23,so2,1.A.2.a,1.A.2,NA
@@ -13127,24 +13103,6 @@ Germany,2021,EMEP_23,so2,1.A.2.g.vii,1.A.2,5.757361122174521e-4
 Germany,2021,EMEP_23,nox,1.A.2.g.viii,1.A.2,0.7940402849250345
 Germany,2021,EMEP_23,pm25,1.A.2.g.viii,1.A.2,0.7380610685521907
 Germany,2021,EMEP_23,so2,1.A.2.g.viii,1.A.2,0.8369378813025181
-Germany,2022,EMEP_23,nox,1.A.2.a,1.A.2,NA
-Germany,2022,EMEP_23,pm25,1.A.2.a,1.A.2,NA
-Germany,2022,EMEP_23,so2,1.A.2.a,1.A.2,NA
-Germany,2022,EMEP_23,nox,1.A.2.b,1.A.2,NA
-Germany,2022,EMEP_23,pm25,1.A.2.b,1.A.2,NA
-Germany,2022,EMEP_23,so2,1.A.2.b,1.A.2,NA
-Germany,2022,EMEP_23,nox,1.A.2.e,1.A.2,NA
-Germany,2022,EMEP_23,pm25,1.A.2.e,1.A.2,NA
-Germany,2022,EMEP_23,so2,1.A.2.e,1.A.2,NA
-Germany,2022,EMEP_23,nox,1.A.2.f,1.A.2,NA
-Germany,2022,EMEP_23,pm25,1.A.2.f,1.A.2,NA
-Germany,2022,EMEP_23,so2,1.A.2.f,1.A.2,NA
-Germany,2022,EMEP_23,nox,1.A.2.g.vii,1.A.2,NA
-Germany,2022,EMEP_23,pm25,1.A.2.g.vii,1.A.2,NA
-Germany,2022,EMEP_23,so2,1.A.2.g.vii,1.A.2,NA
-Germany,2022,EMEP_23,nox,1.A.2.g.viii,1.A.2,NA
-Germany,2022,EMEP_23,pm25,1.A.2.g.viii,1.A.2,NA
-Germany,2022,EMEP_23,so2,1.A.2.g.viii,1.A.2,NA
 Greece,1970,EMEP_23,nox,1.A.2.a,1.A.2,NA
 Greece,1970,EMEP_23,pm25,1.A.2.a,1.A.2,NA
 Greece,1970,EMEP_23,so2,1.A.2.a,1.A.2,NA
@@ -14393,30 +14351,6 @@ Greece,2021,EMEP_23,so2,1.A.2.g.vii,1.A.2,9.843224796033352e-5
 Greece,2021,EMEP_23,nox,1.A.2.g.viii,1.A.2,0.17430470712285742
 Greece,2021,EMEP_23,pm25,1.A.2.g.viii,1.A.2,0.27146152049049427
 Greece,2021,EMEP_23,so2,1.A.2.g.viii,1.A.2,0.04258354900341125
-Greece,2022,EMEP_23,nox,1.A.2.a,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.a,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.a,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.b,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.b,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.b,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.c,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.c,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.c,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.d,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.d,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.d,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.e,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.e,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.e,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.f,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.f,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.f,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.g.vii,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.g.vii,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.g.vii,1.A.2,NA
-Greece,2022,EMEP_23,nox,1.A.2.g.viii,1.A.2,NA
-Greece,2022,EMEP_23,pm25,1.A.2.g.viii,1.A.2,NA
-Greece,2022,EMEP_23,so2,1.A.2.g.viii,1.A.2,NA
 Hungary,1970,EMEP_23,nox,1.A.2.a,1.A.2,NA
 Hungary,1970,EMEP_23,pm25,1.A.2.a,1.A.2,NA
 Hungary,1970,EMEP_23,so2,1.A.2.a,1.A.2,NA
@@ -32513,30 +32447,6 @@ Spain,2021,EMEP_23,so2,1.A.2.g.vii,1.A.2,2.454096381907533e-4
 Spain,2021,EMEP_23,nox,1.A.2.g.viii,1.A.2,0.07013587925363719
 Spain,2021,EMEP_23,pm25,1.A.2.g.viii,1.A.2,0.34426767852169893
 Spain,2021,EMEP_23,so2,1.A.2.g.viii,1.A.2,0.035700540507771536
-Spain,2022,EMEP_23,nox,1.A.2.a,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.a,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.a,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.b,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.b,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.b,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.c,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.c,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.c,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.d,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.d,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.d,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.e,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.e,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.e,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.f,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.f,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.f,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.g.vii,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.g.vii,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.g.vii,1.A.2,NA
-Spain,2022,EMEP_23,nox,1.A.2.g.viii,1.A.2,NA
-Spain,2022,EMEP_23,pm25,1.A.2.g.viii,1.A.2,NA
-Spain,2022,EMEP_23,so2,1.A.2.g.viii,1.A.2,NA
 Sweden,1970,EMEP_23,nox,1.A.2.a,1.A.2,NA
 Sweden,1970,EMEP_23,pm25,1.A.2.a,1.A.2,NA
 Sweden,1970,EMEP_23,so2,1.A.2.a,1.A.2,NA
@@ -37373,51 +37283,3 @@ United Kingdom,2021,EMEP_21,pm25,1.A.2.g.vii,1.A.2,NA
 United Kingdom,2021,EMEP_21,nox,1.A.2.g.viii,1.A.2,NA
 United Kingdom,2021,EMEP_21,so2,1.A.2.g.viii,1.A.2,NA
 United Kingdom,2021,EMEP_21,pm25,1.A.2.g.viii,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.a,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.a,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.a,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.b,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.b,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.b,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.c,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.c,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.c,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.d,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.d,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.d,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.e,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.e,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.e,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.f,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.f,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.f,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.g.vii,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.g.vii,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.g.vii,1.A.2,NA
-United Kingdom,2022,EMEP_21,nox,1.A.2.g.viii,1.A.2,NA
-United Kingdom,2022,EMEP_21,so2,1.A.2.g.viii,1.A.2,NA
-United Kingdom,2022,EMEP_21,pm25,1.A.2.g.viii,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.a,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.a,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.a,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.b,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.b,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.b,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.c,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.c,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.c,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.d,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.d,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.d,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.e,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.e,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.e,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.f,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.f,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.f,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.g.vii,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.g.vii,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.g.vii,1.A.2,NA
-United Kingdom,2023,EMEP_21,nox,1.A.2.g.viii,1.A.2,NA
-United Kingdom,2023,EMEP_21,so2,1.A.2.g.viii,1.A.2,NA
-United Kingdom,2023,EMEP_21,pm25,1.A.2.g.viii,1.A.2,NA
