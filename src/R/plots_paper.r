@@ -292,14 +292,13 @@ pollutant_labels <- c(
 specification_lims <- c(
         "No covariates",
         "Main specification",
-        "Concurrent policies",
-        "Matrix completion"
+        "Concurrent policies"
 )
 
 x_label_face <- c(
         "plain",
         "bold",
-        rep("plain", length(specification_lims) - 2)
+        rep("plain", length(specification_lims) - 1)
 )
 
 plot_title <- expression(bold(paste("Impact of the EU ETS from 2005-2021 on ", NO[x], ", ", PM[2.5], " and ", SO[2]))) # nolint
