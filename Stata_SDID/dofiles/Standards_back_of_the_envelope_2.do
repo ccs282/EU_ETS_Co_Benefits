@@ -65,42 +65,77 @@ keep if eprtranneximainactivitylabel=="Thermal power stations and other combusti
 *Focus on the pollutants covered in our analyses
 keep if pollutant=="Nitrogen oxides (NOX)" | pollutant=="Sulphur oxides (SOX)" | pollutant=="Particulate matter (PM10)"
 
+*******************************************************************
+**********Make this sample comparable to estimation sample*********
+*******************************************************************
 *Focus on EU-25 to use a consistent sample as in our empirical analyses
 drop if countryname=="Bulgaria" | countryname=="Croatia" | countryname=="Romania" | countryname=="Serbia" | countryname=="Switzerland" | countryname=="Norway"
 
 *Focus on the binding period of the LCPD and IED 2008-2021 in our estimation sample
-*We leverage lagged emissions starting from the year prior to standards became binding (--> 2007-2020) and assume the subsequent reductions were driven by our ATTs
-*For instance, we assume that emissions in 2008 would be lower than 2007 by an amount equal to the ATT (for SO2 that is 39% less). 
-*We continue until we ge to 2020 to predict emission reductions in 2021.
-
-*In sum: We assume their emissions in each post-treatment period (i..e, from 2008) would have been higher than the previous year by a percentage equivalent to the ATTs presented in the Report.
-
-drop if reportingyear==2021
+drop if reportingyear==2007
 drop if reportingyear==2022
 
-gen year=2008 if reportingyear==2007
-replace year=2009 if reportingyear==2008
-replace year=2010 if reportingyear==2009
-replace year=2011 if reportingyear==2010
-replace year=2012 if reportingyear==2011
-replace year=2013 if reportingyear==2012
-replace year=2014 if reportingyear==2013
-replace year=2015 if reportingyear==2014
-replace year=2016 if reportingyear==2015
-replace year=2017 if reportingyear==2016
-replace year=2018 if reportingyear==2017
-replace year=2019 if reportingyear==2018
-replace year=2020 if reportingyear==2019
-replace year=2021 if reportingyear==2020
+drop if countryname=="United Kingdom" & reportingyear>=2020
+
+*We assume their emissions in each post-treatment period (i..e, from 2008) would have been higher by a percentage equivalent to the ATTs presented in the Report (cf. SI Appendix).
 
 *As we do not observe PM2.5 but only PM10, we follow the assumption in the UBA report (UBA, 2012) that 70% of PM10 is PM2.5
-replace emissions=emissions*0.70 if pollutant=="Particulate matter (PM10)" 
+replace emissions=emissions*0.70 if pollutant=="Particulate matter (PM10)"
+
+collapse(sum) emissions, by(pollutant reportingyear)
+
+*Generate pollutant-specific variables that reflect ATTt over time
+
+gen ATT_pct=0.006 if reportingyear==2008 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.09 if reportingyear==2009 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.07 if reportingyear==2010 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.06 if reportingyear==2011 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.07 if reportingyear==2012 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.12 if reportingyear==2013 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.14 if reportingyear==2014 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.20 if reportingyear==2015 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.26 if reportingyear==2016 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.30 if reportingyear==2017 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.27 if reportingyear==2018 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.33 if reportingyear==2019 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.30 if reportingyear==2020 & pollutant=="Nitrogen oxides (NOX)"
+replace ATT_pct=0.28 if reportingyear==2021 & pollutant=="Nitrogen oxides (NOX)"
+
+replace ATT_pct=0.12 if reportingyear==2008 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.23 if reportingyear==2009 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.29 if reportingyear==2010 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.26 if reportingyear==2011 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.34 if reportingyear==2012 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.41 if reportingyear==2013 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.39 if reportingyear==2014 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.43 if reportingyear==2015 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.53 if reportingyear==2016 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.56 if reportingyear==2017 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.61 if reportingyear==2018 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.64 if reportingyear==2019 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.59 if reportingyear==2020 & pollutant=="Sulphur oxides (SOX)" 
+replace ATT_pct=0.61 if reportingyear==2021 & pollutant=="Sulphur oxides (SOX)" 
+
+replace ATT_pct=0.17 if reportingyear==2008 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.32 if reportingyear==2009 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.30 if reportingyear==2010 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.26 if reportingyear==2011 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.36 if reportingyear==2012 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.37 if reportingyear==2013 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.29 if reportingyear==2014 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.33 if reportingyear==2015 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.37 if reportingyear==2016 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.30 if reportingyear==2017 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.32 if reportingyear==2018 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.35 if reportingyear==2019 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.32 if reportingyear==2020 & pollutant=="Particulate matter (PM10)"
+replace ATT_pct=0.30 if reportingyear==2021 & pollutant=="Particulate matter (PM10)"
+
 
 *Emissions are in kilograms. Transform to tonnes and leverage the ATTs from the Brief Report
-*We assume their emissions in each post-treatment period (i..e, from 2008) would have been higher than the previous year by a percentage equivalent to the ATTs presented in the Report.
-gen red=emissions*0.39/1000 if pollutant=="Sulphur oxides (SOX)" 
-replace red=emissions*0.28/1000 if pollutant=="Particulate matter (PM10)" 
-replace red=emissions*0.14/1000 if pollutant=="Nitrogen oxides (NOX)" 
+gen red=((emissions/(1-ATT_pct))-emissions)/1000 if pollutant=="Sulphur oxides (SOX)" 
+replace red=((emissions/(1-ATT_pct))-emissions)/1000 if pollutant=="Particulate matter (PM10)" 
+replace red=((emissions/(1-ATT_pct))-emissions)/1000 if pollutant=="Nitrogen oxides (NOX)" 
 
 *Get cumulative emissions by pollutant over the regulated period
 collapse(sum) red, by(pollutant)
@@ -122,11 +157,12 @@ replace main_Red=4762361 if pollutant=="Nitrogen oxides (NOX)"
 gen damage_estimate_main=main_Red*damage
 
 *Compute sum and residual health co-benefits
-collapse(sum) damage_estimate damage_estimate_main
+collapse(sum) damage_estimate damage_estimate_main 
 sum damage_estimate damage_estimate_main
-gen residual_health=damage_estimate_main - damage_estimate
+gen residual_health=damage_estimate_main - damage_estimate 
 
 *in billion Euros
 replace residual_health=residual_health/1000000000
-*199.62306 or approx. 200
+*approx 160
+
 
