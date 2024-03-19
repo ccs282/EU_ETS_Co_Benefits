@@ -81,7 +81,7 @@ The following table contains a description of the relevant function arguments as
 | `pollutant` | The pollutant to consider in the analysis. | `"so2"` `"pm25"` `"nox"` |
 | `main_data` | The main data source to use for the analysis. `"emep23/un"` chooses EMEP (v2023; v2021 for the UK, see SI Appendix) data as in our main specification. `"edgar"` chooses EDGAR data as in our robustness check. | `"edgar"` **`"emep23/un"`*** |
 | `ets_start_year` | Sets the start year of the EU ETS, i.e., the beginning of the treatment. | `2002:2008`; **`2005`*** |
-| `year_last` | The last year to consider in the analysis. EMEP data is available until 2021, whereas EDGAR ends in 2018. | `2018:2021`; **`2021`*** |
+| `year_last` | The last year to consider in the analysis. EMEP data is available until 2021, whereas EDGAR ends in 2018. | `2016:2021`; **`2021`*** |
 | `treat_sectors` | Sets the pool of treated sectors. `"ets_sectors"` chooses all relevant sectors under the regulation of the EU ETS. The other codes can be used to analyse the power sector only. | **`"ets_sectors"`*** `"1.A.1.a"` `"1A1a"` |
 | `treat_countries` | Sets the pool of treated countries. `"sdid_countries"` chooses the countries that are used for the SDID analysis (see SI Appendix). | **`"eu25_countries"`*** `"sdid_countries"` |
 | `donor_countries` | Countries to include in the donor pool. `"same_as_treat"` chooses the same countries as are specified in `treat_countries`. | **`"same_as_treat"`*** |
