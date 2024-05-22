@@ -250,7 +250,7 @@ fig1[[1]] <- fig1[[1]] +
                 "text",
                 x = c(1994.3),
                 y = -Inf,
-                label = glue("Changed\nLCP regulation"),
+                label = glue("Changes to\nLCP standards"),
                 hjust = "left",
                 vjust = -2,
                 size = 3
