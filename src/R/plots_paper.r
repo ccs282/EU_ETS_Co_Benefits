@@ -58,8 +58,6 @@ ets_start <- 2005
 
 y_lab <- "Average treatment effect (ATT)"
 
-plot_title <- expression(bold(paste("Impact of the EU ETS from 2005-2021 on ", SO[2], ", ", PM[2.5], " and ", NO[x]))) # nolint
-
 att_legend_name <- "Mean estimate + 95% confidence interval: "
 
 pollutant_labels <- c(
@@ -72,7 +70,6 @@ pollutant_labels_g <- c(
         expression(SO[2]),
         expression(PM[2.5]),
         expression(NO[x])
-
 )
 
 # Construct plot components
@@ -221,14 +218,25 @@ fig1 <- (ct_tr) / (att) &
                 tag_levels = "a",
                 tag_suffix = ")"
         ) &
-        plot_layout(
+        plot_layout() &
+        # 88/609/EEC emissions limits (not plant level) amendment in 1994
+        # LCPD 2001/80/EC starting in 2008
+        # IED 2010/75/EU starting in 2013 (new plants) or 2016 (existing plants) # nolint
+        geom_vline(
+                xintercept = c(1994, 2008, 2016),
+                linewidth = 0.3,
+                linetype = "dashed"
         ) &
         theme(
                 title = element_text(size = 16),
-                legend.title = element_text(size = 12),
-                legend.text = element_text(size = 12),
-                legend.text.align = 0,
-                legend.title.align = 0,
+                legend.title = element_text(
+                        size = 12,
+                        hjust = 0
+                ),
+                legend.text = element_text(
+                        size = 12,
+                        hjust = 0
+                ),
                 plot.tag = element_text(
                         size = 16
                 )
@@ -237,6 +245,24 @@ fig1 <- (ct_tr) / (att) &
 fig1[[1]] <- fig1[[1]] +
         labs(
                 title = "Average log(emissions) for treated and counterfactual units" # nolint
+        ) +
+        annotate(
+                "text",
+                x = c(1994.3),
+                y = -Inf,
+                label = glue("Changed\nLCP regulation"),
+                hjust = "left",
+                vjust = -2,
+                size = 3
+        ) +
+        annotate(
+                "text",
+                x = 2004.7,
+                y = Inf,
+                label = glue("Start of the\nEU ETS"),
+                hjust = "right",
+                vjust = 2,
+                size = 3
         ) +
         theme(
                 plot.title = element_text(
@@ -250,7 +276,7 @@ fig1[[1]] <- fig1[[1]] +
         )
 
 fig1[[2]] <- fig1[[2]] +
-        labs(title = "Average treatment effect across regulated sectors") +
+        labs(title = "Average treatment effect across treated sectors") +
         theme(
                 plot.title = element_text(
                         size = 14
@@ -286,22 +312,20 @@ pollutant_labels <- c(
         expression(SO[2]),
         expression(PM[2.5]),
         expression(NO[x])
+)
 
+specification_labels <- c(
+        "No covariates" = "No~covariates",
+        "Main specification" = "bold(Main~specification)",
+        "Additional policies" = "Additional~policies"
 )
 
 specification_lims <- c(
         "No covariates",
         "Main specification",
-        "Concurrent policies"
 )
-
-x_label_face <- c(
-        "plain",
-        "bold",
-        rep("plain", length(specification_lims) - 1)
+        "Additional policies"
 )
-
-plot_title <- expression(bold(paste("Impact of the EU ETS from 2005-2021 on ", NO[x], ", ", PM[2.5], " and ", SO[2]))) # nolint
 
 # prepare specific plot data
 base_spec <- function(data,
@@ -357,15 +381,15 @@ spec_chart_data <- plot_data_all %>%
                 # Specification with policy covariates
                 base_spec(.,
                         covs = "carbon_pricing_dummy + log_gdp + log_gdp_2 + log_renew_elec" # nolint
-                ) ~ "Concurrent policies",
+                ) ~ "Additional policies",
                 # carbon pricing dummy
                 base_spec(.,
                         covs = "carbon_pricing_dummy + log_gdp + log_gdp_2"
-                ) ~ "Carbon pricing dummy",
+                ) ~ "Carbon pricing<br>dummy",
                 # Renewable electricity production
                 base_spec(.,
                         covs = "log_gdp + log_gdp_2 + log_renew_elec"
-                ) ~ "Renewable electricity production",
+                ) ~ "Renewable electricity<br>production",
                 # Retired coal capacity added to main
                 base_spec(.,
                         covs = "log_gdp + log_gdp_2 + log_lcp_90_05_na" # nolint
@@ -399,7 +423,7 @@ spec_chart_data <- plot_data_all %>%
                 base_spec(.,
                         treat_c = "sdid_countries",
                         year_l = 2019
-                ) ~ "GSCM with SDID sample",
+                ) ~ "GSCM with<br>SDID sample",
                 # SDID analysis; ending in 2019; incl. UK
                 base_spec(.,
                         treat_c = "sdid_countries",
@@ -409,7 +433,7 @@ spec_chart_data <- plot_data_all %>%
                 # analysis ending in 2018 and emep
                 base_spec(.,
                         year_l = 2018
-                ) ~ "Analysis ending in 2018 - EMEP data",
+                ) ~ "Analysis ending in 2018:<br>EMEP data",
                 # analysis ending in 2018 and edgar
                 base_spec(.,
                         year_l = 2018,
@@ -438,18 +462,60 @@ spec_chart_data <- plot_data_all %>%
                 ),
                 sum_eff_mon = sum(eff_mon)
         ) %>%
-        ungroup()
+        ungroup() %>%
+        mutate(
+                specification = fct(
+                        specification,
+                        levels = specification_lims
+                )
+        )
 
 # diagnostics: should only be 3 per specification
 spec_chart_data %>%
         count(specification)
 
+# Import back-of-the-envelope data
+standards <- read_csv(here(
+        "Stata_SDID",
+        "data_out",
+        "standards_back_of_the_envelope.csv"
+)) %>%
+        select(
+                spec_id,
+                residual_health
+        )
+
+spec_chart_data <- full_join(
+        x = spec_chart_data,
+        y = standards
+) %>%
+        pivot_longer(
+                cols = c(eff_mon, residual_health),
+                names_to = "estimation_type",
+                values_to = "eff_mon"
+        ) %>%
+        mutate(
+                estimation_type = case_when(
+                        estimation_type == "eff_mon" ~
+                                "Joint",
+                        estimation_type == "residual_health" ~
+                                "Bounded",
+                        .default = NA
+                ),
+                estimation_type = fct(
+                        estimation_type,
+                        levels = c(
+                                "Joint",
+                                "Bounded"
+                        )
+                )
+        )
+
 # Build plot components
 spec_chart_base <- ggplot(
         data = spec_chart_data,
         aes(
-                x = specification,
-                y = att_avg
+                x = estimation_type
         )
 ) +
         geom_hline(
@@ -458,12 +524,7 @@ spec_chart_base <- ggplot(
         ) +
         labs(
                 x = "Different specifications",
-                y = "Average effect across regulated sectors"
-        ) +
-        scale_x_discrete(
-                limits = specification_lims,
-                labels = scales::label_wrap(20),
-                guide = guide_axis(n.dodge = 1)
+                y = "Average effect across treated sectors"
         ) +
         scale_y_continuous(
                 labels = scales::label_percent(scale = 1),
@@ -480,10 +541,8 @@ spec_chart_base <- ggplot(
                 axis.text = element_text(
                         size = 12
                 ),
-                axis.text.x = element_text(
-                        size = 12,
-                        face = x_label_face
-                ),
+                axis.text.x = element_blank(),
+                axis.ticks.x = element_blank(),
                 axis.title.x = element_text(
                         size = 14,
                         margin = margin(t = 10)
@@ -492,18 +551,32 @@ spec_chart_base <- ggplot(
                         size = 14,
                         margin = margin(r = 10)
                 ),
-                legend.text.align = 0,
+                legend.text = element_text(
+                        hjust = 0
+                ),
                 legend.position = "bottom",
                 panel.grid.major.x = element_blank(),
-                panel.grid.minor.x = element_blank()
+                panel.grid.minor.x = element_blank(),
+                panel.spacing = unit(0, "lines"),
+                strip.background = element_rect(color = NA, fill = NA),
+                strip.placement = "outside",
+                strip.text = element_text(
+                        size = 12,
+                        margin = margin(t = 5, b = 5)
+                )
         )
 
 # Upper panel of Fig. 2
 col_chart <- spec_chart_base +
         geom_col(
                 mapping = aes(
+                        y = att_avg,
                         fill = pollutant
                 ),
+                data = spec_chart_data %>%
+                        filter(
+                                estimation_type == "Joint"
+                        ),
                 position = position_dodge(),
                 width = 0.5,
                 linewidth = 0.1,
@@ -524,21 +597,24 @@ col_chart <- spec_chart_base +
                 limits = pollutant_lims,
                 labels = pollutant_labels,
                 alpha = 0.7
+        ) +
+        scale_x_discrete(
+                limits = c("Joint")
+        ) +
+        facet_wrap2(
+                facets = ~specification,
+                strip.position = "bottom",
+                labeller = as_labeller(specification_labels, label_parsed)
         )
 
 # Lower panel of Fig. 2
-mon <- ggplot(
-        data = spec_chart_data,
-        aes(
-                x = specification,
-                y = eff_mon
-        )
-) +
+mon <- spec_chart_base +
         geom_col(
                 aes(
+                        y = eff_mon,
                         fill = pollutant
                 ),
-                width = 0.5,
+                width = 0.75,
                 linewidth = 0.1,
                 colour = "black"
         ) +
@@ -547,9 +623,7 @@ mon <- ggplot(
                 y = "Monetized Effect"
         ) +
         scale_x_discrete(
-                limits = specification_lims,
-                labels = scales::label_wrap(20),
-                guide = guide_axis(n.dodge = 1)
+                expand = expansion(mult = c(1))
         ) +
         scale_y_continuous(
                 labels = scales::label_dollar(
@@ -565,45 +639,51 @@ mon <- ggplot(
                 labels = pollutant_labels,
                 alpha = 0.7
         ) +
+        facet_wrap2(
+                facets = ~specification,
+                strip.position = "bottom",
+                labeller = as_labeller(specification_labels, label_parsed)
+        ) +
         theme_bw() +
         theme(
-                plot.title = element_text(
-                        size = 16
-                ),
-                plot.subtitle = element_text(
-                        size = 14
-                ),
-                axis.text = element_text(size = 12),
-                axis.text.x = element_text(
-                        size = 12,
-                        face = x_label_face
-                ),
-                axis.title.x = element_text(
-                        size = 14,
-                        margin = margin(t = 10)
-                ),
                 axis.title.y = element_text(
                         size = 14,
                         margin = margin(r = 10)
                 ),
-                legend.text.align = 0,
+                legend.text = element_text(
+                        hjust = 0
+                ),
                 panel.grid.major.x = element_blank(),
-                panel.grid.minor.x = element_blank()
+                panel.grid.minor.x = element_blank(),
+                panel.spacing = unit(0, "lines"),
+                strip.background = element_rect(color = NA, fill = NA),
+                strip.placement = "outside",
+                strip.text = element_text(
+                        size = 12,
+                        margin = margin(t = 5, b = 5)
+                )
         )
 
 # Merge plots in patchwork
 fig2 <- (col_chart / mon) +
         plot_layout(
                 guides = "collect",
-                heights = c(4, 1)
+                heights = c(3, 1)
         ) +
         plot_annotation(
                 tag_levels = "a",
                 tag_suffix = ")"
         ) +
         theme(
-                strip.background = element_blank(),
-                strip.text = element_blank()
+                axis.text.x = element_markdown(
+                        size = 14
+                ),
+                plot.caption = element_markdown(
+                        hjust = 0
+                ),
+                strip.text = element_text(
+                        size = 16
+                )
         ) &
         theme(
                 plot.tag = element_text(
@@ -617,14 +697,12 @@ fig2 <- (col_chart / mon) +
                 legend.title = element_text(
                         size = 14
                 ),
+                legend.spacing.x = unit(0.2, "cm"),
                 panel.border = element_rect(
                         linewidth = 0.25
                 ),
                 axis.title.y = element_text(
                         size = 16
-                ),
-                axis.text.x = element_text(
-                        size = 14
                 ),
                 axis.text.y = element_text(
                         size = 14
@@ -638,11 +716,6 @@ fig2 <- (col_chart / mon) +
         )
 
 fig2[[1]] <- fig2[[1]] +
-        scale_x_discrete(
-                limits = specification_lims,
-                breaks = NULL,
-                guide = guide_axis(n.dodge = 1)
-        ) +
         scale_y_continuous(
                 labels = scales::label_percent(scale = 1),
                 breaks = scales::breaks_width(10)
@@ -650,6 +723,10 @@ fig2[[1]] <- fig2[[1]] +
         labs(
                 title = NULL,
                 subtitle = NULL
+        ) +
+        theme(
+                axis.title.x = element_blank(),
+                strip.text = element_blank()
         )
 
 fig2
@@ -659,7 +736,7 @@ ggsave(
                 "plots",
                 "paper",
                 "Fig2",
-                "fig2.pdf" # change ending to .png if desired # nolint
+                "fig2.pdf"
         ),
         plot = fig2,
         width = 10,
