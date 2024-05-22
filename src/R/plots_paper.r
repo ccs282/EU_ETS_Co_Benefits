@@ -323,7 +323,6 @@ specification_labels <- c(
 specification_lims <- c(
         "No covariates",
         "Main specification",
-)
         "Additional policies"
 )
 
