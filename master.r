@@ -7,7 +7,7 @@
 
 # Data input:   Multiple files saved under './data/'
 # Output files: Plots saved under './plots/' and results under './results/' # nolint
-# Last update:  March 2024
+# Last update:  May 2024
 
 # TECHNICAL DISCLAIMER
 # Analysis run using R version 4.3.2 in Visual Studio Code 1.84.2 on Windows 11, 64 bit, Intel(R) Core(TM) i7-1185G7 @ 3.00GHz 3.00 GHz with 16GB RAM # nolint
@@ -67,6 +67,8 @@ execute_analysis(
                 "carbon_pricing_dummy"
         )
 )
+
+# For the back-of-the-envelope calculations visualized in Fig. 2 of the Brief Report, check out the file ./Stata_SDID/r_scripts/standards_back_of_the_envelope.r # nolint
 
 
 
