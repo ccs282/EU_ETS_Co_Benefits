@@ -160,7 +160,7 @@ Two descriptive plots showing the relative and absolute emissions reductions bet
 
 ### Back-of-the envelope calculations
 
-[Here](/Stata_SDID/dofiles/Standards_back_of_the_envelope_2.do), you can additionally find details on our back-of-the-envelope calculations (included in the SI Appendix) to bound the direct impacts of EU-wide combustion standards.  
+[Here](./Stata_SDID/r_scripts/standards_back_of_the_envelope.r), you can additionally find details on our back-of-the-envelope calculations (included in the SI Appendix) to bound the direct impacts of EU-wide combustion standards.  
 
 ### Contact information
 
