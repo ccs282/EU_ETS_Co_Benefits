@@ -17,7 +17,7 @@
 # Contact:
 # Email: jonas.sebastian.grunau@uni-hamburg.de
 
-# Note: The synthetic DID analysis is in a separate folder './Stata_SDID/' # nolint
+# Note: The synthetic DID analysis is in a separate folder './Stata_SDID/'. For the back-of-the-envelope calculations visualized in Fig. 2 of the Brief Report, check out the file ./Stata_SDID/r_scripts/standards_back_of_the_envelope.r # nolint
 
 
 
@@ -67,8 +67,6 @@ execute_analysis(
                 "carbon_pricing_dummy"
         )
 )
-
-# For the back-of-the-envelope calculations visualized in Fig. 2 of the Brief Report, check out the file ./Stata_SDID/r_scripts/standards_back_of_the_envelope.r # nolint
 
 
 
