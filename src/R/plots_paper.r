@@ -473,7 +473,7 @@ spec_chart_data <- plot_data_all %>%
 spec_chart_data %>%
         count(specification)
 
-# Import back-of-the-envelope data
+# Import back-of-the-envelope data; created in Stata_SDID/r_scripts/standards_back_of_the_envelope.r # nolint
 standards <- read_csv(here(
         "Stata_SDID",
         "data_out",
