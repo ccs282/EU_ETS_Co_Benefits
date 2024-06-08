@@ -1,4 +1,4 @@
-# Online Materials: Data, Code, Results, and Plots
+# The European Union Emissions Trading System might yield large co-benefits from pollution reduction: data and code
 
 Welcome to the online repository of the paper *"The European Emissions Trading System might yield large co-benefits from pollution reduction"* (by Piero Basaglia, Jonas Grunau, Moritz Drupp).
 
